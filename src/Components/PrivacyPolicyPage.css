@@ -1,0 +1,23 @@
+.privacy-policy-text {
+    color: white;
+    text-align: justify;
+    line-height: 2;
+    margin: auto;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    padding-right: 24%;
+    padding-left: 24%;
+    margin-bottom: 30px;
+}
+
+.heading-text {
+    color: white;
+    text-align: center;
+    line-height: 2;
+    margin: auto;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    padding-right: 24%;
+    padding-left: 24%;
+    margin-bottom: 20px;
+}

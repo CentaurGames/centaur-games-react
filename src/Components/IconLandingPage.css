@@ -1,0 +1,10 @@
+.icon-landing-page {
+    border-radius: 6.3%;
+}
+
+.icon-link-landing-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 3%;
+}

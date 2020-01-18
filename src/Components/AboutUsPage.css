@@ -1,0 +1,60 @@
+.about-us__intro-text {
+    color: white;
+    text-align: justify;
+    line-height: 2;
+    margin: auto;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    padding-right: 15%;
+    padding-left: 15%;
+    margin-bottom: 30px;
+}
+
+.about-us__bottom-text {
+    color: white;
+    text-align: center;
+    line-height: 2;
+    margin: auto;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    padding-right: 15%;
+    padding-left: 15%;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+    .about-us__bottom-text {
+        text-align: justify;
+    }
+}
+
+.about-us__head-shot {
+    display: flex;
+    flex-direction: row;
+    padding-right: 15%;
+    padding-left: 15%;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.about-us__image {
+    min-width: 200px;
+    height: 240px;
+    margin: 50px;
+    object-fit: fill;
+}
+
+.about-us__text {
+    color: white;
+    text-align: justify;
+    line-height: 2;
+    margin: auto;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+@media (max-width: 1000px) {
+    .about-us__head-shot {
+        flex-direction: column;
+    }
+}

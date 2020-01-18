@@ -1,0 +1,13 @@
+.mobile-games {
+    width: 70%;
+    margin: auto;
+}
+
+.mobile-games__link {
+    width: 100%;
+}
+
+.mobile-games__image {
+    width: 45%;
+    margin: 2%;
+}

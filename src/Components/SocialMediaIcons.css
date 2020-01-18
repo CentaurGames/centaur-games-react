@@ -1,0 +1,16 @@
+.social-media-app-icons {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.social-media-icon__link {
+    width: 46px;
+    margin: 7px;
+}
+
+.social-media-icon__image {
+    width: 100%;
+}

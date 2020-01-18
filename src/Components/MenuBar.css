@@ -1,0 +1,15 @@
+.menu-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.menu-bar-text {
+    color: white;
+    margin: 15px;
+    line-height: 2;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}

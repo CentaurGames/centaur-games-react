@@ -1,0 +1,148 @@
+.large-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 12px;
+    width: 20%;
+}
+
+.description-text {
+    color: white;
+    text-align: center;
+    text-align: justify;
+    line-height: 2;
+    width: 60%;
+    margin: auto;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 40px;
+}
+
+.recommended-games {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
+.youtube-vid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.play-game {
+    color: greenyellow;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: black;
+    line-height: 2;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 25px;
+}
+
+.recommended-games-text {
+    color: cyan;
+    text-align: center;
+    line-height: 2;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 70px;
+}
+
+.app-icon {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.ios-app-icon {
+    width: 100%;
+}
+
+.android-app-icon {
+    width: 100%;
+}
+
+.ios-app-link {
+    width: 30%;
+    margin: 15px;
+}
+
+.android-app-link {
+    width: 30%;
+    margin: 15px;
+}
+
+.social-media-app-icons {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.all-ios-app-icon {
+    width: 100%;
+}
+
+.all-ios-app-link {
+    width: 6%;
+    margin: 7px;
+}
+
+.all-android-app-icon {
+    width: 100%;
+}
+
+.all-android-app-link {
+    width: 6%;
+    margin: 7px;
+}
+
+.twitter-icon {
+    width: 100%;
+}
+
+.twitter-link {
+    width: 6%;
+    margin: 7px;
+}
+
+.youtube-icon {
+    width: 100%;
+}
+
+.youtube-link {
+    width: 6%;
+    margin: 7px;
+}
+
+.landing-page__screenshot-slider .carousel.slide {
+    width: 600px;
+    margin: auto;
+}
+
+.screenshot-text {
+    color: white;
+    text-align: center;
+    line-height: 2;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 70px;
+}
