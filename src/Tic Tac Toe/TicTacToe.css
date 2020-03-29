@@ -1,0 +1,47 @@
+.tic-tac-toe__grid {
+  margin: auto;
+  width: 440px;
+  height: 440px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -220px;
+  margin-left: -220px;
+}
+
+.tic-tac-toe__square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --height: 144px;
+    background: black;
+    border-right: 4px solid white;
+    float: left;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;    
+    height: var(--height);
+    padding: 0;
+    text-align: center;
+    width: var(--height);
+  }
+  
+  .tic-tac-toe__row {
+    display: flex;
+    border-bottom: 4px solid white;
+  }
+
+  .tic-tac-toe__row:nth-child(3) {
+    border-bottom: none;
+  }
+
+  .tic-tac-toe__square:nth-child(3) {
+    border-right: none;
+  }
+
+  .tic-tac-toe__o {
+    border-radius: 36px;
+    width: 65px;
+    height: 65px;
+    border: 10px solid white;
+  }
