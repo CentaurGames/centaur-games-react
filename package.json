@@ -45,7 +45,7 @@
     "react-dom": "^16.13.1",
     "react-latex": "^1.6.0",
     "react-youtube": "^7.9.0",
-    "three": "^0.110.0",
+    "three": "^0.137.0",
     "webpack-dev-server": "^3.10.3"
   }
 }
