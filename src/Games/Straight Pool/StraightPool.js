@@ -1200,3 +1200,4 @@ export class StraightPool extends React.Component {
     }
 }
 
+export {StraightPool as default};

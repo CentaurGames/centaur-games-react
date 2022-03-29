@@ -759,55 +759,6 @@ function createGrid() {
 			}
 		}
 	}
-	/*
-	var r = numX/2, xCenter = (numX-1)/2, yCenter = (numY-1)/2;
-	grid[0][0][0] = -2;
-	grid[9][0][0] = -2;
-	grid[0][7][0] = -2;
-	grid[9][7][0] = -2;
-	for (var i = 1; i < 9; i++) {
-		for (var j = 0; j < 8; j++) {
-			grid[i][j][0] = -2;
-		}
-	}
-	for (var i = 2; i < 8; i++) {
-		for (var j = 1; j < 7; j++) {
-			grid[i][j][1] = -2;
-		}
-	}
-	for (var i = 3; i < 7; i++) {
-		for (var j = 2; j < 6; j++) {
-			grid[i][j][2] = -2;
-		}
-	}
-	for (var i = 4; i < 6; i++) {
-		for (var j = 3; j < 5; j++) {
-			grid[i][j][3] = -2;
-		}
-	}
-	for (var i = 0; i < numX; i++) {
-		grid[i][0][0] = -2;
-		grid[i][numY-1][0] = -2;
-		for (var j = 0; j < numY; j++) {
-			r = numY/2;
-			if ((i-xCenter)*(i-xCenter)+(j-yCenter)*(j-yCenter) < r*r) {
-				grid[i][j][0] = -2;
-			}
-			r *= .75;
-			if ((i-xCenter)*(i-xCenter)+(j-yCenter)*(j-yCenter) < r*r) {
-				grid[i][j][1] = -2;
-			}
-			r *= .75;
-			if ((i-xCenter)*(i-xCenter)+(j-yCenter)*(j-yCenter) < r*r) {
-				grid[i][j][2] = -2;
-			}
-			r *= .75;
-			if ((i-xCenter)*(i-xCenter)+(j-yCenter)*(j-yCenter) < r*r) {
-				grid[i][j][3] = -2;
-			}
-		}
-	}
-	*/
 	randomizeGrid();
 }
 
@@ -882,3 +833,5 @@ export class MahjongPyramid extends React.Component {
         );
     }
 }
+
+export {MahjongPyramid as default};

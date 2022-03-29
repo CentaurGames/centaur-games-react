@@ -1128,3 +1128,5 @@ export class Minesweeper extends React.Component {
         );
     }
 }
+
+export {Minesweeper as default};

@@ -831,3 +831,4 @@ export class MahjongAlchemy extends React.Component {
     }
 }
 
+export {MahjongAlchemy as default};

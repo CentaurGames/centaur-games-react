@@ -1427,4 +1427,4 @@ export class EightBallPool extends React.Component {
     }
 }
 
-
+export {EightBallPool as default};

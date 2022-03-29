@@ -558,3 +558,5 @@ export class Snake extends React.Component {
         );
     }
 }
+
+export {Snake as default};

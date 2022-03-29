@@ -796,3 +796,5 @@ export class MahjongClassic extends React.Component {
         );
     }
 }
+
+export {MahjongClassic as default};

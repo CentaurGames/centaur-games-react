@@ -906,3 +906,5 @@ export class BubbleShooter extends React.Component {
         );
     }
 }
+
+export {BubbleShooter as default};

@@ -1474,4 +1474,4 @@ export class RocketRacersNitro extends React.Component {
     }
 }
 
-
+export {RocketRacersNitro as default};

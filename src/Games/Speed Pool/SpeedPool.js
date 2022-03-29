@@ -1030,3 +1030,4 @@ export class SpeedPool extends React.Component {
     }
 }
 
+export {SpeedPool as default};

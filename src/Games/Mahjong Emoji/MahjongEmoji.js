@@ -753,36 +753,6 @@ function createGrid() {
 			}
 		}
 	}
-	
-	/*
-	var r = numX/2, xCenter = (numX-1)/2, yCenter = (numY-1)/2;
-	for (var i = 0; i < numX; i++) {
-		grid[i][0][0] = -2;
-		grid[i][numY-1][0] = -2;
-		for (var j = 0; j < numY; j++) {
-			r = numY/2;
-			if ((i-xCenter)*(i-xCenter)+(j-yCenter)*(j-yCenter) < r*r) {
-				grid[i][j][0] = -2;
-			}
-			r *= .75;
-			if ((i-xCenter)*(i-xCenter)+(j-yCenter)*(j-yCenter) < r*r) {
-				grid[i][j][1] = -2;
-			}
-			r *= .75;
-			if ((i-xCenter)*(i-xCenter)+(j-yCenter)*(j-yCenter) < r*r) {
-				grid[i][j][2] = -2;
-			}
-			r *= .75;
-			if ((i-xCenter)*(i-xCenter)+(j-yCenter)*(j-yCenter) < r*r) {
-				grid[i][j][3] = -2;
-			}
-			r *= .75;
-			if ((i-xCenter)*(i-xCenter)+(j-yCenter)*(j-yCenter) < r*r) {
-				grid[i][j][4] = -2;
-			}
-		}
-	}
-	*/
 	randomizeGrid();
 }
 
@@ -857,3 +827,5 @@ export class MahjongEmoji extends React.Component {
         );
     }
 }
+
+export {MahjongEmoji as default};

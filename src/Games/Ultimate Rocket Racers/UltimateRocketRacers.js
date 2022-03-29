@@ -1681,3 +1681,5 @@ export class UltimateRocketRacers extends React.Component {
         );
     }
 }
+
+export {UltimateRocketRacers as default};

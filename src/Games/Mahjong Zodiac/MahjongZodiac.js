@@ -813,3 +813,5 @@ export class MahjongZodiac extends React.Component {
         );
     }
 }
+
+export {MahjongZodiac as default};
