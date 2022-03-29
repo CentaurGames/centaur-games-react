@@ -1680,28 +1680,7 @@ function explosionSound() {
 	lastAudioSource = audioSource;
 }
 
-function endGame() {     // You Win Text function
-	/*
-	if (myTimerIsRunning) {
-		clearInterval(myTimer);
-		myTimerIsRunning = 0;
-	}
-	if (cueTimerIsRunning) {
-		clearInterval(cueTimer);
-		cueTimerIsRunning = 0;
-	}
-	for (var i = 0; i < 16; i++) {
-		if (ballTimerIsRunning[i]) {
-			clearInterval(ballTimer[i]);
-			ballTimerIsRunning[i];
-			opacity[i] = 0;
-		}
-		if (explosiveTimerIsRunning[i]) {
-			clearInterval(explosiveTimer[i]);
-			explosiveTimerIsRunning[i] = 0;
-		}
-	}
-	*/
+function endGame() {
 	var grad = context.createLinearGradient(320,170,320,190);
 	grad.addColorStop(0,"yellow");
 	grad.addColorStop(1,"rgb(255,102,0)");
@@ -1737,24 +1716,7 @@ function endGame() {     // You Win Text function
 	},5000);
 }
 
-function loseGame() {     // You Win Text function
-	/*
-	if (myTimerIsRunning) {
-		clearInterval(myTimer);
-		myTimerIsRunning = 0;
-	}
-	if (cueTimerIsRunning) {
-		clearInterval(cueTimer);
-		cueTimerIsRunning = 0;
-	}
-	for (var i = 0; i < 16; i++) {
-		if (ballTimerIsRunning[i]) {
-			clearInterval(ballTimer[i]);
-			ballTimerIsRunning[i] = 0;
-			opacity[i] = 0;
-		}
-	}
-	*/
+function loseGame() {
 	var grad = context.createLinearGradient(320,170,320,190);
 	grad.addColorStop(0,"yellow");
 	grad.addColorStop(1,"rgb(255,102,0)");
@@ -1844,3 +1806,4 @@ export class PoolDynamite extends React.Component {
     }
 }
 
+export {PoolDynamite as default};

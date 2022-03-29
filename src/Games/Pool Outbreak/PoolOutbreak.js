@@ -1356,18 +1356,6 @@ function drawBall() {
 			explodingContext.globalAlpha = opacity[i];
 			explodingContext.drawImage(glowImage,xs[i]-r,ys[i]-r);
 			explodingContext.restore();
-			/*
-			var grad = explodingContext.createRadialGradient(Math.round(xs[i]-r/2),Math.round(ys[i]-r/2),0,Math.round(xs[i]-r/2),Math.round(ys[i]-r/2),(1+1/Math.sqrt(2))*r);
-			grad.addColorStop(0,"rgba(255,255,255," + opacity[i] + ")");
-			grad.addColorStop(0.2,"rgba(255,0,0," + opacity[i] + ")");
-			grad.addColorStop(1,"rgba(0,0,0," + opacity[i] + ")");
-			explodingContext.fillStyle = grad;
-			explodingContext.beginPath();
-			explodingContext.moveTo(xs[i],ys[i]);
-			explodingContext.arc(xs[i],ys[i],r,0,2*Math.PI);
-			explodingContext.closePath();
-			explodingContext.fill();
-			*/
 		}
 		if (explosiveIndex[i] != -1) {
 			explodingContext.drawImage(explosiveImages[explosiveIndex[i]],xs[i]-r-40,ys[i]-r-40);
@@ -1701,28 +1689,7 @@ function explosionSound() {
 	lastAudioSource = audioSource;
 }
 
-function endGame() {     // You Win Text function
-	/*
-	if (myTimerIsRunning) {
-		clearInterval(myTimer);
-		myTimerIsRunning = 0;
-	}
-	if (cueTimerIsRunning) {
-		clearInterval(cueTimer);
-		cueTimerIsRunning = 0;
-	}
-	for (var i = 0; i < 16; i++) {
-		if (ballTimerIsRunning[i]) {
-			clearInterval(ballTimer[i]);
-			ballTimerIsRunning[i];
-			opacity[i] = 0;
-		}
-		if (explosiveTimerIsRunning[i]) {
-			clearInterval(explosiveTimer[i]);
-			explosiveTimerIsRunning[i] = 0;
-		}
-	}
-	*/
+function endGame() {
 	var grad = context.createLinearGradient(320,170,320,190);
 	grad.addColorStop(0,"yellow");
 	grad.addColorStop(1,"rgb(255,102,0)");
@@ -1758,24 +1725,7 @@ function endGame() {     // You Win Text function
 	},5000);
 }
 
-function loseGame() {     // You Win Text function
-	/*
-	if (myTimerIsRunning) {
-		clearInterval(myTimer);
-		myTimerIsRunning = 0;
-	}
-	if (cueTimerIsRunning) {
-		clearInterval(cueTimer);
-		cueTimerIsRunning = 0;
-	}
-	for (var i = 0; i < 16; i++) {
-		if (ballTimerIsRunning[i]) {
-			clearInterval(ballTimer[i]);
-			ballTimerIsRunning[i] = 0;
-			opacity[i] = 0;
-		}
-	}
-	*/
+function loseGame() {
 	var grad = context.createLinearGradient(320,170,320,190);
 	grad.addColorStop(0,"yellow");
 	grad.addColorStop(1,"rgb(255,102,0)");
@@ -1865,3 +1815,4 @@ export class PoolOutbreak extends React.Component {
     }
 }
 
+export {PoolOutbreak as default};

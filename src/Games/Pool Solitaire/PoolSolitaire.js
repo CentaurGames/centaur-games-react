@@ -964,3 +964,5 @@ export class PoolSolitaire extends React.Component {
         );
     }
 }
+
+export {PoolSolitaire as default};

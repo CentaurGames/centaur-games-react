@@ -1535,3 +1535,4 @@ export class PoolChampions extends React.Component {
     }
 }
 
+export {PoolChampions as default};

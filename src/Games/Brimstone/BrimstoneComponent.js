@@ -1304,79 +1304,7 @@ function walk(currentI,currentJ,newI,newJ,frame)
 		}, playerTimer);
 	})(currentI,currentJ,newI,newJ,frame);
 }
-/*
-function TargetTracker(currentI,currentJ,avoidDirection,stepNumber) {
-	this.i = currentI,
-	this.j = currentJ,
-	this.avoid = avoidDirection,
-	this.step = stepNumber,
-	this.findMinimumDistanceSquared = function distanceFinder() {
-		var maxSteps = 5;
-		if (this.step >= maxSteps) {
-			if (this.i < 0 || this.j < 0 || this.i >= grid.length || this.j >= grid[this.i].length || grid[this.i][this.j] < 0) return 10000;
-			return (this.i-targetI)*(this.i-targetI) + (this.j-targetJ)*(this.j-targetJ);
-		}
-		var tracker = new TargetTracker(this.i,this.j,-1,maxSteps);
-		var distance = distanceFinder.call(tracker);
-		if (distance >= 10000) return distance;
-		var upTracker = new TargetTracker(this.i,this.j-1,1,this.step+1);
-		var downTracker = new TargetTracker(this.i,this.j+1,0,this.step+1);
-		var leftTracker = new TargetTracker(this.i-1,this.j,3,this.step+1);
-		var rightTracker = new TargetTracker(this.i+1,this.j,2,this.step+1);
-		var upDistSqrd = distanceFinder.call(upTracker);
-		var downDistSqrd = distanceFinder.call(downTracker);
-		var leftDistSqrd = distanceFinder.call(leftTracker);
-		var rightDistSqrd = distanceFinder.call(rightTracker);
-		var minDistSqrd = (upDistSqrd < downDistSqrd ? upDistSqrd : downDistSqrd);
-		minDistSqrd = (minDistSqrd < leftDistSqrd ? minDistSqrd : leftDistSqrd);
-		minDistSqrd = (minDistSqrd < rightDistSqrd ? minDistSqrd : rightDistSqrd);
-		minDistSqrd = (minDistSqrd < distance ? minDistSqrd : distance);
-		return minDistSqrd;
-	},
-	this.findMinimumSteps = function stepsFinder() {
-		var maxSteps = 5;
-		if (this.i === targetI && this.j === targetJ) return this.step;
-		if (this.step >= maxSteps) return 10000;
-		if (this.i < 0 || this.j < 0 || this.i >= grid.length || this.j >= grid[this.i].length || grid[this.i][this.j] < 0) return 10000;
-		var upTracker = new TargetTracker(this.i,this.j-1,1,this.step+1);
-		var downTracker = new TargetTracker(this.i,this.j+1,0,this.step+1);
-		var leftTracker = new TargetTracker(this.i-1,this.j,3,this.step+1);
-		var rightTracker = new TargetTracker(this.i+1,this.j,2,this.step+1);
-		var upSteps = stepsFinder.call(upTracker);
-		var downSteps = stepsFinder.call(downTracker);
-		var leftSteps = stepsFinder.call(leftTracker);
-		var rightSteps = stepsFinder.call(rightTracker);
-		var minSteps = (upSteps < downSteps ? upSteps : downSteps);
-		minSteps = (minSteps < leftSteps ? minSteps : leftSteps);
-		minSteps = (minSteps < rightSteps ? minSteps : rightSteps);
-		return minSteps;
-	},
-	this.rankDirections = function() {
-		var upTracker = new TargetTracker(this.i,this.j-1,1,this.step+1);
-		var downTracker = new TargetTracker(this.i,this.j+1,0,this.step+1);
-		var leftTracker = new TargetTracker(this.i-1,this.j,3,this.step+1);
-		var rightTracker = new TargetTracker(this.i+1,this.j,2,this.step+1);
-		var upDistSqrd = upTracker.findMinimumDistanceSquared();
-		var downDistSqrd = downTracker.findMinimumDistanceSquared();
-		var leftDistSqrd = leftTracker.findMinimumDistanceSquared();
-		var rightDistSqrd = rightTracker.findMinimumDistanceSquared();
-		var distanceSquaredArray = [leftDistSqrd,rightDistSqrd,upDistSqrd,downDistSqrd];
-		var zeroes = 0;
-		for (var i = 0; i < distanceSquaredArray.length; i++) {
-			if (distanceSquaredArray[i] === 0) zeroes++;
-		}
-		if (zeroes > 1) {
-			upDistSqrd = upTracker.findMinimumSteps();
-			downDistSqrd = downTracker.findMinimumSteps();
-			leftDistSqrd = leftTracker.findMinimumSteps();
-			rightDistSqrd = rightTracker.findMinimumSteps();
-			distanceSquaredArray = [leftDistSqrd,rightDistSqrd,upDistSqrd,downDistSqrd];
-		}
-		var directionsRanked = rankDirectionsByDistance(distanceSquaredArray);
-		return directionsRanked;
-	}
-}
-*/
+
 function TargetTracker(currentI,currentJ,avoidDirection,stepNumber) {
 	this.i = currentI,
 	this.j = currentJ,
@@ -1952,3 +1880,5 @@ export class Brimstone extends React.Component {
         );
     }
 }
+
+export {Brimstone as default};

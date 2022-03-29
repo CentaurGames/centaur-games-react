@@ -1,0 +1,28 @@
+.playing-card__container {
+    overflow: hidden;
+    position: relative;
+    border-radius: 6%;
+}
+
+.playing-card__container--selected {
+    border: 1px solid blue;
+}
+
+.playing-card__image {
+    width: 102.5%;
+    height: 102%;
+    position: relative;
+    left: -1%;
+    margin-top: -1%;
+}
+
+.playing-card--selected {
+    position: absolute;
+    width: 100.5%;
+    height: 100.5%;
+    top: -0.25%;
+    left: -0.25%;
+    background-color: rgba(153,204,255,0.6);
+    border: 3px solid blue;
+    border-radius: 6%;
+}

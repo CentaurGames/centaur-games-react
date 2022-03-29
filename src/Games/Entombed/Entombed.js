@@ -2102,34 +2102,15 @@ function arrowKey(keycode)
 
 function gameOverSequence()
 {
-	/*
-	if (lastAudioSource) {
-		lastAudioSource.loop = false;
-		lastAudioSource.stop();
-	}
-	*/
 	gameOver = 1;
 	score = 0;
 	embersFound = 0;
 	numberOfLives = 0;
 	isReplayOn = 1;
-	//drawScore();
 	dimmerContext.fillStyle = "black";
 	dimmerContext.fillRect(0,0,420,420);
 	scoreContext.clearRect(0,0,420,460);
 	scoreContext.drawImage(screenshotImage,0,0);
-	/*
-	textContext.fillStyle = "gold";
-	textContext.font = "20px Georgia";
-	textContext.textAlign = "center";
-	textContext.textBaseline = "bottom";
-	textContext.fillRect(Math.round((canvasWidth-pixelWidth)/2)-3*pixelWidth,Math.round(canvasHeight/2)-pixelHeight,7*pixelWidth,2*pixelHeight);
-	textContext.fillStyle = "indigo";
-	textContext.fillText("GAME OVER",Math.round(canvasWidth/2),Math.round(canvasHeight/2)+2);
-	textContext.textBaseline = "top";
-	textContext.font = "10px Georgia";
-	textContext.fillText("CLICK TO REPLAY",Math.round(canvasWidth/2),Math.round(canvasHeight/2)+5);
-	*/
 }
 
 function resetPlayerPosition() {
@@ -2491,3 +2472,5 @@ export class Entombed extends React.Component {
         );
     }
 }
+
+export {Entombed as default};

@@ -836,3 +836,5 @@ export class MahjongMycenaean extends React.Component {
         );
     }
 }
+
+export {MahjongMycenaean as default};

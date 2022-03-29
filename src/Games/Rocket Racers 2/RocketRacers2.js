@@ -1655,3 +1655,4 @@ export class RocketRacers2 extends React.Component {
     }
 }
 
+export {RocketRacers2 as default};

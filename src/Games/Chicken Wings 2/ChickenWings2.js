@@ -620,3 +620,5 @@ export class ChickenWings2 extends React.Component {
         );
     }
 }
+
+export {ChickenWings2 as default};

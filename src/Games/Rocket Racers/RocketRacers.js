@@ -1427,3 +1427,5 @@ export class RocketRacers extends React.Component {
         );
     }
 }
+
+export {RocketRacers as default};

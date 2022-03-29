@@ -645,3 +645,5 @@ export class LumpyDumplings3 extends React.Component {
         );
     }
 }
+
+export {LumpyDumplings3 as default};

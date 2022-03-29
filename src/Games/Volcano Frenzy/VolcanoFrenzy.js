@@ -1469,3 +1469,5 @@ export class VolcanoFrenzy extends React.Component {
         );
     }
 }
+
+export {VolcanoFrenzy as default};
