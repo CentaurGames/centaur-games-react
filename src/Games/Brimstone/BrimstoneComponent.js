@@ -1661,7 +1661,7 @@ function animateTransition() {
 	isTransitionRendering = 1;
 	if (isTransitionAudioLoaded) playTransitionSound();
 	gameOver = 1;
-	isDimmerCanvasDrawing = 1;
+	dimmerCanvasIsDrawing = 1;
 	var counter = 0;
 	var numberOfFrames = 20;
 	var maxRadius = dimmerRadius;
@@ -1683,7 +1683,7 @@ function animateTransition() {
 			if (currentLevel >= numberOfLevels) {
 				victorySequence();
 			} else {
-				isDimmerCanvasDrawing = 0;
+				dimmerCanvasIsDrawing = 0;
 				initializeGrid();
 			}
 		}
