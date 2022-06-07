@@ -1,5 +1,6 @@
 import * as React from "react";
 import loadable from "@loadable/component";
+import { LoadingIndicator } from "./LoadingIndicator";
 
 /**
  * props:
@@ -103,7 +104,9 @@ export class GameComponent extends React.Component {
             default:
                 return <></>;
         }
-        return <Game fallback={<></>} />
+        return (
+            <Game fallback={<LoadingIndicator />} />
+        );
     }
 }
 
