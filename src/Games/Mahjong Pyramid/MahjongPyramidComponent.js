@@ -2,6 +2,7 @@ import * as React from "react";
 import {imageSources, backgroundImageURL} from "./MahjongPyramidImageSources";
 import backgroundAudioURL from "./backgroundAudio.mp3";
 import swipeAudioURL from "../Mahjong Alchemy/swipeAudio.mp3";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var scrollPreventCanvas, imageCanvas, backgroundCanvas, tileCanvas, scoreCanvas;
 
@@ -695,6 +696,7 @@ function randomizeGrid() {
 	}
 	//rescaleCanvases();
 	hasGameBegun = 1;
+	stopGlobalLoadingIndicator();
 }
 
 function createGrid() {
@@ -806,6 +808,7 @@ function sketch() {
 
 export class MahjongPyramid extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         imageCanvas = document.getElementById("imgCanvas");
         imageContext = imageCanvas.getContext("2d");
