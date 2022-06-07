@@ -1,5 +1,6 @@
 import * as React from "react";
 import loadable from "@loadable/component";
+import { LoadingIndicator } from "./LoadingIndicator";
 
 /**
  * props:
@@ -8,98 +9,104 @@ import loadable from "@loadable/component";
  */
 export class GameComponent extends React.Component {
     render() {
+        let Game;
         switch (this.props.gameName) {
             case "Brimstone":
-                const Brimstone = loadable(() => import("../Games/Brimstone/BrimstoneComponent"));
-                return <Brimstone fallback={<></>} />;
+                Game = loadable(() => import("../Games/Brimstone/BrimstoneComponent"));
+                break;
             case "BubbleShooter":
-                const BubbleShooter = loadable(() => import("../Games/Bubble Shooter/BubbleShooter"));
-                return <BubbleShooter fallback={<></>} />;
+                Game = loadable(() => import("../Games/Bubble Shooter/BubbleShooter"));
+                break;
             case "ChickenWings":
-                const ChickenWings = loadable(() => import("../Games/Chicken Wings/ChickenWings"));
-                return <ChickenWings fallback={<></>} />;
+                Game = loadable(() => import("../Games/Chicken Wings/ChickenWings"));
+                break;
             case "ChickenWings2":
-                const ChickenWings2 = loadable(() => import("../Games/Chicken Wings 2/ChickenWings2"));
-                return <ChickenWings2 fallback={<></>} />;
+                Game = loadable(() => import("../Games/Chicken Wings 2/ChickenWings2"));
+                break;
             case "ChickenWings3":
-                const ChickenWings3 = loadable(() => import("../Games/Chicken Wings 3/ChickenWings3"));
-                return <ChickenWings3 fallback={<></>} />;
+                Game = loadable(() => import("../Games/Chicken Wings 3/ChickenWings3"));
+                break;
             case "EightBallPool":
-                const EightBallPool = loadable(() => import("../Games/Eight-Ball Pool/EightBallPool"));
-                return <EightBallPool fallback={<></>} />;
+                Game = loadable(() => import("../Games/Eight-Ball Pool/EightBallPool"));
+                break;
             case "Entombed":
-                const Entombed = loadable(() => import("../Games/Entombed/Entombed"));
-                return <Entombed fallback={<></>} />;
+                Game = loadable(() => import("../Games/Entombed/Entombed"));
+                break;
             case "LumpyDumplings":
-                const LumpyDumplings = loadable(() => import("../Games/Lumpy Dumplings/LumpyDumplings"));
-                return <LumpyDumplings fallback={<></>} />;
+                Game = loadable(() => import("../Games/Lumpy Dumplings/LumpyDumplings"));
+                break;
             case "LumpyDumplings2":
-                const LumpyDumplings2 = loadable(() => import("../Games/Lumpy Dumplings 2/LumpyDumplings2"));
-                return <LumpyDumplings2 fallback={<></>} />;
+                Game = loadable(() => import("../Games/Lumpy Dumplings 2/LumpyDumplings2"));
+                break;
             case "LumpyDumplings3":
-                const LumpyDumplings3 = loadable(() => import("../Games/Lumpy Dumplings 3/LumpyDumplings3"));
-                return <LumpyDumplings3 fallback={<></>} />;
+                Game = loadable(() => import("../Games/Lumpy Dumplings 3/LumpyDumplings3"));
+                break;
             case "MahjongAlchemy":
-                const MahjongAlchemy = loadable(() => import("../Games/Mahjong Alchemy/MahjongAlchemy"));
-                return <MahjongAlchemy fallback={<></>} />;
+                Game = loadable(() => import("../Games/Mahjong Alchemy/MahjongAlchemy"));
+                break;
             case "MahjongClassic":
-                const MahjongClassic = loadable(() => import("../Games/Mahjong Classic/MahjongClassic"));
-                return <MahjongClassic fallback={<></>} />;
+                Game = loadable(() => import("../Games/Mahjong Classic/MahjongClassic"));
+                break;
             case "MahjongEmoji":
-                const MahjongEmoji = loadable(() => import("../Games/Mahjong Emoji/MahjongEmoji"));
-                return <MahjongEmoji fallback={<></>} />;
+                Game = loadable(() => import("../Games/Mahjong Emoji/MahjongEmoji"));
+                break;
             case "MahjongMycenaean":
-                const MahjongMycenaean = loadable(() => import("../Games/Mahjong Mycenaean/MahjongMycenaean"));
-                return <MahjongMycenaean fallback={<></>} />;
+                Game = loadable(() => import("../Games/Mahjong Mycenaean/MahjongMycenaean"));
+                break;
             case "MahjongPyramid":
-                const MahjongPyramid = loadable(() => import("../Games/Mahjong Pyramid/MahjongPyramidComponent"));
-                return <MahjongPyramid fallback={<></>} />;
+                Game = loadable(() => import("../Games/Mahjong Pyramid/MahjongPyramidComponent"));
+                break;
             case "MahjongZodiac":
-                const MahjongZodiac = loadable(() => import("../Games/Mahjong Zodiac/MahjongZodiac"));
-                return <MahjongZodiac fallback={<></>} />;
+                Game = loadable(() => import("../Games/Mahjong Zodiac/MahjongZodiac"));
+                break;
             case "Minesweeper":
-                const Minesweeper = loadable(() => import("../Games/Minesweeper/Minesweeper"));
-                return <Minesweeper fallback={<></>} />;
+                Game = loadable(() => import("../Games/Minesweeper/Minesweeper"));
+                break;
             case "PoolChampions":
-                const PoolChampions = loadable(() => import("../Games/Pool Champions/PoolChampionsComponent"));
-                return <PoolChampions fallback={<></>} />;
+                Game = loadable(() => import("../Games/Pool Champions/PoolChampionsComponent"));
+                break;
             case "PoolDynamite":
-                const PoolDynamite = loadable(() => import("../Games/Pool Dynamite/PoolDynamite"));
-                return <PoolDynamite fallback={<></>} />;
+                Game = loadable(() => import("../Games/Pool Dynamite/PoolDynamite"));
+                break;
             case "PoolOutbreak":
-                const PoolOutbreak = loadable(() => import("../Games/Pool Outbreak/PoolOutbreak"));
-                return <PoolOutbreak fallback={<></>} />;
+                Game = loadable(() => import("../Games/Pool Outbreak/PoolOutbreak"));
+                break;
             case "PoolSolitaire":
-                const PoolSolitaire = loadable(() => import("../Games/Pool Solitaire/PoolSolitaire"));
-                return <PoolSolitaire fallback={<></>} />;
+                Game = loadable(() => import("../Games/Pool Solitaire/PoolSolitaire"));
+                break;
             case "RocketRacers":
-                const RocketRacers = loadable(() => import("../Games/Rocket Racers/RocketRacers"));
-                return <RocketRacers fallback={<></>} />;
+                Game = loadable(() => import("../Games/Rocket Racers/RocketRacers"));
+                break;
             case "RocketRacers2":
-                const RocketRacers2 = loadable(() => import("../Games/Rocket Racers 2/RocketRacers2"));
-                return <RocketRacers2 fallback={<></>} />;
+                Game = loadable(() => import("../Games/Rocket Racers 2/RocketRacers2"));
+                break;
             case "RocketRacersNitro":
-                const RocketRacersNitro = loadable(() => import("../Games/Rocket Racers Nitro/RocketRacersNitro"));
-                return <RocketRacersNitro fallback={<></>} />;
+                Game = loadable(() => import("../Games/Rocket Racers Nitro/RocketRacersNitro"));
+                break;
             case "Snake":
-                const Snake = loadable(() => import("../Games/Snake/SnakeComponent"));
-                return <Snake fallback={<></>} />;
+                Game = loadable(() => import("../Games/Snake/SnakeComponent"));
+                break;
             case "SpeedPool":
-                const SpeedPool = loadable(() => import("../Games/Speed Pool/SpeedPool"));
-                return <SpeedPool fallback={<></>} />;
+                Game = loadable(() => import("../Games/Speed Pool/SpeedPool"));
+                break;
             case "StraightPool":
-                const StraightPool = loadable(() => import("../Games/Straight Pool/StraightPool"));
-                return <StraightPool fallback={<></>} />;
+                Game = loadable(() => import("../Games/Straight Pool/StraightPool"));
+                break;
             case "UltimateRocketRacers":
-                const UltimateRocketRacers = loadable(() => import("../Games/Ultimate Rocket Racers/UltimateRocketRacers"));
-                return <UltimateRocketRacers fallback={<></>} />;
+                Game = loadable(() => import("../Games/Ultimate Rocket Racers/UltimateRocketRacers"));
+                break;
             case "VolcanoFrenzy":
-                const VolcanoFrenzy = loadable(() => import("../Games/Volcano Frenzy/VolcanoFrenzy"));
-                return <VolcanoFrenzy fallback={<></>} />;
+                Game = loadable(() => import("../Games/Volcano Frenzy/VolcanoFrenzy"));
+                break;
             case "VolcanoFrenzy2":
-                const VolcanoFrenzy2 = loadable(() => import("../Games/Volcano Frenzy 2/VolcanoFrenzy2"));
-                return <VolcanoFrenzy2 fallback={<></>} />;
+                Game = loadable(() => import("../Games/Volcano Frenzy 2/VolcanoFrenzy2"));
+                break;
+            default:
+                return <></>;
         }
+        return (
+            <Game fallback={<LoadingIndicator />} />
+        );
     }
 }
 

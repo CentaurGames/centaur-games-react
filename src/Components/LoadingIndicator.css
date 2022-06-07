@@ -1,0 +1,13 @@
+.loading-indicator__root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.loading-indicator__text {
+    color: white;
+    margin-top: 20px;
+}
