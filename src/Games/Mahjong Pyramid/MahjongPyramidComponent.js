@@ -693,10 +693,10 @@ function randomizeGrid() {
 	if (!hasGameBegun) {
 		setEventListeners();
 		rescaleCanvases();
+		stopGlobalLoadingIndicator();
 	}
 	//rescaleCanvases();
 	hasGameBegun = 1;
-	stopGlobalLoadingIndicator();
 }
 
 function createGrid() {
