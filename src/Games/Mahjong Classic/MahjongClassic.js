@@ -2,6 +2,7 @@ import * as React from "react";
 import {imageSources, backgroundImageURL} from "./MahjongClassicImageSources";
 import backgroundAudioURL from "./backgroundAudio.mp3";
 import swipeAudioURL from "../Mahjong Alchemy/swipeAudio.mp3";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var scrollPreventCanvas, imageCanvas, backgroundCanvas, tileCanvas, scoreCanvas;
 
@@ -679,6 +680,7 @@ function randomizeGrid() {
 	if (!hasGameBegun) {
 		setEventListeners();
 		rescaleCanvases();
+		stopGlobalLoadingIndicator();
 	}
 	//rescaleCanvases();
 	hasGameBegun = 1;
@@ -769,6 +771,7 @@ function sketch() {
 
 export class MahjongClassic extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = this.refs.scrollPreventCanvas;
         imageCanvas = this.refs.imageCanvas;
         backgroundCanvas = this.refs.backgroundCanvas;
