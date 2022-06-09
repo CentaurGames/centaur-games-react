@@ -1,5 +1,6 @@
 import * as React from "react";
 import audioURL from "../Eight-Ball Pool/audio.mp3";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var scrollPreventCanvas, myCanvas, ballCanvas, tableCanvas, cueCanvas, cursorCanvas, imageCanvas;
 
@@ -148,6 +149,7 @@ function createBallImage(i) {
 		scrollPreventCanvas.addEventListener("touchmove",function(evt) {
 			evt.preventDefault();
 		});
+		stopGlobalLoadingIndicator();
 		myTimer = setInterval(moveBall,1);
 		return;
 	}
@@ -931,6 +933,7 @@ function checkIfGameIsOver() {
 
 export class PoolSolitaire extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         myCanvas = document.getElementById("myCanvas");
         context = myCanvas.getContext("2d");
