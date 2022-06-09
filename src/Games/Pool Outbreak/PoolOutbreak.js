@@ -1,6 +1,7 @@
 import * as React from "react";
 import audioURL from "../Eight-Ball Pool/audio.mp3";
 import explosionURL from "../Pool Dynamite/explosion.mp3";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var scrollPreventCanvas, myCanvas, ballCanvas, tableCanvas, cueCanvas, cursorCanvas, imageCanvas, floorCanvas, explodingCanvas, livesCanvas;
 
@@ -191,6 +192,7 @@ function smoke7() {
 			evt.preventDefault();
 		});
 		window.addEventListener("resize",rescaleCanvases);
+		stopGlobalLoadingIndicator();
 		myTimer = setInterval(moveBall,1);
 		myTimerIsRunning = 1;
 		areImagesLoaded = 1;
@@ -1772,6 +1774,7 @@ function checkIfGameIsOver() {
 
 export class PoolOutbreak extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         myCanvas = document.getElementById("myCanvas");
         context = myCanvas.getContext("2d");

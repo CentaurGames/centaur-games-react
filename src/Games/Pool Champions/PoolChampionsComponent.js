@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as THREE from "three";
 import audioURL from "../Eight-Ball Pool/audio.mp3";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var scrollPreventCanvas, myCanvas, ballCanvas, tableCanvas, cueCanvas, cursorCanvas, imageCanvas, floorCanvas, scoreCanvas, shinyCanvas, shadowCanvas;
 
@@ -144,6 +145,7 @@ function loadMesh(texture,i) {
 			evt.preventDefault();
 		});
 		window.addEventListener("resize",rescaleCanvases);
+		stopGlobalLoadingIndicator();
 		myTimer = setInterval(moveBall,1);
 		return;
 	}
@@ -1490,6 +1492,7 @@ function checkIfGameIsOver() {
 
 export class PoolChampions extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         myCanvas = document.getElementById("myCanvas");
         context = myCanvas.getContext("2d");
