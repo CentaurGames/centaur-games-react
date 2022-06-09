@@ -15,7 +15,9 @@ export function GlobalLoadingIndicator(props) {
 
     return (
         <>
-            {props.children}
+            <div style={{visibility: isLoading ? "hidden" : "visible"}}>
+                {props.children}
+            </div>
             {isLoading && <LoadingIndicator />}
         </>
     );
