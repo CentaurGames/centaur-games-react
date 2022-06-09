@@ -1,5 +1,6 @@
 import * as React from "react";
 import audioURL from "../Eight-Ball Pool/audio.mp3";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var scrollPreventCanvas, myCanvas, ballCanvas, tableCanvas, cueCanvas, cursorCanvas, imageCanvas, floorCanvas, scoreCanvas;
 
@@ -235,6 +236,7 @@ function createBallImage(i) {
 			evt.preventDefault();
 		});
 		window.addEventListener("resize",rescaleCanvases);
+		stopGlobalLoadingIndicator();
 		myTimer = setInterval(moveBall,1);
 		return;
 	}
@@ -1160,6 +1162,7 @@ function checkIfGameIsOver() {
 
 export class StraightPool extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         myCanvas = document.getElementById("myCanvas");
         context = myCanvas.getContext("2d");
