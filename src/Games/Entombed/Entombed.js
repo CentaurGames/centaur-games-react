@@ -3,6 +3,7 @@ import {mazeImageSourceLevel1, mazeImageSourceLevel2, mazeImageSourceLevel3, maz
 import drumsURL from "./drums.mp3";
 import deathURL from "./death.mp3";
 import transitionURL from "./transition.mp3";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var scrollPreventCanvas, imageCanvas, hiddenCanvas, waterCanvas, backgroundCanvas, trapsCanvas, playerCanvas, monsterCanvas, shadowCanvas, textCanvas, overCanvas, glyphCanvas, underCanvas, dimmerCanvas, footstepsCanvas, coinsCanvas, scoreCanvas, powerupsCanvas;
 
@@ -1273,6 +1274,7 @@ function drawSpiderImages(index,direction)
 		document.onkeyup = function(e) {
 			if (e.keyCode == lastkeycode) {keyReleased = 1;}
 		};
+		stopGlobalLoadingIndicator();
 	} else {
 		monsterImages[1][direction][index].src = spiderImageSources[index][direction];
 		monsterImages[1][direction][index].onload = function() {
@@ -2406,6 +2408,7 @@ function play()
 
 export class Entombed extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         imageCanvas = document.getElementById("imgCanvas");
         imageContext = imageCanvas.getContext("2d");

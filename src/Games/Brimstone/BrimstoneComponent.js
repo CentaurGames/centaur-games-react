@@ -3,6 +3,7 @@ import {lightningDataURLs, mazeImageSourceLevels, underImageSourceLevels, overIm
 import drumsURL from "./drums.mp3";
 import deathURL from "./death.mp3";
 import transitionURL from "./transition.mp3";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var scrollPreventCanvas, imageCanvas, hiddenCanvas, waterCanvas, backgroundCanvas, playerCanvas, shadowCanvas, textCanvas, overCanvas, glyphCanvas, underCanvas, dimmerCanvas, footstepsCanvas, coinsCanvas, scoreCanvas, powerupsCanvas;
 
@@ -633,6 +634,7 @@ function drawUnderImage(index) {
 		document.onkeyup = function(e) {
 			if (e.keyCode == lastkeycode) {keyReleased = 1;}
 		};
+		stopGlobalLoadingIndicator();
 		return;
 	}
 	underImages[index] = new Image(largeImageWidth,largeImageHeight);
@@ -1820,6 +1822,7 @@ function play()
 
 export class Brimstone extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         imageCanvas = document.getElementById("imgCanvas");
         imageContext = imageCanvas.getContext("2d");
