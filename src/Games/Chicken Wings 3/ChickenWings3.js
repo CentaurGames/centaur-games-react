@@ -1,6 +1,7 @@
 import * as React from "react";
 import {treeDataURL, mushroomDataURL, eggDataURL, replayDataURL, scoreDataURL} from "./ChickenWings3ImageSources";
 import backgroundAudioURL from "../Chicken Wings/backgroundAudio.mp3";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var scrollPreventCanvas, treeCanvas, mushroomCanvas, eggCanvas, replayCanvas;
 
@@ -534,6 +535,7 @@ function afterImagesAreLoaded() {
 	setEventListeners();
 	setTimingEvents();
 	rescaleCanvases();
+	stopGlobalLoadingIndicator();
 }
 
 function loadScoreImage() {
@@ -600,6 +602,7 @@ function loadTreeImage() {
 
 export class ChickenWings3 extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         treeCanvas = document.getElementById("treeCanvas");
         treeContext = treeCanvas.getContext("2d");
