@@ -1,6 +1,7 @@
 import * as React from "react";
 import pingURL from "../Rocket Racers/ping.wav";
 import explosionURL from "../Rocket Racers/explosion.mp3";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var audioContext, pingBuffer, explosionBuffer, audioVolume, lastAudioSource;
 
@@ -531,6 +532,7 @@ function startGame() {
 	gameOver = 1;
 	rescaleCanvases();
 	window.addEventListener("resize",rescaleCanvases);
+	stopGlobalLoadingIndicator();
 	screenCanvas.addEventListener("mousedown",userClick);
 	screenCanvas.addEventListener("touchstart",userClick);
 	screenCanvas.addEventListener("touchmove",function(evt) {
@@ -1621,6 +1623,7 @@ function run() {
 
 export class RocketRacers2 extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         trackCanvas = document.getElementById("trackCanvas");
         trackContext = trackCanvas.getContext("2d");
