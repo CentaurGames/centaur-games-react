@@ -1,4 +1,5 @@
 import * as React from "react";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var canvasWidth = 610;
 var canvasHeight = 600;
@@ -391,6 +392,7 @@ function drawBubbleImage(index,mag)
 			evt.preventDefault();
 		});
 		if (!gamePaused) {layerTimer = setInterval(addNewLayer,45000);}
+		stopGlobalLoadingIndicator();
 		return;
 	}
 	if (mag >= numberOfMagnificationStates)
@@ -869,6 +871,7 @@ function play()
 
 export class BubbleShooter extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         scrollPreventContext = scrollPreventCanvas.getContext("2d");
         backgroundCanvas = document.getElementById("bkgrndCanvas");
