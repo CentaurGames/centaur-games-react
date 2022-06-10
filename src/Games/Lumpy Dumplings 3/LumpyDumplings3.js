@@ -1,5 +1,6 @@
 import * as React from "react";
 import audioURL from "../Lumpy Dumplings/audio.mp3";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var scrollPreventCanvas, imageCanvas, backgroundCanvas, dumplingCanvas, scoreCanvas;
 
@@ -341,6 +342,7 @@ function drawBackgroundImage() {
 		}
 		setEventListeners();
 		rescaleAllCanvases();
+		stopGlobalLoadingIndicator();
 	}
 	//initializeGame;
 }
@@ -618,6 +620,7 @@ function run() {
 
 export class LumpyDumplings3 extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         imageCanvas = document.getElementById("imgCanvas");
         imageContext = imageCanvas.getContext("2d");
