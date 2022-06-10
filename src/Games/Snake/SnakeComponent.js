@@ -1,4 +1,5 @@
 import * as React from "react";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var delta_t = 70;
 
@@ -531,6 +532,7 @@ function play()
 
 export class Snake extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         c = document.getElementById("myCanvas");
         ctx = c.getContext("2d");
@@ -544,6 +546,7 @@ export class Snake extends React.Component {
 		document.body.scroll = "no";
 
         play();
+		stopGlobalLoadingIndicator();
     }
 
     render() {

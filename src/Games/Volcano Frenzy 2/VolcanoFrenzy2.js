@@ -1,6 +1,7 @@
 import * as React from "react";
 import {cavernImageURL, lavaImageURL, tileImageURLs, cartImageURL, coinEdgeURL, coinImageURL} from "./VolcanoFrenzy2ImageSources";
 import audioURL from "../Volcano Frenzy/audio.mp3";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var audioContext, audioVolume, audioBuffer, isAudioLoaded = 0, isAudioLoading = 0, isIOS = 0, isMobile = 0;
 
@@ -1379,6 +1380,7 @@ function initializeGrid() {
 		setLavaInterval();
 		rescaleCanvases();
 		eventListenersAreSet = 1;
+		stopGlobalLoadingIndicator();
 	} else {
 		render();
 	}
@@ -1431,6 +1433,7 @@ function loadLavaImage() {
 
 export class VolcanoFrenzy2 extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         lavaCanvas = document.getElementById("lavaCanvas");
         lavaContext = lavaCanvas.getContext("2d");
