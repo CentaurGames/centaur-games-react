@@ -1,4 +1,5 @@
 import * as React from "react";
+import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
 
 var numberOfCellsVertical = 20;
 var numberOfCellsHorizontal = 20;
@@ -281,6 +282,7 @@ function initialize() {
 	rescaleAllCanvases();
 	imagesLoaded = 1;
 	setEventListeners();
+	stopGlobalLoadingIndicator();
 }
 
 function drawSmiley2()
@@ -1083,6 +1085,7 @@ function play()
 
 export class Minesweeper extends React.Component {
     componentDidMount() {
+		startGlobalLoadingIndicator();
         scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
         numberCanvas = document.getElementById("nmbrCanvas");
         tileCanvas = document.getElementById("tlCanvas");
