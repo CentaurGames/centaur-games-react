@@ -30,3 +30,28 @@
      overflow: scroll;
  }
  
+ @media (max-width: 800px) {
+     .list-page {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding-left: 0;
+     }
+
+     .list-page .carousel-icon {
+         width: 100%;
+         margin: 0;
+         border-radius: 20%;
+     }
+
+     .list-page .wrap-div {
+         width: 50%;
+         padding: 0;
+     }
+
+     .list-page img {
+         width: 100%;
+         padding: 10%;
+         border-radius: 20%;
+     }
+ }
