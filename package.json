@@ -44,6 +44,7 @@
     "loadable-components": "^2.2.3",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
+    "react-burger-menu": "^3.0.8",
     "react-counter-input": "^0.2.1",
     "react-dom": "^16.13.1",
     "react-latex": "^1.6.0",
