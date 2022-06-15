@@ -6,10 +6,55 @@
     padding: 20px;
 }
 
+.menu-hamburger {
+    display: none;
+}
+
 .menu-bar-text {
     color: white;
     margin: 15px;
     line-height: 2;
     font-size: 17px;
     font-family: 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 900px) {
+    .menu-bar {
+        display: none;
+    }
+
+    .menu-hamburger {
+        display: inline;
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu-hamburger-placeholder {
+        margin-bottom: 75px;
+    }
+
+    .bm-burger-button {
+        width: 36px !important;
+        height: 36px !important;
+        position: fixed;
+        top: 12px;
+        right: 12px;
+    }
+
+    .bm-burger-bars {
+        background: white;
+    }
+
+    .bm-cross {
+        background: white;
+    }
+
+    .bm-menu {
+        background: currentColor;
+    }
+
+    .bm-menu-wrap {
+        margin-top: -75px;
+        width: 150px !important; 
+    }
 }
