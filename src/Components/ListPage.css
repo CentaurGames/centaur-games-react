@@ -30,7 +30,7 @@
      overflow: scroll;
  }
  
- @media (max-width: 800px) {
+ @media (max-width: 800px), (max-device-width: 812px) {
      .list-page {
          display: flex;
          flex-direction: column;
