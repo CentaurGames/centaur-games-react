@@ -44,8 +44,12 @@
          border-radius: 20%;
      }
 
+     .list-page a {
+         width: 60%;
+     }
+
      .list-page .wrap-div {
-         width: 50%;
+         width: 60%;
          padding: 0;
      }
 
