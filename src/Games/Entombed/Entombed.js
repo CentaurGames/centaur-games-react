@@ -4,6 +4,7 @@ import drumsURL from "./drums.mp3";
 import deathURL from "./death.mp3";
 import transitionURL from "./transition.mp3";
 import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
+import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
 var scrollPreventCanvas, imageCanvas, hiddenCanvas, waterCanvas, backgroundCanvas, trapsCanvas, playerCanvas, monsterCanvas, shadowCanvas, textCanvas, overCanvas, glyphCanvas, underCanvas, dimmerCanvas, footstepsCanvas, coinsCanvas, scoreCanvas, powerupsCanvas;
 
@@ -2339,7 +2340,7 @@ function rescaleAllCanvases() {
 	var scaleX = widthNeeded/520;
 	var scaleY = heightNeeded/460;
 	var scale = (scaleX < scaleY ? scaleX:scaleY);
-	scale = (scale >= 1. ? 1.:scale);
+	scale = (scale >= maxCanvasScale ? maxCanvasScale : scale);
 	var offsetY = scale*40;
 	var offsetX = 0;
 	scoreCanvas.width = Math.floor(420.*scale);

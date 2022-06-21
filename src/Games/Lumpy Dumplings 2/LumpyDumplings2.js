@@ -1,6 +1,7 @@
 import * as React from "react";
 import audioURL from "../Lumpy Dumplings/audio.mp3";
 import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
+import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
 var scrollPreventCanvas, imageCanvas, backgroundCanvas, dumplingCanvas, scoreCanvas;
 
@@ -105,7 +106,7 @@ function rescaleAllCanvases() {
 	var scaleX = window.innerWidth/1136;
 	var scaleY = window.innerHeight/640;
 	var scale = (scaleX < scaleY ? scaleX:scaleY);
-	scale = (scale >= 1. ? 1.:scale);
+	scale = (scale >= maxCanvasScale ? maxCanvasScale : scale);
 	imageCanvas.width = 0;
 	imageCanvas.height = 0;
 	//rescaleCanvas(imageCanvas,imageContext,scale);

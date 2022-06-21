@@ -2,6 +2,7 @@ import * as React from "react";
 import pingURL from "../Rocket Racers/ping.wav";
 import explosionURL from "../Rocket Racers/explosion.mp3";
 import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
+import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
 var audioContext, pingBuffer, explosionBuffer, audioVolume, lastAudioSource;
 
@@ -151,8 +152,8 @@ function rescaleCanvases() {
 	var scaleX = neededWidth/1000.;
 	var scaleY = neededHeight/700.;
 	var scale = (scaleX < scaleY ? scaleX : scaleY);
-	if (scale >= 1) {
-		scale = 1;
+	if (scale >= maxCanvasScale) {
+		scale = maxCanvasScale;
 	}
 	trackCanvas.width = Math.round(700.*scale);
 	trackCanvas.height = Math.round(700.*scale);

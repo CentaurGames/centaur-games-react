@@ -2,6 +2,7 @@ import * as React from "react";
 import {cavernImageURL, lavaImageURL, tileImageURLs, cartImageURL, coinEdgeURL, coinImageURL} from "./VolcanoFrenzy2ImageSources";
 import audioURL from "../Volcano Frenzy/audio.mp3";
 import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
+import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
 var audioContext, audioVolume, audioBuffer, isAudioLoaded = 0, isAudioLoading = 0, isIOS = 0, isMobile = 0;
 
@@ -436,7 +437,7 @@ function rescaleCanvases() {
 	var scaleX = neededWidth/canvasWidth;
 	var scaleY = neededHeight/canvasHeight;
 	var scale = (scaleX < scaleY ? scaleX : scaleY);
-	if (scale >= 1) scale = 1;
+	if (scale >= maxCanvasScale) scale = maxCanvasScale;
 	scrollPreventCanvas.width = neededWidth;
 	scrollPreventCanvas.height = neededHeight;
 	lavaCanvas.width = Math.round(canvasWidth*scale);
