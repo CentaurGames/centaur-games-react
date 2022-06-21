@@ -40,8 +40,6 @@ var imagesLoaded = 0;
 var myTimer, isMyTimerRunning = 0, secondsCounter, numberOfFlagsLeft, tapTimer, tapCounter, lastTap;
 var lastSmiley, playerIsVictorious = 0, isMobile = 0;
 
-let isFirstCallToPlay = true;
-
 function setEventListeners() {
 	document.addEventListener("click",clickStuff);
 	window.addEventListener("resize",rescaleAllCanvases);
@@ -1082,10 +1080,6 @@ function play()
 		fillNumbers();
 		renderNumbers();
 		renderTiles();
-		if (isFirstCallToPlay) {
-			rescaleAllCanvases();
-			isFirstCallToPlay = false;
-		}
 	}
 }
 
