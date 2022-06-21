@@ -2,6 +2,7 @@ import * as React from "react";
 import * as THREE from "three";
 import audioURL from "./audio.mp3";
 import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
+import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
 var scrollPreventCanvas, myCanvas, ballCanvas, tableCanvas, cueCanvas, cursorCanvas, imageCanvas, floorCanvas, scoreCanvas, shinyCanvas;
 
@@ -274,8 +275,8 @@ function rescaleCanvases() {
 	var scaleX = neededWidth/800.;
 	var scaleY = neededHeight/520.;
 	var scale = (scaleX < scaleY ? scaleX : scaleY);
-	if (scale >= 1) {
-		scale = 1;
+	if (scale >= maxCanvasScale) {
+		scale = maxCanvasScale;
 	}
 	tableCanvas.width = Math.round(700.*scale);
 	tableCanvas.height = Math.round(420.*scale);

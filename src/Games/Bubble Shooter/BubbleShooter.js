@@ -1,5 +1,6 @@
 import * as React from "react";
 import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
+import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
 var canvasWidth = 610;
 var canvasHeight = 600;
@@ -93,7 +94,7 @@ function rescaleAllCanvases() {
 	var scaleX = widthNeeded/canvasWidth;
 	var scaleY = heightNeeded/canvasHeight;
 	var scale = (scaleX < scaleY ? scaleX:scaleY);
-	scale = (scale >= 1. ? 1.:scale);
+	scale = (scale >= maxCanvasScale ? maxCanvasScale : scale);
 	scrollPreventCanvas.width = window.innerWidth;
 	scrollPreventCanvas.height = window.innerHeight;
 	for (var i = 1; i < canvases.length; i++) {

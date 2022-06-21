@@ -8,3 +8,10 @@
     justify-content: center;
     margin: 3%;
 }
+
+@media (max-width: 800px), (max-device-width: 812px) {
+    .icon-landing-page {
+        width: 100%;
+        margin: 20px;
+    }
+}
