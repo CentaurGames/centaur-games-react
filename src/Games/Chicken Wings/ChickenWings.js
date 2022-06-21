@@ -2,6 +2,7 @@ import * as React from "react";
 import {treeDataURL, mushroomDataURL, eggDataURL, replayDataURL, scoreDataURL} from "./ChickenWingsImageSources";
 import backgroundAudioURL from "./backgroundAudio.mp3";
 import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
+import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
 var scrollPreventCanvas, treeCanvas, mushroomCanvas, eggCanvas, replayCanvas;
 
@@ -364,8 +365,8 @@ function rescaleCanvases() {
 	var scaleX = neededWidth/640.;
 	var scaleY = neededHeight/1136.;
 	var scale = (scaleX < scaleY ? scaleX : scaleY);
-	if (scale >= 1) {
-		scale = 1;
+	if (scale >= maxCanvasScale) {
+		scale = maxCanvasScale;
 	}
 	treeCanvas.width = Math.round(640.*scale);
 	treeCanvas.height = Math.round(1136.*scale);

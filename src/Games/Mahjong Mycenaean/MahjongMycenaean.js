@@ -3,6 +3,7 @@ import {imageSources, backgroundImageURL} from "./MahjongMycenaeanImageSources";
 import backgroundAudioURL from "./backgroundAudio.mp3";
 import swipeAudioURL from "../Mahjong Alchemy/swipeAudio.mp3";
 import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
+import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
 var scrollPreventCanvas, imageCanvas, backgroundCanvas, tileCanvas, scoreCanvas;
 
@@ -156,8 +157,8 @@ function rescaleCanvases() {
 	var scaleX = neededWidth/1050.;
 	var scaleY = neededHeight/700.;
 	var scale = (scaleX < scaleY ? scaleX : scaleY);
-	if (scale >= 1) {
-		scale = 1;
+	if (scale >= maxCanvasScale) {
+		scale = maxCanvasScale;
 	}
 	tileCanvas.width = Math.round(tileCanvasWidth*scale);
 	tileCanvas.height = Math.round(tileCanvasHeight*scale);

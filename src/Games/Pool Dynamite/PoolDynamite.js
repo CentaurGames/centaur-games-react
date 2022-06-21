@@ -2,6 +2,7 @@ import * as React from "react";
 import audioURL from "../Eight-Ball Pool/audio.mp3";
 import explosionURL from "./explosion.mp3";
 import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
+import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
 var scrollPreventCanvas, myCanvas, ballCanvas, tableCanvas, cueCanvas, cursorCanvas, imageCanvas, floorCanvas, explodingCanvas, livesCanvas;
 
@@ -84,8 +85,8 @@ function rescaleCanvases() {
 	var scaleX = neededWidth/800.;
 	var scaleY = neededHeight/520.;
 	var scale = (scaleX < scaleY ? scaleX : scaleY);
-	if (scale >= 1) {
-		scale = 1;
+	if (scale >= maxCanvasScale) {
+		scale = maxCanvasScale;
 	}
 	tableCanvas.width = Math.round(700.*scale);
 	tableCanvas.height = Math.round(420.*scale);

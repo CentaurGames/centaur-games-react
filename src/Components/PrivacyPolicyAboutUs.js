@@ -22,7 +22,7 @@ export class PrivacyPolicyAboutUs extends React.Component {
             </div>
             {/*Sub Text*/}
             <div className="tech-support">
-                Questions? Contact us at tech.support@centaurgamesonline.com. Copyright © 2019 Centaur Games.
+                Questions? Contact us at tech.support@centaurgamesonline.com. Copyright © 2022 Centaur Games.
             </div>
       </div>
     );

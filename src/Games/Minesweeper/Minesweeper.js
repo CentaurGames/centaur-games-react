@@ -1,5 +1,6 @@
 import * as React from "react";
 import { startGlobalLoadingIndicator, stopGlobalLoadingIndicator } from "../../Components/GlobalLoadingIndicator";
+import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
 var numberOfCellsVertical = 20;
 var numberOfCellsHorizontal = 20;
@@ -172,7 +173,7 @@ function rescaleAllCanvases() {
 	var scaleX = window.innerWidth/406.;
 	var scaleY = window.innerHeight/459.;
 	var scale = (scaleX < scaleY ? scaleX : scaleY);
-	if (scale >= 1) scale = 1;
+	if (scale >= maxCanvasScale) scale = maxCanvasScale;
 	numberCanvas.width = Math.round(scale*400.);
 	numberCanvas.height = Math.round(scale*400.);
 	numberContext.scale(scale,scale);
