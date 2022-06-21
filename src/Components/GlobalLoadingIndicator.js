@@ -10,7 +10,7 @@ export function GlobalLoadingIndicator(props) {
 
     React.useEffect(() => {
         startGlobalLoadingIndicator = () => setLoading(() => true);
-        stopGlobalLoadingIndicator = () => setLoading(() => false);
+        stopGlobalLoadingIndicator = () => setTimeout(() => setLoading(() => false), 500);
     }, []);
 
     return (
