@@ -493,8 +493,7 @@ function move_forward()
 	render_pixels();
 }
 
-function play()
-{
+function initializeEventListeners() {
 	if (/Android|iPhone|iPad|iPod|webOS|Blackberry|IEMobile|Opera Mini/i.test(navigator.userAgent)) isMobile = 1; 
 	window.addEventListener("resize",rescaleAllCanvases);
 	document.onkeydown = click_stuff;
@@ -509,11 +508,13 @@ function play()
 	scrollPreventCanvas.addEventListener("touchmove",function(evt) {
 		evt.preventDefault();
 	});
+}
+
+function play()
+{
 	VX = 0;
 	VY = -1;
 	SCORE = 0;
-	ctx.clearRect(0,0,canvasWidth,canvasHeight);
-	background_ctx.clearRect(0,0,canvasWidth,canvasHeight);
 	snakex = [xmid,xmid,xmid];
 	snakey = [ymid-2,ymid-1,ymid];
 	fill_grid();
@@ -522,8 +523,6 @@ function play()
 		grid[snakex[i]][snakey[i]] = 1;
 	}
 	create_apple();
-	//render_initializer();
-	rescaleAllCanvases();
 	if (GAME_PAUSED)
 	{
 		drawButton();
@@ -545,8 +544,9 @@ export class Snake extends React.Component {
 		textContext = textCanvas.getContext("2d");
 		document.documentElement.style.overflow = "hidden";
 		document.body.scroll = "no";
-
+		initializeEventListeners();
         play();
+		rescaleAllCanvases();
 		stopGlobalLoadingIndicator();
     }
 
