@@ -1,1 +1,1 @@
-export const maxCanvasScale = window.devicePixelRatio || 1.;
+export const maxCanvasScale = window.devicePixelRatio || 1;
