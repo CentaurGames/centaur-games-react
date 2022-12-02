@@ -51,9 +51,10 @@ export class TakingAdvantageOfCanvasRotations extends React.Component {
 
           <p>
             As an example, let's say that we wish to draw an object whose center
-            is located at point (<em>x</em>,<em>y</em>), rotated by angle θ
-            about the axis point (<em>u</em>,<em>v</em>). The object we wish to
-            draw is an image of width <em>w</em> and height <em>h</em>.
+            is located at point (<em>x</em>,<em>y</em>
+            ), rotated by angle θ about the axis point (<em>u</em>,<em>v</em>).
+            The object we wish to draw is an image of width <em>w</em> and
+            height <em>h</em>.
           </p>
 
           <p>
@@ -79,9 +80,9 @@ export class TakingAdvantageOfCanvasRotations extends React.Component {
           <div style={{ color: "#808080" }}>context.translate(0,-r);</div>
 
           <p>
-            Remember that we have only translated to the <em>center</em> of the
-            image, so we need to translate again to the top-left corner. We then
-            draw the image at this location.
+            Remember that we have only translated to the 
+            <em>center</em> of the image, so we need to translate again to the
+            top-left corner. We then draw the image at this location.
           </p>
 
           <div style={{ color: "#808080" }}>context.translate(-w/2.-h/2);</div>
@@ -106,10 +107,12 @@ export class TakingAdvantageOfCanvasRotations extends React.Component {
             In addition to <em>Rocket Racers</em>, we have also used this
             technique to make the cue follow the mouse around in our pool games,
             and we similarly used it to make the bubble canon follow the cursor
-            in <em>Bubble Shooter</em>. In pool, the axis of rotation was simply
-            the tip of the cue and in <em>Bubble Shooter</em> it was the center
-            of the canon. In both cases the angle was determined by the angle
-            from the cursor's location to the axis of rotation.
+            in 
+            <em>Bubble Shooter</em>. In pool, the axis of rotation was simply
+            the tip of the cue and in 
+            <em>Bubble Shooter</em> it was the center of the canon. In both
+            cases the angle was determined by the angle from the cursor's
+            location to the axis of rotation.
           </p>
         </div>
       </div>

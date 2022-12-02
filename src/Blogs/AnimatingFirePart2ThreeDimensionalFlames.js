@@ -51,14 +51,16 @@ export class AnimatingFirePart2ThreeDimensionalFlames extends React.Component {
             idea we will use to create our three-dimensional flame.
           </p>
           <p>
-            With the coin, we had a constant <em>ω </em>set to 2π/<em>T</em>,
-            where <em>T</em> is how long it takes the coin to rotate back to the
-            same state. Here, we will create <em>N </em>fires with <em>M</em>{" "}
-            animation frames each and will set <em>ω</em> equal to 2π/<em>N</em>
-            . Each <em>step</em> of the animation, we will perform <em>N</em>{" "}
-            transformations of the canvas in the same manner that we did the
-            coin. Each transformation we will draw a different fire. For
-            example, during the <em>j</em>-th transformation of the <em>k</em>
+            With the coin, we had a constant <em>ω </em>set to 2π/
+            <em>T</em>, where <em>T</em> is how long it takes the coin to rotate
+            back to the same state. Here, we will create <em>N </em>fires with 
+            <em>M</em> animation frames each and will set <em>ω</em> equal
+            to 2π/<em>N</em>. Each <em>step</em> of the animation, we will
+            perform 
+            <em>N</em> transformations of the canvas in the same manner that we
+            did the coin. Each transformation we will draw a different fire. For
+            example, during the 
+            <em>j</em>-th transformation of the <em>k</em>
             -th step we will draw the <em>k</em>-th animation frame of the 
             <em>j</em>-th fire. This will ensure that each fire will be animated
             at a different rotation angle, and we will essentially have rotated

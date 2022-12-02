@@ -47,7 +47,8 @@ export class CreatingAnAIWhichPlaysPool extends React.Component {
           </p>
         </div>
         <p className="sub-paragraph">
-          In the <a href={getBlogUrl("MechanicsOfBilliards")}>previous post</a>
+          In the 
+          <a href={getBlogUrl("MechanicsOfBilliards")}>previous post</a>
            we found that when the cue ball hits a ball at rest, the second ball
           will move in the direction which separates their centers. Thus if we
           want the ball to move towards the pocket, we need the centers to align

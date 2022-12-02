@@ -114,15 +114,17 @@ export class TipsForCrossPlatformCompatibilityInJavascript extends React.Compone
           ahead and navigate the maze with ease. It was no longer difficult for
           the user to control the character, as the character did most of the
           work. (Read more about our obstacle-avoiding AI{" "}
-          <a href={getBlogUrl("BuildingAnAIForNavigatingObstacles")}> here</a>.)
+          <a href={getBlogUrl("BuildingAnAIForNavigatingObstacles")}> here</a>
+          .)
         </p>
         <p className="sub-paragraph">
           Since we dismissed swipe-based controls when discussing 
           <em>Entombed</em>, it should be mentioned in their defense that we
           have encountered several situations where they do the job better than
-          any other. In particular, our <em>Volcano Frenzy</em> games use a
-          swiping action to tell the cart to switch from one track to another.
-          Crucial to this is the fact that the cart knows what to do 
+          any other. In particular, our 
+          <em>Volcano Frenzy</em> games use a swiping action to tell the cart to
+          switch from one track to another. Crucial to this is the fact that the
+          cart knows what to do 
           <em>in between</em> swipes - that is, it simply follows the tracks to
           the next crossroads - rather than having the user swipe over and over
           again to make the cart move a very small distance.

@@ -33,23 +33,24 @@ export class AnimatingFirePart1TwoDimensionalFlames extends React.Component {
               The Bottom point is initially set to (<em>x0</em>,<em>y0</em>).
             </li>
             <li>
-              The Left point is initially set to (<em>x0 + </em>0.5 <em>h</em>{" "}
-              cos (<em>θ</em> - φ) , <em>y</em>
+              The Left point is initially set to (<em>x0 + </em>
+              0.5 <em>h</em> cos (<em>θ</em> - φ) , <em>y</em>
               <em>0 + </em>0.5 <em>h</em> sin (<em>θ</em> - φ)).
             </li>
             <li>
-              The Right point is initially set to (<em>x0 + </em>0.5 <em>h</em>{" "}
-              cos (<em>θ</em> + φ) , <em>y</em>
+              The Right point is initially set to (<em>x0 + </em>
+              0.5 <em>h</em> cos (<em>θ</em> + φ) , <em>y</em>
               <em>0 + </em>0.5 <em>h</em> sin (<em>θ</em> + φ)).
             </li>
             <li>
-              The Top point is initially set to (<em>x0</em> + <em>h</em> cos
+              The Top point is initially set to (<em>x0</em> + 
+              <em>h</em> cos
               <em>θ</em> , <em>y0</em> + <em>h</em> sinθ).
             </li>
             <li>
               All four points have an associated velocity, which is initially
-              set to (<em>v0</em> cos<em>θ</em> , <em>v0</em> sin<em>θ</em>) for
-              all four.
+              set to (<em>v0</em> cos<em>θ</em> , 
+              <em>v0</em> sin<em>θ</em>) for all four.
             </li>
           </ol>
           <p>
@@ -79,9 +80,9 @@ export class AnimatingFirePart1TwoDimensionalFlames extends React.Component {
             </li>
             <li>
               If the Top point is in the top half of the canvas, we step it
-              forward with a 50% probability and we <em>pin</em> it with a 50%
-              probability. Pinning the Top point means that it will no longer be
-              available for stepping forward.
+              forward with a 50% probability and we 
+              <em>pin</em> it with a 50% probability. Pinning the Top point
+              means that it will no longer be available for stepping forward.
             </li>
           </ol>
           <p>
@@ -133,19 +134,21 @@ export class AnimatingFirePart1TwoDimensionalFlames extends React.Component {
             move on to creating an entire fire. To do so, we will need three new
             variables: (<em>u</em>,<em>η,N</em>). Note that <em>u</em>{" "}
             represents the maximum speed of flames coming out of it, <em>η</em>{" "}
-            is the average angular dispersion of the flames, and <em>N</em> is
-            the number of flames that are added per step. To generate the above
-            animation, we used values of <em>u</em> = 5, <em>η</em> = 30°, and 
+            is the average angular dispersion of the flames, and 
+            <em>N</em> is the number of flames that are added per step. To
+            generate the above animation, we used values of <em>u</em> = 5, 
+            <em>η</em> = 30°, and 
             <em>N</em> = 10. With these new values, we do the following for each
             new flame added to the fire:
           </p>
           <ol className="bulleted-list">
             <li>
-              Set <em>x0</em> to half the canvas width and set <em>y0</em> to
-              the canvas height.
+              Set <em>x0</em> to half the canvas width and set 
+              <em>y0</em> to the canvas height.
             </li>
             <li>
-              Set <em>v0</em> to a random value between 0 and <em>u</em>.
+              Set <em>v0</em> to a random value between 0 and 
+              <em>u</em>.
             </li>
             <li>
               Generate a random number <em>r</em> between 0 and 1, and let 
@@ -153,9 +156,10 @@ export class AnimatingFirePart1TwoDimensionalFlames extends React.Component {
             </li>
           </ol>
           <p>
-            To step forward the fire a single time, create <em>N</em> flames of
-            these specifications and add them to the current list of flames.
-            Then step forward all of the flames in the list.
+            To step forward the fire a single time, create 
+            <em>N</em> flames of these specifications and add them to the
+            current list of flames. Then step forward all of the flames in the
+            list.
           </p>
           <p>
             It should be noted that the fire will start small and will quickly

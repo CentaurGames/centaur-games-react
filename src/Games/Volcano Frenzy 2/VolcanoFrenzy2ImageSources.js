@@ -20,4 +20,16 @@ export const lavaImageURL = _lavaImageURL;
 export const cartImageURL = _cartImageURL;
 export const coinEdgeURL = _coinEdgeURL;
 export const coinImageURL = _coinImageURL;
-export const tileImageURLs = [tileImageURLs_0, tileImageURLs_1, tileImageURLs_2, tileImageURLs_3, tileImageURLs_4, tileImageURLs_5, tileImageURLs_6, tileImageURLs_7, tileImageURLs_8, tileImageURLs_9, tileImageURLs_10];
+export const tileImageURLs = [
+  tileImageURLs_0,
+  tileImageURLs_1,
+  tileImageURLs_2,
+  tileImageURLs_3,
+  tileImageURLs_4,
+  tileImageURLs_5,
+  tileImageURLs_6,
+  tileImageURLs_7,
+  tileImageURLs_8,
+  tileImageURLs_9,
+  tileImageURLs_10
+];

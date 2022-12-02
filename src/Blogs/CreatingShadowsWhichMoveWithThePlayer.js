@@ -11,7 +11,8 @@ export class CreatingShadowsWhichMoveWithThePlayer extends React.Component {
             In this post we will be simulating the following effect, in which
             our pillars cast shadows that move as the player moves. This
             technique is one we used when creating the games <em>Entombed</em>{" "}
-            and <em>Brimstone</em>.
+            and 
+            <em>Brimstone</em>.
           </p>
           <img src={MovingShadows} width="200" height="200" />
           <p style={{ marginTop: "40px" }}>
@@ -56,10 +57,11 @@ export class CreatingShadowsWhichMoveWithThePlayer extends React.Component {
           <p>
             We have successfully found the coordinates which determine the 
             <em>inner boundary</em> of the shadow; now we need to find the
-            coordinates which determine the <em>outer boundary</em> of the
-            shadow. These points we will call (<em>u1</em>,<em>v1</em>), (
-            <em>u2</em>,<em>v2</em>), (<em>u3</em>,<em>v3</em>) and (<em>u4</em>
-            ,<em>v4</em>). To find them, we define a global scale factor 
+            coordinates which determine the 
+            <em>outer boundary</em> of the shadow. These points we will call (
+            <em>u1</em>,<em>v1</em>), (<em>u2</em>,<em>v2</em>), (<em>u3</em>,
+            <em>v3</em>) and (<em>u4</em>,<em>v4</em>). To find them, we define
+            a global scale factor 
             <em>f </em>which is the same for all pillars and determines how long
             the shadows are (a value of 0 gives no shadows, while a value of 1
             gives infinitely long shadows). With <em>f</em> defined, we can find
@@ -80,7 +82,8 @@ export class CreatingShadowsWhichMoveWithThePlayer extends React.Component {
               <em>θ1</em>)
             </li>
             <li>
-              Let <em>v1</em> = <em>y1</em> + <em>f r1 </em>sin(<em>θ1</em>)
+              Let <em>v1</em> = <em>y1</em> + <em>f r1 </em>sin(
+              <em>θ1</em>)
             </li>
             <li>
               Do the same for all of our (<em>u</em>,<em>v</em>) pairs.

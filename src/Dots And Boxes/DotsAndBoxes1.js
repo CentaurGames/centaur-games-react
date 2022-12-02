@@ -473,8 +473,15 @@ export class DotsAndBoxes1 extends React.Component {
           onCountChange={count => {
             this.setState(INITIAL_STATE(count));
           }}
-          inputStyle={{ background: "white", height: "30px", width: "80px" }}
-          wrapperStyle={{ justifyContent: "center", marginBottom: "50px" }}
+          inputStyle={{
+            background: "white",
+            height: "30px",
+            width: "80px"
+          }}
+          wrapperStyle={{
+            justifyContent: "center",
+            marginBottom: "50px"
+          }}
           btnStyle={{ color: "white", fontSize: "24px" }}
         />
         <div className="dots-and-boxes__game">

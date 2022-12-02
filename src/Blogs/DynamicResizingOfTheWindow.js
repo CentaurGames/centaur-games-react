@@ -77,11 +77,11 @@ export class DynamicResizingOfTheWindow extends React.Component {
         <p className="sub-paragraph">
           Once you've gotten rid of the scrollbar, 
           <span style={{ color: "#00ffff" }}>window.innerWidth</span> and{" "}
-          <span style={{ color: "#00ffff" }}>window.innerHeight </span>should
-          give you the correct width and height of your screen. But be careful!
-          Setting your canvases' width and height to the screen's width and
-          height will typically mess up the aspect ratio of the game and will
-          make it look skewed or stretched. Instead, we want to scale our
+          <span style={{ color: "#00ffff" }}>window.innerHeight </span>
+          should give you the correct width and height of your screen. But be
+          careful! Setting your canvases' width and height to the screen's width
+          and height will typically mess up the aspect ratio of the game and
+          will make it look skewed or stretched. Instead, we want to scale our
           canvases while keeping a constant aspect ratio. We will presume that
           you want the canvases to be as large as they can be while fitting
           inside the screen.
@@ -91,11 +91,12 @@ export class DynamicResizingOfTheWindow extends React.Component {
           canvas in <em>each direction </em>and compare them. We will use the
           largest canvas in our game to do so, since it is the limiting factor. 
           The <em>x</em>-scale is the screen width divided by the canvas'
-          original width; the <em>y</em>-scale is the screen height divided by
-          the canvas' original height. The desired scale will be the 
-          <em>smaller</em> of the <em>x</em>-scale and the <em>y</em>-scale.
-          Why? Because any scale larger than this will cause the canvas to flow
-          past the screen edge in one of the directions.
+          original width; the 
+          <em>y</em>-scale is the screen height divided by the canvas' original
+          height. The desired scale will be the 
+          <em>smaller</em> of the <em>x</em>-scale and the <em>y</em>
+          -scale. Why? Because any scale larger than this will cause the canvas
+          to flow past the screen edge in one of the directions.
         </p>
         <p className="sub-paragraph">
           Once we have obtained the scale <em>s</em>, we simply multiply all of

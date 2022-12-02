@@ -16,7 +16,8 @@ export class CreatingAScrollingEffect extends React.Component {
             Note that this effect can also be used to create the appearance of a
             background scrolling past such as the tree in <em>Chicken Wings</em>
             , and is used to create both the water in <em>Entombed</em> and the
-            lava in <em>Brimstone</em>.
+            lava in 
+            <em>Brimstone</em>.
           </p>
           <p>
             The concept is simple: take an image, double it in the vertical
@@ -31,10 +32,10 @@ export class CreatingAScrollingEffect extends React.Component {
               height of the desired canvas.
             </li>
             <li>
-              Create a second image <em>scrollImage</em> of width <em>w</em> and
-              height 2<em>h</em>. The upper half of this image is a duplicate of
-              the basis image, and the lower half of this image is also a
-              duplicate of the basis image.
+              Create a second image <em>scrollImage</em> of width 
+              <em>w</em> and height 2<em>h</em>. The upper half of this image is
+              a duplicate of the basis image, and the lower half of this image
+              is also a duplicate of the basis image.
             </li>
             <li>
               Declare a variable <em>y</em> which keeps track of the scrolling.

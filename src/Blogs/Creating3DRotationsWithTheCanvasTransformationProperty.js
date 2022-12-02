@@ -20,9 +20,10 @@ export class Creating3DRotationsWithTheCanvasTransformationProperty extends Reac
             <em>Brimstone</em>, <em>Rocket Racers 2</em> and 
             <em>Volcano Frenzy</em>, the rotating heiroglyph at the end of each
             level in <em>Entombed</em>, and the tumbling tracks that fall into
-            the cavern in <em>Volcano Frenzy</em>. In addition to making objects
-            rotate, it can be used to give 3D depth to 2D objects such as the
-            flames in <em>Brimstone</em> (we will talk more about this in a{" "}
+            the cavern in 
+            <em>Volcano Frenzy</em>. In addition to making objects rotate, it
+            can be used to give 3D depth to 2D objects such as the flames in 
+            <em>Brimstone</em> (we will talk more about this in a{" "}
             <a href={getBlogUrl("AnimatingFirePart2ThreeDimensionalFlames")}>
               later post
             </a>
@@ -54,10 +55,12 @@ export class Creating3DRotationsWithTheCanvasTransformationProperty extends Reac
             track of an entire rotation matrix. Initially that matrix will be
             set to the 3x3 identity, but every time it rotates we will multiply
             it by the appropriate matrix. For example: if our object rotates by
-            angles η, θ, and φ in the <em>x</em>, <em>y</em> and <em>z</em>{" "}
-            directions respectively, then its rotation matrix should be
-            multiplied by the corresponding elemental rotation matrix for each
-            of these directions: <em>R</em> = <em>Z</em>(φ)<em>Y</em>(θ)
+            angles η, θ, and φ in the <em>x</em>, 
+            <em>y</em> and <em>z</em> directions respectively, then its rotation
+            matrix should be multiplied by the corresponding elemental rotation
+            matrix for each of these directions: <em>R</em> = <em>Z</em>(φ)
+            <em>Y</em>
+            (θ)
             <em>X</em>(η)<em>R</em>
             <em>. </em>Note that the elemental rotation matrices should always
             be multiplied in the same order every time, and they should always

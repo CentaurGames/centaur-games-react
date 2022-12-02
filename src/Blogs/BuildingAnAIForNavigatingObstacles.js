@@ -15,16 +15,16 @@ export class BuildingAnAIForNavigatingObstacles extends React.Component {
     return (
       <div className="blog-text">
         <p className="sub-paragraph">
-          While creating <i>Brimstone</i> as a sequel to <i>Entombed</i>, our
-          development team decided to make some modifications to the AI that
-          makes the game work. Specifically, we wanted to improve the
-          target-tracking capabilities of the game - essentially the ability of
-          the character to navigate the maze in search of a target that the user
-          has clicked on. This allows our users on touchscreen devices to easily
-          tell the character where they want him to go, rather than being forced
-          to micromanage his every move (which can be quite cumbersome on a
-          small screen). This target-tracking system is showcased in the
-          following video:
+          While creating <i>Brimstone</i> as a sequel to 
+          <i>Entombed</i>, our development team decided to make some
+          modifications to the AI that makes the game work. Specifically, we
+          wanted to improve the target-tracking capabilities of the game -
+          essentially the ability of the character to navigate the maze in
+          search of a target that the user has clicked on. This allows our users
+          on touchscreen devices to easily tell the character where they want
+          him to go, rather than being forced to micromanage his every move
+          (which can be quite cumbersome on a small screen). This
+          target-tracking system is showcased in the following video:
         </p>
         {/*YouTube*/}
         <div className="youtube-blog-vid">
@@ -149,10 +149,10 @@ export class BuildingAnAIForNavigatingObstacles extends React.Component {
           </li>
           <li>
             If the square doesn't contain an obstacle and <i>n</i> > 0, the 
-            <i>n</i>-proxy is defined by finding the (<i>n</i>-1)-proxy of each
-            of the adjacent squares (top, bottom, left, right) and finding the
-            minimum of their values. The <i>n</i>-proxy is then the lesser of
-            this value and the square's own 0-proxy.
+            <i>n</i>-proxy is defined by finding the (<i>n</i>
+            -1)-proxy of each of the adjacent squares (top, bottom, left, right)
+            and finding the minimum of their values. The <i>n</i>-proxy is then
+            the lesser of this value and the square's own 0-proxy.
           </li>
         </ol>
         <p className="sub-paragraph">
@@ -169,7 +169,8 @@ export class BuildingAnAIForNavigatingObstacles extends React.Component {
           which has a minimum <i>P</i>-proxy (where <i>P</i> is a value of your
           choosing - note though that it must be the same for all four squares).
           For our game, we found that <i>P</i>-values around 3 were not good
-          enough at navigating large clusters of obstacles, while <i>P</i>
+          enough at navigating large clusters of obstacles, while 
+          <i>P</i>
           -values close to 10 slowed even desktop computers down with large
           amounts of recursion. We chose a <i>P</i>-value of 7 as this enabled
           sophisticated navigation while still running quickly even on an
@@ -181,15 +182,16 @@ export class BuildingAnAIForNavigatingObstacles extends React.Component {
           There's still a huge problem with this algorithm, which is not obvious
           until you code it up and try it out: the character will stop precisely{" "}
           <em>P</em> steps before the target and begin oscillating! Remember
-          that the <em>n</em>-proxy of a square is the closest distance you can
-          get to the target, given that you can walk <em>n</em> steps from that
-          square. But if my current square is <em>P</em> steps away from the
-          target, and all the surrounding squares are <em>P</em> steps away from
-          the target, then all of these squares will return a <em>P-</em>proxy
-          of zero! This is when our algorithm breaks down, as it is incapable of
-          distinguishing between these squares. This gets represented physically
-          by the character oscillating back and forth between two squares of
-          equal <em>P</em>-proxy.
+          that the <em>n</em>
+          -proxy of a square is the closest distance you can get to the target,
+          given that you can walk <em>n</em> steps from that square. But if my
+          current square is <em>P</em> steps away from the target, and all the
+          surrounding squares are <em>P</em> steps away from the target, then
+          all of these squares will return a <em>P-</em>proxy of zero! This is
+          when our algorithm breaks down, as it is incapable of distinguishing
+          between these squares. This gets represented physically by the
+          character oscillating back and forth between two squares of equal{" "}
+          <em>P</em>-proxy.
         </p>
         <p className="sub-paragraph">
           Rather than freak out, we should recognize that this is a signal that
@@ -205,8 +207,8 @@ export class BuildingAnAIForNavigatingObstacles extends React.Component {
             <em>n</em>-step is defined as some prohibitively huge number.
           </li>
           <li>
-            If the square is the target square, the&nbsp;<em>n</em>-step is
-            defined as (<em>P - n).</em>
+            If the square is the target square, the&nbsp;<em>n</em>
+            -step is defined as (<em>P - n).</em>
           </li>
           <li>
             If none of these conditions hold true, find the minimum&nbsp;(
@@ -231,7 +233,8 @@ export class BuildingAnAIForNavigatingObstacles extends React.Component {
             <em>P</em>-step of each adjacent square instead.
           </li>
           <li>
-            Move to the square with the minimum&nbsp;<em>P</em>-proxy, or&nbsp;
+            Move to the square with the minimum&nbsp;<em>P</em>
+            -proxy, or&nbsp;
             <em>P</em>-step, depending on which is appropriate.
           </li>
           <li>
