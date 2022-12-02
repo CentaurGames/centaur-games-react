@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js -p --progress --colors --display-error-details",
-    "prettier": "prettier --write src/**/*.js"
+    "prettier": "prettier --write --tab-width 2 \"src/**/*.js\""
   },
   "keywords": [],
   "author": "Priyanjoli Mukherjee, Centaur Games <centaurgamesonline@gmail.com> (https://centaurgamesonline.com)",

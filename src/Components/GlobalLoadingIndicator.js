@@ -6,19 +6,20 @@ export let startGlobalLoadingIndicator = () => {};
 export let stopGlobalLoadingIndicator = () => {};
 
 export function GlobalLoadingIndicator(props) {
-    const [isLoading, setLoading] = React.useState(false);
+  const [isLoading, setLoading] = React.useState(false);
 
-    React.useEffect(() => {
-        startGlobalLoadingIndicator = () => setLoading(() => true);
-        stopGlobalLoadingIndicator = () => setTimeout(() => setLoading(() => false), 500);
-    }, []);
+  React.useEffect(() => {
+    startGlobalLoadingIndicator = () => setLoading(() => true);
+    stopGlobalLoadingIndicator = () =>
+      setTimeout(() => setLoading(() => false), 500);
+  }, []);
 
-    return (
-        <>
-            <div style={{visibility: isLoading ? "hidden" : "visible"}}>
-                {props.children}
-            </div>
-            {isLoading && <LoadingIndicator />}
-        </>
-    );
+  return (
+    <>
+      <div style={{ visibility: isLoading ? "hidden" : "visible" }}>
+        {props.children}
+      </div>
+      {isLoading && <LoadingIndicator />}
+    </>
+  );
 }

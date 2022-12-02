@@ -12,38 +12,24 @@ import { BlogComponent } from "./BlogComponent";
  * pageName: ListPage etc
  */
 export class MainWebsite extends React.Component {
-    render() {
-        const pageType = getUrlParameter("pageType");
-        const pageName = getUrlParameter("pageName");
-        switch (pageType) {
-            case "list":
-                return (
-                    <ListPage name={pageName} />
-                );
-            case "landing":
-                return (
-                    <LandingPage game={pageName} />
-                );
-            case "game":
-                return (
-                    <GameComponent gameName={pageName} />
-                );
-            case "privacy":
-                return (
-                    <PrivacyPolicyPage />
-                );
-            case "about":
-                return (
-                    <AboutUsPage />
-                );
-            case "blog":
-                return (
-                    <BlogComponent blogName={pageName} />
-                );
-            default:
-                return (
-                    <ListPage name={"Home"} />
-                );
-        }
+  render() {
+    const pageType = getUrlParameter("pageType");
+    const pageName = getUrlParameter("pageName");
+    switch (pageType) {
+      case "list":
+        return <ListPage name={pageName} />;
+      case "landing":
+        return <LandingPage game={pageName} />;
+      case "game":
+        return <GameComponent gameName={pageName} />;
+      case "privacy":
+        return <PrivacyPolicyPage />;
+      case "about":
+        return <AboutUsPage />;
+      case "blog":
+        return <BlogComponent blogName={pageName} />;
+      default:
+        return <ListPage name={"Home"} />;
     }
   }
+}
