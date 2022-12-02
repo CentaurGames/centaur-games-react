@@ -7,7 +7,7 @@ import { MenuBar } from "./MenuBar";
 
 /**
  * props:
- *    name: string  
+ *    name: string
  */
 export class MobileGamesListPage extends React.Component {
   render() {
@@ -18,12 +18,20 @@ export class MobileGamesListPage extends React.Component {
         <div>
           <MenuBar />
         </div>
-        <div className="mobile-games" > 
+        <div className="mobile-games">
           {LIST_PAGE_META_INFO[this.props.name].games.map(gameName => (
-              <a href={GAME_META_INFO[gameName][mobileUrl]} key={gameName} target="_blank" className="mobile-games__link" >
-                <img src={GAME_META_INFO[gameName].appImageURL} className="mobile-games__image" />
-              </a>
-            ))}
+            <a
+              href={GAME_META_INFO[gameName][mobileUrl]}
+              key={gameName}
+              target="_blank"
+              className="mobile-games__link"
+            >
+              <img
+                src={GAME_META_INFO[gameName].appImageURL}
+                className="mobile-games__image"
+              />
+            </a>
+          ))}
         </div>
         {/*Social Media Icons*/}
         <div>

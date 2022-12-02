@@ -592,19 +592,19 @@ function loadTreeImage() {
 export class ChickenWings extends React.Component {
     componentDidMount() {
 		startGlobalLoadingIndicator();
-        scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
-        treeCanvas = document.getElementById("treeCanvas");
-        treeContext = treeCanvas.getContext("2d");
-        mushroomCanvas = document.getElementById("mushroomCanvas");
-        mushroomContext = mushroomCanvas.getContext("2d");
-        eggCanvas = document.getElementById("eggCanvas");
-        eggContext = eggCanvas.getContext("2d");
-        replayCanvas = document.getElementById("replayCanvas");
+		scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
+		treeCanvas = document.getElementById("treeCanvas");
+		treeContext = treeCanvas.getContext("2d");
+		mushroomCanvas = document.getElementById("mushroomCanvas");
+		mushroomContext = mushroomCanvas.getContext("2d");
+		eggCanvas = document.getElementById("eggCanvas");
+		eggContext = eggCanvas.getContext("2d");
+		replayCanvas = document.getElementById("replayCanvas");
 		replayContext = replayCanvas.getContext("2d");
 		document.documentElement.style.overflow = "hidden";
 		document.body.scroll = "no";
-
-        initializeGame();
+		
+		initializeGame();
     }
 
     render() {

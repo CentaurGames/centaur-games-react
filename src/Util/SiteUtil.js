@@ -136,7 +136,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.snakeretro",
     largeImageURL: SnakeLargeImage,
-    appImageURL: SnakeAppImage,
+    appImageURL: SnakeAppImage
   },
   Minesweeper: {
     name: "Minesweeper",
@@ -148,7 +148,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.minesweeper",
     largeImageURL: MinesweeperLargeImage,
-    appImageURL: MinesweeperAppImage,
+    appImageURL: MinesweeperAppImage
   },
   BubbleShooter: {
     name: "Bubble Shooter",
@@ -161,7 +161,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.bubbleshooter",
     largeImageURL: BubbleShooterLargeImage,
-    appImageURL: BubbleShooterAppImage,
+    appImageURL: BubbleShooterAppImage
   },
   Brimstone: {
     name: "Brimstone",
@@ -181,7 +181,18 @@ export const GAME_META_INFO = {
     largeImageURL: BrimstoneLargeImage,
     appImageURL: BrimstoneAppImage,
     youtubeLink: "XVAl59LLJtk",
-    screenshotImages: [BrimstoneLevel2, BrimstoneLevel4, BrimstoneLevel5, BrimstoneLevel6, BrimstoneLevel7, BrimstoneLevel8, BrimstoneLevel9, BrimstoneLevel10, BrimstoneLevel12, BrimstoneLevel1],
+    screenshotImages: [
+      BrimstoneLevel2,
+      BrimstoneLevel4,
+      BrimstoneLevel5,
+      BrimstoneLevel6,
+      BrimstoneLevel7,
+      BrimstoneLevel8,
+      BrimstoneLevel9,
+      BrimstoneLevel10,
+      BrimstoneLevel12,
+      BrimstoneLevel1
+    ]
   },
   PoolChampions: {
     name: "Pool Champions",
@@ -200,7 +211,13 @@ export const GAME_META_INFO = {
     largeImageURL: PoolChampionsLargeImage,
     appImageURL: PoolChampionsAppImage,
     youtubeLink: "aQIitNAlMSc",
-    screenshotImages: [PoolChampionsScreenshot1, PoolChampionsScreenshot2, PoolChampionsScreenshot3, PoolChampionsScreenshot4, PoolChampionsScreenshot5],
+    screenshotImages: [
+      PoolChampionsScreenshot1,
+      PoolChampionsScreenshot2,
+      PoolChampionsScreenshot3,
+      PoolChampionsScreenshot4,
+      PoolChampionsScreenshot5
+    ]
   },
   MahjongPyramid: {
     name: "Mahjong Pyramid",
@@ -217,7 +234,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.mahjongpyramid",
     largeImageURL: MahjongPyramidLargeImage,
-    appImageURL: MahjongPyramidAppImage,
+    appImageURL: MahjongPyramidAppImage
   },
   ChickenWings2: {
     name: "Chicken Wings 2",
@@ -236,7 +253,11 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.chickenwings",
     largeImageURL: ChickenWings2LargeImage,
     youtubeLink: "GLt7s2C_80E",
-    screenshotImages: [ChickenWingsScreenshot1, ChickenWingsScreenshot2, ChickenWingsScreenshot3],
+    screenshotImages: [
+      ChickenWingsScreenshot1,
+      ChickenWingsScreenshot2,
+      ChickenWingsScreenshot3
+    ]
   },
   RocketRacersNitro: {
     name: "Rocket Racers Nitro",
@@ -256,7 +277,11 @@ export const GAME_META_INFO = {
     largeImageURL: RocketRacersNitroLargeImage,
     appImageURL: RocketRacersNitroAppImage,
     youtubeLink: "2m4nYnKI96s",
-    screenshotImages: [RocketRacersScreenshot1, RocketRacersScreenshot2, RocketRacersScreenshot3],
+    screenshotImages: [
+      RocketRacersScreenshot1,
+      RocketRacersScreenshot2,
+      RocketRacersScreenshot3
+    ]
   },
   LumpyDumplings2: {
     name: "Lumpy Dumplings 2",
@@ -273,7 +298,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.lumpydumplings",
     largeImageURL: LumpyDumplings2LargeImage,
-    youtubeLink: "KADPseajCsE",
+    youtubeLink: "KADPseajCsE"
   },
   VolcanoFrenzy2: {
     name: "Volcano Frenzy 2",
@@ -292,7 +317,12 @@ export const GAME_META_INFO = {
     largeImageURL: VolcanoFrenzy2LargeImage,
     youtubeLink: "C-yHTpcv3mg",
     youtubeLink2: "Z89HxMawHm0",
-    screenshotImages: [VolcanoFrenzyScreenshot1, VolcanoFrenzyScreenshot2, VolcanoFrenzyScreenshot3, VolcanoFrenzyScreenshot4],
+    screenshotImages: [
+      VolcanoFrenzyScreenshot1,
+      VolcanoFrenzyScreenshot2,
+      VolcanoFrenzyScreenshot3,
+      VolcanoFrenzyScreenshot4
+    ]
   },
   MahjongAlchemy: {
     name: "Mahjong Alchemy",
@@ -309,7 +339,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.mahjongalchemy",
     largeImageURL: MahjongAlchemyLargeImage,
-    appImageURL: MahjongAlchemyAppImage,
+    appImageURL: MahjongAlchemyAppImage
   },
   Entombed: {
     name: "Entombed",
@@ -329,7 +359,16 @@ export const GAME_META_INFO = {
     largeImageURL: EntombedLargeImage,
     appImageURL: EntombedAppImage,
     youtubeLink: "0ynT_XL4F_I",
-    screenshotImages: [EntombedLevel2, EntombedLevel4, EntombedLevel5, EntombedLevel6, EntombedLevel8, EntombedLevel10, EntombedLevel11, EntombedLevel1],
+    screenshotImages: [
+      EntombedLevel2,
+      EntombedLevel4,
+      EntombedLevel5,
+      EntombedLevel6,
+      EntombedLevel8,
+      EntombedLevel10,
+      EntombedLevel11,
+      EntombedLevel1
+    ]
   },
   PoolOutbreak: {
     name: "Pool Outbreak",
@@ -345,7 +384,7 @@ export const GAME_META_INFO = {
     iosURL: "https://apps.apple.com/us/app/pool-dynamite/id1451104795?ls=1",
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.pooldynamite",
-    largeImageURL: PoolOutbreakLargeImage,
+    largeImageURL: PoolOutbreakLargeImage
   },
   UltimateRocketRacers: {
     name: "Ultimate Rocket Racers",
@@ -364,7 +403,11 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.rocketracers",
     largeImageURL: UltimateRocketRacersLargeImage,
     youtubeLink: "2m4nYnKI96s",
-    screenshotImages: [RocketRacersScreenshot1, RocketRacersScreenshot2, RocketRacersScreenshot3],
+    screenshotImages: [
+      RocketRacersScreenshot1,
+      RocketRacersScreenshot2,
+      RocketRacersScreenshot3
+    ]
   },
   EightBallPool: {
     name: "Eight Ball Pool",
@@ -382,8 +425,13 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.poolchampions",
     largeImageURL: EightBallPoolLargeImage,
     youtubeLink: "aQIitNAlMSc",
-    screenshotImages: [PoolChampionsScreenshot1, PoolChampionsScreenshot2, PoolChampionsScreenshot3, PoolChampionsScreenshot4, PoolChampionsScreenshot5],
-
+    screenshotImages: [
+      PoolChampionsScreenshot1,
+      PoolChampionsScreenshot2,
+      PoolChampionsScreenshot3,
+      PoolChampionsScreenshot4,
+      PoolChampionsScreenshot5
+    ]
   },
   MahjongZodiac: {
     name: "Mahjong Zodiac",
@@ -400,7 +448,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.mahjongzodiac",
     largeImageURL: MahjongZodiacLargeImage,
-    appImageURL: MahjongZodiacAppImage,
+    appImageURL: MahjongZodiacAppImage
   },
   ChickenWings3: {
     name: "Chicken Wings 3",
@@ -419,7 +467,11 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.chickenwings",
     largeImageURL: ChickenWings3LargeImage,
     youtubeLink: "GLt7s2C_80E",
-    screenshotImages: [ChickenWingsScreenshot1, ChickenWingsScreenshot2, ChickenWingsScreenshot3],
+    screenshotImages: [
+      ChickenWingsScreenshot1,
+      ChickenWingsScreenshot2,
+      ChickenWingsScreenshot3
+    ]
   },
   MahjongClassic: {
     name: "Mahjong Classic",
@@ -436,7 +488,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.mahjongclassic",
     largeImageURL: MahjongClassicLargeImage,
-    appImageURL: MahjongClassicAppImage,
+    appImageURL: MahjongClassicAppImage
   },
   PoolDynamite: {
     name: "Pool Dynamite",
@@ -453,7 +505,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.pooldynamite",
     largeImageURL: PoolDynamiteLargeImage,
-    appImageURL: PoolDynamiteAppImage,
+    appImageURL: PoolDynamiteAppImage
   },
   LumpyDumplings3: {
     name: "Lumpy Dumplings 3",
@@ -470,7 +522,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.lumpydumplings",
     largeImageURL: LumpyDumplings3LargeImage,
-    youtubeLink: "KADPseajCsE",
+    youtubeLink: "KADPseajCsE"
   },
   RocketRacers: {
     name: "Rocket Racers",
@@ -489,7 +541,11 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.rocketracers",
     largeImageURL: RocketRacersLargeImage,
     youtubeLink: "https://youtu.be/2m4nYnKI96s",
-    screenshotImages: [RocketRacersScreenshot1, RocketRacersScreenshot2, RocketRacersScreenshot3],
+    screenshotImages: [
+      RocketRacersScreenshot1,
+      RocketRacersScreenshot2,
+      RocketRacersScreenshot3
+    ]
   },
   StraightPool: {
     name: "Straight Pool",
@@ -526,7 +582,12 @@ export const GAME_META_INFO = {
     youtubeLink: "C-yHTpcv3mg",
     youtubeLink2: "Z89HxMawHm0",
     appImageURL: VolcanoFrenzyAppImage,
-    screenshotImages: [VolcanoFrenzyScreenshot1, VolcanoFrenzyScreenshot2, VolcanoFrenzyScreenshot3, VolcanoFrenzyScreenshot4],
+    screenshotImages: [
+      VolcanoFrenzyScreenshot1,
+      VolcanoFrenzyScreenshot2,
+      VolcanoFrenzyScreenshot3,
+      VolcanoFrenzyScreenshot4
+    ]
   },
   MahjongMycenaean: {
     name: "Mahjong Mycenaean",
@@ -543,7 +604,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.mahjongmycenaean",
     largeImageURL: MahjongMycenaeanLargeImage,
-    appImageURL: MahjongMycenaeanAppImage,
+    appImageURL: MahjongMycenaeanAppImage
   },
   ChickenWings: {
     name: "Chicken Wings",
@@ -563,7 +624,11 @@ export const GAME_META_INFO = {
     largeImageURL: ChickenWingsLargeImage,
     youtubeLink: "GLt7s2C_80E",
     appImageURL: ChickenWingsAppImage,
-    screenshotImages: [ChickenWingsScreenshot1, ChickenWingsScreenshot2, ChickenWingsScreenshot3],
+    screenshotImages: [
+      ChickenWingsScreenshot1,
+      ChickenWingsScreenshot2,
+      ChickenWingsScreenshot3
+    ]
   },
   SpeedPool: {
     name: "Speed Pool",
@@ -580,7 +645,7 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.speedpool",
     largeImageURL: SpeedPoolLargeImage,
     appImageURL: SpeedPoolAppImage,
-    youtubeLink: "OyTziuQpmXI",
+    youtubeLink: "OyTziuQpmXI"
   },
   LumpyDumplings: {
     name: "Lumpy Dumplings",
@@ -598,7 +663,7 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.lumpydumplings",
     largeImageURL: LumpyDumplingsLargeImage,
     appImageURL: LumpyDumplingsAppImage,
-    youtubeLink: "https://youtu.be/KADPseajCsE",
+    youtubeLink: "https://youtu.be/KADPseajCsE"
   },
   PoolSolitaire: {
     name: "Pool Solitaire",
@@ -616,7 +681,7 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.poolsolitaire",
     largeImageURL: PoolSolitaireLargeImage,
     appImageURL: PoolSolitaireAppImage,
-    youtubeLink: "lQcNicHDpls",
+    youtubeLink: "lQcNicHDpls"
   },
   RocketRacers2: {
     name: "Rocket Racers 2",
@@ -635,7 +700,11 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.rocketracers",
     largeImageURL: RocketRacers2LargeImage,
     youtubeLink: "2m4nYnKI96s",
-    screenshotImages: [RocketRacersScreenshot1, RocketRacersScreenshot2, RocketRacersScreenshot3],
+    screenshotImages: [
+      RocketRacersScreenshot1,
+      RocketRacersScreenshot2,
+      RocketRacersScreenshot3
+    ]
   },
   MahjongEmoji: {
     name: "Mahjong Emoji",
@@ -652,7 +721,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.mahjongemoji",
     largeImageURL: MahjongEmojiLargeImage,
-    appImageURL: MahjongEmojiAppImage,
+    appImageURL: MahjongEmojiAppImage
   }
 };
 
@@ -691,7 +760,7 @@ export const LIST_PAGE_META_INFO = {
       "MahjongEmoji"
     ],
     youtubeLink: "0ynT_XL4F_I",
-    sliderImageURL: FinalColoredLogo,
+    sliderImageURL: FinalColoredLogo
   },
   iOS: {
     games: [
@@ -713,7 +782,7 @@ export const LIST_PAGE_META_INFO = {
       "Snake",
       "ChickenWings",
       "LumpyDumplings"
-    ],
+    ]
   },
   Android: {
     games: [
@@ -737,7 +806,7 @@ export const LIST_PAGE_META_INFO = {
       "LumpyDumplings",
       "StraightPool",
       "SpeedPool"
-    ],
+    ]
   },
   Featured: {
     games: [
@@ -759,7 +828,7 @@ export const LIST_PAGE_META_INFO = {
       "MahjongZodiac"
     ],
     youtubeLink: "XVAl59LLJtk",
-    sliderImageURL: FeaturedGames,
+    sliderImageURL: FeaturedGames
   },
   Strategy: {
     games: [
@@ -785,7 +854,7 @@ export const LIST_PAGE_META_INFO = {
       "SpeedPool"
     ],
     youtubeLink: "C-yHTpcv3mg",
-    sliderImageURL: StrategyLogo,
+    sliderImageURL: StrategyLogo
   },
   Addictive: {
     games: [
@@ -802,7 +871,7 @@ export const LIST_PAGE_META_INFO = {
       "LumpyDumplings"
     ],
     youtubeLink: "KADPseajCsE",
-    sliderImageURL: AddictiveLogo,
+    sliderImageURL: AddictiveLogo
   },
   Puzzle: {
     games: [
@@ -821,7 +890,7 @@ export const LIST_PAGE_META_INFO = {
       "MahjongMycenaean"
     ],
     youtubeLink: "0ynT_XL4F_I",
-    sliderImageURL: PuzzleLogo,
+    sliderImageURL: PuzzleLogo
   },
   Adventure: {
     games: [
@@ -838,7 +907,7 @@ export const LIST_PAGE_META_INFO = {
       "RocketRacers"
     ],
     youtubeLink: "GLt7s2C_80E",
-    sliderImageURL: ActionAndAdventureLogo,
+    sliderImageURL: ActionAndAdventureLogo
   },
   Classics: {
     games: [
@@ -855,7 +924,7 @@ export const LIST_PAGE_META_INFO = {
       "MahjongPyramid"
     ],
     youtubeLink: "aQIitNAlMSc",
-    sliderImageURL: ClassicsLogo,
+    sliderImageURL: ClassicsLogo
   },
   Sports: {
     games: [
@@ -872,94 +941,108 @@ export const LIST_PAGE_META_INFO = {
       "PoolSolitaire"
     ],
     youtubeLink: "2m4nYnKI96s",
-    sliderImageURL: SportsLogo,
+    sliderImageURL: SportsLogo
   },
-  Blog: true,
+  Blog: true
 };
 
 export const BLOG_META_INFO = {
   BuildingAnAIForNavigatingObstacles: {
     title: "Building an AI for Navigating Obstacles",
-    description: "We developed a sophisticated target-tracking system to make it easier to guide your character through the labyrinthine levels of <i>Entombed</i> and <i>Brimstone</i>. Find out how in this blog.",
+    description:
+      "We developed a sophisticated target-tracking system to make it easier to guide your character through the labyrinthine levels of <i>Entombed</i> and <i>Brimstone</i>. Find out how in this blog.",
     featureGraphic: "Brimstone",
-    gamesMentioned: ["Brimstone", "Entombed"],
+    gamesMentioned: ["Brimstone", "Entombed"]
   },
   TipsForCrossPlatformCompatibilityInJavascript: {
     title: "Tips for Cross-Platform Compatibility in Javascript",
-    description: "Looking to make your game perform smoothly on any device? Find out more in this blog post.",
+    description:
+      "Looking to make your game perform smoothly on any device? Find out more in this blog post.",
     featureGraphic: "PoolDynamite",
-    gamesMentioned: ["Brimstone", "Entombed", "VolcanoFrenzy"],
+    gamesMentioned: ["Brimstone", "Entombed", "VolcanoFrenzy"]
   },
   DynamicResizingOfTheWindow: {
     title: "Dynamic Resizing of the Window",
-    description: "In this blog, we explore the subtle art of managing multiple device sizes when making a game.",
+    description:
+      "In this blog, we explore the subtle art of managing multiple device sizes when making a game.",
     featureGraphic: "VolcanoFrenzy",
-    gamesMentioned: [],
+    gamesMentioned: []
   },
   TakingAdvantageOfCanvasRotations: {
     title: "Taking Advantage of Canvas Rotations",
-    description: "When creating a fast-paced game like Rocket Racers, your graphics need to be able to keep up the speed. Find out how we optimized the performance of this racing game using simple canvas rotations.",
+    description:
+      "When creating a fast-paced game like Rocket Racers, your graphics need to be able to keep up the speed. Find out how we optimized the performance of this racing game using simple canvas rotations.",
     featureGraphic: "RocketRacersNitro",
-    gamesMentioned: ["RocketRacersNitro", "PoolChampions", "BubbleShooter"],
+    gamesMentioned: ["RocketRacersNitro", "PoolChampions", "BubbleShooter"]
   },
   Creating3DRotationsWithTheCanvasTransformationProperty: {
     title: "Creating 3D Rotations with the Canvas Transformation Property",
-    description: "You don't need a complicated 3D engine to make realistic effects in your game. Read this blog to find out how we used a simple 2D canvas context to create 3D effects like rotating coins in our games.",
+    description:
+      "You don't need a complicated 3D engine to make realistic effects in your game. Read this blog to find out how we used a simple 2D canvas context to create 3D effects like rotating coins in our games.",
     featureGraphic: "Entombed",
-    gamesMentioned: ["RocketRacers2", "Brimstone", "Entombed", "VolcanoFrenzy"],
+    gamesMentioned: ["RocketRacers2", "Brimstone", "Entombed", "VolcanoFrenzy"]
   },
   CreatingAScrollingEffect: {
     title: "Creating a Scrolling Effect",
-    description: "Looking to add a scrolling background to your game? We've got you covered. Read more about how we used scrolling effects to create flowing water, lava, and even the tree in Chicken Wings.",
+    description:
+      "Looking to add a scrolling background to your game? We've got you covered. Read more about how we used scrolling effects to create flowing water, lava, and even the tree in Chicken Wings.",
     featureGraphic: "ChickenWings",
-    gamesMentioned: ["ChickenWings", "Brimstone", "Entombed"],
+    gamesMentioned: ["ChickenWings", "Brimstone", "Entombed"]
   },
   MechanicsOfBilliards: {
     title: "The Mechanics of Billiards",
-    description: "Creating a realistic-looking pool game requires an intimate understanding of the physics that makes pool work. Take a sneak peak under the hood of our physics algorithms in this post.",
+    description:
+      "Creating a realistic-looking pool game requires an intimate understanding of the physics that makes pool work. Take a sneak peak under the hood of our physics algorithms in this post.",
     featureGraphic: "StraightPool",
-    gamesMentioned: ["PoolChampions"],
+    gamesMentioned: ["PoolChampions"]
   },
   CreatingAnAIWhichPlaysPool: {
     title: "Creating an AI Which Plays Pool",
-    description: "We demonstrate how to create any pool bot you could ask for - from the simplest to the hardest to beat.",
+    description:
+      "We demonstrate how to create any pool bot you could ask for - from the simplest to the hardest to beat.",
     featureGraphic: "PoolChampions",
-    gamesMentioned: ["StraightPool", "PoolChampions", "EightBallPool"],
+    gamesMentioned: ["StraightPool", "PoolChampions", "EightBallPool"]
   },
   CreatingShadowsWhichMoveWithThePlayer: {
     title: "Creating Shadows Which Move with the Player",
-    description: "Curious how we made the shadows follow you around in Entombed and Brimstone? Find out how in this blog post.",
+    description:
+      "Curious how we made the shadows follow you around in Entombed and Brimstone? Find out how in this blog post.",
     featureGraphic: "Entombed",
-    gamesMentioned: ["Brimstone", "Entombed"],
+    gamesMentioned: ["Brimstone", "Entombed"]
   },
   StructureOfAnyGame: {
     title: "Structure of Any Game",
-    description: "We explore the basic underlying architecture that makes any Javascript game work.",
+    description:
+      "We explore the basic underlying architecture that makes any Javascript game work.",
     featureGraphic: "Minesweeper",
-    gamesMentioned: [],
+    gamesMentioned: []
   },
   CreatingRealisticLookingLava: {
     title: "Creating Realistic-Looking Lava",
-    description: "Learn how we created the lava effect that gave Brimstone its signature graphics.",
+    description:
+      "Learn how we created the lava effect that gave Brimstone its signature graphics.",
     featureGraphic: "VolcanoFrenzy",
-    gamesMentioned: ["ChickenWings", "Brimstone"],
+    gamesMentioned: ["ChickenWings", "Brimstone"]
   },
   AnimatingFirePart1TwoDimensionalFlames: {
     title: "Animating Fire Part 1: Two-Dimensional Flames",
-    description: "Learn how to create simple but effective two-dimensional flames, like the ones showcased in the Pool Dynamite graphic to the left.",
+    description:
+      "Learn how to create simple but effective two-dimensional flames, like the ones showcased in the Pool Dynamite graphic to the left.",
     featureGraphic: "PoolDynamite",
-    gamesMentioned: ["Brimstone"],
+    gamesMentioned: ["Brimstone"]
   },
   AnimatingFirePart2ThreeDimensionalFlames: {
     title: "Animating Fire Part 2: Three-Dimensional Flames",
-    description: "We show how you can use simple 2D context transformations to achieve a realistic three-dimensional flame for birds-eye platformers.",
+    description:
+      "We show how you can use simple 2D context transformations to achieve a realistic three-dimensional flame for birds-eye platformers.",
     featureGraphic: "Brimstone",
-    gamesMentioned: ["Brimstone"],
+    gamesMentioned: ["Brimstone"]
   },
   WrappingImagesAroundASphereInTHREE: {
     title: "Wrapping Images around a Sphere in THREE.js",
-    description: "We take a look at the process involved in creating a three-dimensional pool ball for Pool Champions and Eight-Ball Pool.",
+    description:
+      "We take a look at the process involved in creating a three-dimensional pool ball for Pool Champions and Eight-Ball Pool.",
     featureGraphic: "PoolChampions",
-    gamesMentioned: ["PoolChampions", "EightBallPool"],
-  },
+    gamesMentioned: ["PoolChampions", "EightBallPool"]
+  }
 };

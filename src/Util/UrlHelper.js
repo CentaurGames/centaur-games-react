@@ -12,5 +12,3 @@ export const BASE_URL = window.location.href.match("^[^?]*");
 export function getBlogUrl(blogName) {
   return BASE_URL + "?pageType=blog&pageName=" + blogName;
 }
-
-

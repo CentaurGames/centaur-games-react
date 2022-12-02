@@ -1,12 +1,16 @@
 import * as React from "react";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/fontawesome-free-solid';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/fontawesome-free-solid";
 import "./TicTacToe.css";
 
 const INITIAL_STATE = {
-  grid: [["","",""], ["","",""], ["","",""]],
+  grid: [
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""]
+  ],
   isPlayer: true,
-  isGameOver: false,
+  isGameOver: false
 };
 
 export class TicTacToe extends React.Component {
@@ -14,9 +18,9 @@ export class TicTacToe extends React.Component {
     super();
     this.state = INITIAL_STATE;
   }
-  
+
   testRow(row) {
-    const result = row.filter(ele => ele === row[0] && ele !== "")
+    const result = row.filter(ele => ele === row[0] && ele !== "");
     return result.length === row.length;
   }
 
@@ -30,20 +34,20 @@ export class TicTacToe extends React.Component {
       }
     }
     const diaArray = [];
-      for (let j = 0; j < grid.length; j++) {
-        diaArray.push(grid[j][j]);
-      }
-      if (this.testRow(diaArray)) {
-        return true;
-      }
-      const antiDiaArray = [];
-      for (let j = 0; j < grid.length; j++) {
-        antiDiaArray.push(grid[j][grid.length-j-1]);
-      }
-      if (this.testRow(antiDiaArray)) {
-        return true;
-      }
-      return this.isGameADraw(grid);
+    for (let j = 0; j < grid.length; j++) {
+      diaArray.push(grid[j][j]);
+    }
+    if (this.testRow(diaArray)) {
+      return true;
+    }
+    const antiDiaArray = [];
+    for (let j = 0; j < grid.length; j++) {
+      antiDiaArray.push(grid[j][grid.length - j - 1]);
+    }
+    if (this.testRow(antiDiaArray)) {
+      return true;
+    }
+    return this.isGameADraw(grid);
   }
 
   isGameADraw(grid) {
@@ -69,7 +73,7 @@ export class TicTacToe extends React.Component {
     this.setState(oldState => ({
       ...oldState,
       grid: this.deepCopy(newGrid),
-      isPlayer: true,
+      isPlayer: true
     }));
   }
 
@@ -81,17 +85,17 @@ export class TicTacToe extends React.Component {
         }
         const newGrid = this.deepCopy(grid);
         newGrid[i][j] = "O";
-        if (this.checkIfGameIsOver(newGrid)){
+        if (this.checkIfGameIsOver(newGrid)) {
           newGrid[i][j] = "O";
           this.setState(oldState => ({
             ...oldState,
             grid: this.deepCopy(newGrid),
             isPlayer: true,
-            isGameOver: true,
+            isGameOver: true
           }));
           setTimeout(() => {
             this.setState(INITIAL_STATE);
-          },1000);
+          }, 1000);
           return;
         }
       }
@@ -107,12 +111,12 @@ export class TicTacToe extends React.Component {
         }
         const newGrid = this.deepCopy(grid);
         newGrid[i][j] = "X";
-        if (this.checkIfGameIsOver(newGrid)){
+        if (this.checkIfGameIsOver(newGrid)) {
           newGrid[i][j] = "O";
           this.setState(oldState => ({
             ...oldState,
             grid: this.deepCopy(newGrid),
-            isPlayer: true,
+            isPlayer: true
           }));
           return;
         }
@@ -131,21 +135,21 @@ export class TicTacToe extends React.Component {
     this.setState(oldState => ({
       ...oldState,
       grid: newGrid,
-      isPlayer: false,
+      isPlayer: false
     }));
     if (this.checkIfGameIsOver(newGrid)) {
       this.setState(oldState => ({
         ...oldState,
-        isGameOver: true,
+        isGameOver: true
       }));
       setTimeout(() => {
         this.setState(INITIAL_STATE);
-      },1000);
+      }, 1000);
       return;
     }
     setTimeout(() => {
       this.winningMove(newGrid);
-    },300);
+    }, 300);
   }
 
   deepCopy(grid) {
@@ -168,15 +172,18 @@ export class TicTacToe extends React.Component {
       <div className="tic-tac-toe__grid">
         {this.state.grid.map((row, i) => (
           <div className="tic-tac-toe__row" key={i}>
-          {row.map((cell, j) => (
-            <div className="tic-tac-toe__square" key={j} onClick={() => this.player1Click(i,j)}>
-              {this.convertCellToIcon(cell)}
-            </div>
-          ))}
-        </div>
+            {row.map((cell, j) => (
+              <div
+                className="tic-tac-toe__square"
+                key={j}
+                onClick={() => this.player1Click(i, j)}
+              >
+                {this.convertCellToIcon(cell)}
+              </div>
+            ))}
+          </div>
         ))}
       </div>
     );
   }
 }
-
