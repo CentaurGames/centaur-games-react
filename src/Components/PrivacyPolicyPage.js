@@ -13,6 +13,11 @@ export class PrivacyPolicyPage extends React.Component {
           <MenuBar />
         </div>
         <div>
+          <p className="about-us__intro-text privacy-policy__title">
+            <p className="privacy-policy__header">
+              Privacy Policy for Centaur Games
+            </p>
+          </p>
           <p className="about-us__intro-text">
             We at Centaur Games never use your personal information for anything
             - ever! In fact, none of our games gather any information from your
