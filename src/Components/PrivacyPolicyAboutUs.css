@@ -6,7 +6,7 @@
     margin-top: 40px;
 }
 
-.privacy-policy-link{
+.privacy-policy-link {
     width: 100%;
     color: #686868;
     line-height: 2;
@@ -27,9 +27,22 @@
     font-family: "Times New Roman", Times, serif;
 }
 
-.privacy-policy-about-us{
+.privacy-policy-about-us {
     display: flex;
     justify-content: center;
     width: 100%;
     margin: auto;
+}
+
+.privacy-policy__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-bottom: 1px solid white;
+    margin-bottom: 0;
+}
+
+.privacy-policy__title {
+    margin-bottom: 0 !important;
 }
