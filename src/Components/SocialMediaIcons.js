@@ -12,7 +12,7 @@ export class SocialMediaIcons extends React.Component {
         {/*Social Media Icons*/}
         <div className="social-media-app-icons">
           <a
-            href="https://apps.apple.com/us/developer/centaur-games/id1447989301#see-all/i-phonei-pad-apps"
+            href="https://apps.apple.com/us/developer/centaur-games/id1447989301#see-all"
             className="social-media-icon__link"
             target="_blank"
           >
