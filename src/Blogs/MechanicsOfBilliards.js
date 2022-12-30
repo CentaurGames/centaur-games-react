@@ -17,7 +17,7 @@ export class MechanicsOfBilliards extends React.Component {
     return (
       <div className="blog-text">
         <p className="sub-paragraph">
-          In the{" "}
+          In the&nbsp;
           <a href={getBlogUrl("CreatingAnAIWhichPlaysPool")}>next post</a> we
           are going to develop an AI which can play pool against an opponent; in
           order to do that, we first need to establish the mathematics of pool.
@@ -47,7 +47,7 @@ export class MechanicsOfBilliards extends React.Component {
             velocity $\vec \mathit v_2$. These velocities can point anywhere in
             the plane of the table. In addition, immediately before the
             collision let's label a vector $\vec \mathit d$ which points from
-            the center of Ball 1 to the center of Ball 2.{" "}
+            the center of Ball 1 to the center of Ball 2.&nbsp;
           </Latex>
         </p>
         <p className="sub-paragraph">
@@ -55,7 +55,7 @@ export class MechanicsOfBilliards extends React.Component {
             After the collision, Ball 1 has velocity $\vec \mathit u_1$ and Ball
             2 has velocity $\vec \mathit u_2$. Since the balls have not yet
             moved immediately after the collision, the same vector $\vec \mathit
-            d$ points from the center of Ball 1 to the center of Ball 2.{" "}
+            d$ points from the center of Ball 1 to the center of Ball 2.&nbsp;
           </Latex>
         </p>
         <p className="sub-paragraph">
@@ -65,7 +65,7 @@ export class MechanicsOfBilliards extends React.Component {
             is initially at rest. This means that we are pretending that we are
             moving alongside Ball 2 so that it appears at rest with respect to
             us; in practice, this is equivalent to making the following
-            substitution for the velocities:{" "}
+            substitution for the velocities:&nbsp;
           </Latex>
         </p>
         <p className="sub-paragraph">
@@ -97,47 +97,66 @@ export class MechanicsOfBilliards extends React.Component {
           </Latex>
         </p>
         <p className="sub-paragraph">
-          From conservation of angular momentum we have
+          From conservation of momentum we have &nbsp;
           <Latex>
             $$\mathit m \vec \mathit w_1 + 0 = m \vec \mathit s_1 + \mathit m
             \vec \mathit s_2$$
           </Latex>
         </p>
         <p className="sub-paragraph">
-          which can be rearranged as
+          which can be rearranged as &nbsp;
           <Latex>
             $$\vec \mathit s_1 = \vec \mathit w_1 - \vec \mathit s_2$$
           </Latex>
         </p>
         <p className="sub-paragraph">
           Next we apply conservation of kinetic energy (we are presuming an
-          elastic collision) to get
+          elastic collision) to get &nbsp;
           <Latex>
             $$\frac 1 2 \mathit m \mathit w_1^2 + 0 = \frac 1 2 \mathit m
             \mathit s_1^2 + \frac 1 2 \mathit m \mathit s_2^2$$
           </Latex>
         </p>
+        <p className="sub-paragraph">which can be rearranged to get</p>
         <p className="sub-paragraph">
-          which can be rearranged to get
+          <Latex>$$\mathit s_1^2 = \mathit w_1^2 - \mathit s_2^2$$</Latex>
+        </p>
+        <p className="sub-paragraph">
           <Latex>
-            $$\mathit s_1^2 = \mathit w_1^2 - \mathit s_2^2$$ $$\vec \mathit s_1
-            \cdot \vec \mathit s_1 = \vec \mathit w_1 \cdot \vec \mathit w_1 -
-            \vec \mathit s_2 \cdot \vec \mathit s_2$$
+            $$\vec \mathit s_1 \cdot \vec \mathit s_1 = \vec \mathit w_1 \cdot
+            \vec \mathit w_1 - \vec \mathit s_2 \cdot \vec \mathit s_2$$
           </Latex>
         </p>
         <p className="sub-paragraph">
           <Latex>
-            {" "}
             Substituting our previous expression for $\vec \mathit s_1$, we have
+          </Latex>
+        </p>
+        <p className="sub-paragraph">
+          <Latex>
             $$(\vec \mathit w_1 - \vec \mathit s_2) \cdot (\vec \mathit w_1 -
             \vec \mathit s_2) = \vec \mathit w_1 \cdot \vec \mathit w_1 - \vec
-            \mathit s_2 \cdot \vec \mathit s_2$$ $$\vec \mathit w_1 \cdot \vec
-            \mathit w_1 - 2 \vec \mathit w_1 \cdot \vec \mathit s_2 + \vec
-            \mathit s_2 \cdot \vec \mathit s_2 = \vec \mathit w_1 \cdot \vec
-            \mathit w_1 - \vec \mathit s_2 \cdot \vec \mathit s_2$$ $$\vec
-            \mathit w_1 \cdot \vec \mathit s_2 - \vec \mathit s_2 \cdot \vec
-            \mathit s_2 = 0$$ $$\vec \mathit s_2 \cdot \left( \vec \mathit w_1
-            - \vec \mathit s_2 \right) = 0 $$
+            \mathit s_2 \cdot \vec \mathit s_2$$
+          </Latex>
+        </p>
+        <p className="sub-paragraph">
+          <Latex>
+            $$\vec \mathit w_1 \cdot \vec \mathit w_1 - 2 \vec \mathit w_1
+            \cdot \vec \mathit s_2 + \vec \mathit s_2 \cdot \vec \mathit s_2
+            = \vec \mathit w_1 \cdot \vec \mathit w_1 - \vec \mathit s_2 \cdot
+            \vec \mathit s_2$$
+          </Latex>
+        </p>
+        <p className="sub-paragraph">
+          <Latex>
+            $$\vec \mathit w_1 \cdot \vec \mathit s_2 - \vec \mathit s_2 \cdot
+            \vec \mathit s_2 = 0$$
+          </Latex>
+        </p>
+        <p className="sub-paragraph">
+          <Latex>
+            $$\vec \mathit s_2 \cdot \left( \vec \mathit w_1 - \vec \mathit s_2
+            \right) = 0 $$
           </Latex>
         </p>
         <p className="sub-paragraph">
@@ -147,7 +166,7 @@ export class MechanicsOfBilliards extends React.Component {
             equations (two components of momentum and one component of kinetic
             energy), but we have four components to solve for. Thus to uniquely
             solve for them, we need a fourth conservation equation. For this we
-            will use conservation of angular momentum.{" "}
+            will use conservation of angular momentum.&nbsp;
           </Latex>
         </p>
         <p className="sub-paragraph">
@@ -164,14 +183,16 @@ export class MechanicsOfBilliards extends React.Component {
             in both cases. Likewise, in our reference frame Ball 2 is initially
             at rest - hence its angular momentum is also zero before the
             collision. Thus there is only one angular momentum term, which is
-            from Ball 2 after the collision:{" "}
+            from Ball 2 after the collision:&nbsp;
           </Latex>
         </p>
         <p className="sub-paragraph">
           <Latex>
-            $$0 + 0 = 0 + m \vec \mathit s_2 \times \vec \mathit d$$ $$\vec
-            \mathit s_2 \times \vec \mathit d = 0 $$
+            $$0 + 0 = 0 + m \vec \mathit s_2 \times \vec \mathit d$$
           </Latex>
+        </p>
+        <p className="sub-paragraph">
+          <Latex>$$\vec \mathit s_2 \times \vec \mathit d = 0 $$</Latex>
         </p>
         <p className="sub-paragraph">
           <Latex>
@@ -180,7 +201,7 @@ export class MechanicsOfBilliards extends React.Component {
             Ball 2. (It could also be antiparallel mathematically, but this
             would be an unphysical solution in which Ball 2 would pass through
             Ball 1. This sort of solution occurs due to the quadratic terms in
-            the kinetic energy, which have two roots.){" "}
+            the kinetic energy, which have two roots.)&nbsp;
           </Latex>
         </p>
         <p className="sub-paragraph">
@@ -190,7 +211,7 @@ export class MechanicsOfBilliards extends React.Component {
             initially at rest (which is the reference frame we are dealing with
             here), then after the collision Ball 2 will move in the direction of
             the displacement vector $\vec \mathit d$ which points from the
-            center of Ball 1 to the center of Ball 2.{" "}
+            center of Ball 1 to the center of Ball 2.&nbsp;
           </Latex>
         </p>
         <p className="sub-paragraph">
@@ -199,12 +220,16 @@ export class MechanicsOfBilliards extends React.Component {
             perpendicular to $\vec \mathit s_2$. Since we have now proved
             that $\vec \mathit s_2$ is parallel with $\vec \mathit d$, it
             follows that $\vec \mathit w_1 - \vec \mathit s_2$ is perpendicular
-            to $\vec \mathit d$. Hence their dot product must be zero:{" "}
+            to $\vec \mathit d$. Hence their dot product must be zero:&nbsp;
           </Latex>
         </p>
         <p className="sub-paragraph">
           <Latex>
             $$\vec \mathit d \cdot ( \vec \mathit w_1 - \vec \mathit s_2) = 0$$
+          </Latex>
+        </p>
+        <p className="sub-paragraph">
+          <Latex>
             $$\vec \mathit s_2 \cdot \vec \mathit d = \vec \mathit w_1 \cdot
             \vec \mathit d$$
           </Latex>
@@ -213,13 +238,15 @@ export class MechanicsOfBilliards extends React.Component {
           <Latex>
             Since $\vec \mathit s_2$ is parallel with $\vec \mathit d$, it
             follows that $\vec \mathit s_2 \cdot \vec \mathit d = \mathit s_2
-            \mathit d$:{" "}
+            \mathit d$:&nbsp;
           </Latex>
         </p>
         <p className="sub-paragraph">
           <Latex>
             $$\mathit s_2 \mathit d = \vec \mathit w_1 \cdot \vec \mathit d$$
           </Latex>
+        </p>
+        <p className="sub-paragraph">
           <Latex>
             {
               "$$\\mathit s_2 = \\frac {1} {\\mathit d} \\vec \\mathit w_1 \\cdot \\vec \\mathit d$$"
@@ -237,6 +264,8 @@ export class MechanicsOfBilliards extends React.Component {
           <Latex>
             $$\vec \mathit w_1 = \vec \mathit v_1 - \vec \mathit v_2$$
           </Latex>
+        </p>
+        <p className="sub-paragraph">
           <Latex>
             {
               "$$\\mathit s_2 = \\frac {1} {\\mathit d} \\vec \\mathit w_1 \\cdot \\vec \\mathit d$$"
@@ -249,11 +278,20 @@ export class MechanicsOfBilliards extends React.Component {
               "$$\\vec \\mathit s_2 = \\frac {\\mathit s_2} {\\mathit d} \\vec \\mathit d$$"
             }
           </Latex>
+        </p>
+        <p className="sub-paragraph">
           <Latex>
-            {" "}
-            $$\vec \mathit s_1 = \vec \mathit w_1 - \vec \mathit s_2$$ $$\vec
-            \mathit u_1 = \vec \mathit s_1 + \vec \mathit v_2$$ $$\vec \mathit
-            u_2 = \vec \mathit s_2 + \vec \mathit v_2$$
+            &nbsp; $$\vec \mathit s_1 = \vec \mathit w_1 - \vec \mathit s_2$$
+          </Latex>
+        </p>
+        <p className="sub-paragraph">
+          <Latex>
+            &nbsp; $$\vec \mathit u_1 = \vec \mathit s_1 + \vec \mathit v_2$$
+          </Latex>
+        </p>
+        <p className="sub-paragraph">
+          <Latex>
+            &nbsp; $$\vec \mathit u_2 = \vec \mathit s_2 + \vec \mathit v_2$$
           </Latex>
         </p>
         <p className="sub-paragraph">
