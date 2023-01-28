@@ -14,6 +14,7 @@ export class Icon extends React.Component {
         href={BASE_URL + "?pageType=landing&pageName=" + this.props.game}
         target="_blank"
         className="icon-link"
+        data-testid="icon"
       >
         <img
           src={GAME_META_INFO[this.props.game].iconImageURL}
