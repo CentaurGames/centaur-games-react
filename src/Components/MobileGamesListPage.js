@@ -25,6 +25,7 @@ export class MobileGamesListPage extends React.Component {
               key={gameName}
               target="_blank"
               className="mobile-games__link"
+              data-testid="mobile-games-icon"
             >
               <img
                 src={GAME_META_INFO[gameName].appImageURL}
