@@ -89,7 +89,7 @@ export class BlogComponent extends React.Component {
         <div className="sub-paragraph">
           {nextBlogName && (
             <a className="next-blog" href={getBlogUrl(nextBlogName)}>
-              Next Blog >>
+              {"Next Blog >>"}
             </a>
           )}
           {previousBlogName && (
