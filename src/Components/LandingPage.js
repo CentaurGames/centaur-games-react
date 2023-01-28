@@ -12,6 +12,8 @@ import { MenuBar } from "./MenuBar";
 import AppStoreImage from "./AppStoreImage.png";
 import googlePlayImage from "./googlePlayImage.png";
 
+//props:
+//game: string
 export class LandingPage extends React.Component {
   render() {
     const opts = {
@@ -47,6 +49,7 @@ export class LandingPage extends React.Component {
             href={GAME_META_INFO[this.props.game].iosURL}
             className="ios-app-link"
             target="_blank"
+            data-testid="ios-app-icon"
           >
             <img src={AppStoreImage} className="ios-app-icon" />
           </a>
@@ -54,6 +57,7 @@ export class LandingPage extends React.Component {
             href={GAME_META_INFO[this.props.game].androidURL}
             className="android-app-link"
             target="_blank"
+            data-testid="android-app-icon"
           >
             <img src={googlePlayImage} className="android-app-icon" />
           </a>
@@ -80,18 +84,9 @@ export class LandingPage extends React.Component {
 
         {/*Recommended Games*/}
         <div className="recommended-games">
-          <IconLandingPage
-            game={GAME_META_INFO[this.props.game].recommendedGames[0]}
-          />
-          <IconLandingPage
-            game={GAME_META_INFO[this.props.game].recommendedGames[1]}
-          />
-          <IconLandingPage
-            game={GAME_META_INFO[this.props.game].recommendedGames[2]}
-          />
-          <IconLandingPage
-            game={GAME_META_INFO[this.props.game].recommendedGames[3]}
-          />
+          {GAME_META_INFO[this.props.game].recommendedGames.map((recommendGame) => (
+            <IconLandingPage key={recommendGame} game={recommendGame} />
+          ))}
         </div>
 
         {/*Screenshot Text & Screenshot slider*/}
