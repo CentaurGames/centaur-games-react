@@ -84,9 +84,11 @@ export class LandingPage extends React.Component {
 
         {/*Recommended Games*/}
         <div className="recommended-games">
-          {GAME_META_INFO[this.props.game].recommendedGames.map((recommendGame) => (
-            <IconLandingPage key={recommendGame} game={recommendGame} />
-          ))}
+          {GAME_META_INFO[this.props.game].recommendedGames.map(
+            recommendGame => (
+              <IconLandingPage key={recommendGame} game={recommendGame} />
+            )
+          )}
         </div>
 
         {/*Screenshot Text & Screenshot slider*/}
