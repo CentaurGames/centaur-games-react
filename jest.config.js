@@ -7,6 +7,6 @@ module.exports = {
     ],
     "transform": {
       "^.+\\.(js|jsx)$": "babel-jest",
-      ".+\\.(css|scss|png|jpg|svg)$": "jest-transform-stub"
+      ".+\\.(css|scss|png|jpg|svg|gif)$": "jest-transform-stub"
     },
   }
