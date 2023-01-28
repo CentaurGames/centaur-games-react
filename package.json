@@ -7,7 +7,7 @@
     "build": "node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js -p --progress --colors --display-error-details",
     "prettier": "prettier --write --tab-width 2 \"src/**/*.js\"",
     "test": "jest --transformIgnorePatterns --silent",
-    "coverage": "jest --silent --coverage"
+    "coverage": "jest --transformIgnorePatterns --silent --coverage"
   },
   "keywords": [],
   "author": "Priyanjoli Mukherjee, Centaur Games <centaurgamesonline@gmail.com> (https://centaurgamesonline.com)",
