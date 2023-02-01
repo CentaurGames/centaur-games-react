@@ -2,6 +2,10 @@ module.exports = {
     "roots": [
       "src"
     ],
+    "testEnvironment": "jsdom",
+    "testEnvironmentOptions": {
+      "url": "http://localhost/"
+    },
     "testMatch": [
       "**/*.jest.(ts|tsx|js|jsx)",
     ],
