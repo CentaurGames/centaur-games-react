@@ -127,11 +127,11 @@ export class GameComponent extends React.Component {
         return <></>;
     }
     return (
-      <GlobalLoadingIndicator>
         <React.Suspense fallback={<LoadingIndicator />}>
-          <Game />
+          <GlobalLoadingIndicator>
+            <Game />
+          </GlobalLoadingIndicator>
         </React.Suspense>
-      </GlobalLoadingIndicator>
     );
   }
 }
