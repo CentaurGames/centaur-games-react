@@ -3,7 +3,7 @@ import audioURL from "../Eight-Ball Pool/audio.mp3";
 import explosionURL from "./explosion.mp3";
 import {
   startGlobalLoadingIndicator,
-  stopGlobalLoadingIndicator
+  stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
@@ -33,22 +33,7 @@ var explosiveImages = new Array(22);
 var explosiveTimer = new Array(16);
 var explosiveTimerIsRunning = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var explosiveIndex = [
-  -1,
-  -1,
-  -1,
-  -1,
-  -1,
-  -1,
-  -1,
-  -1,
-  -1,
-  -1,
-  -1,
-  -1,
-  -1,
-  -1,
-  -1,
-  -1
+  -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
 ];
 var r = 10;
 var h = Math.sqrt(3) * r;
@@ -68,7 +53,7 @@ var ys = [
   180 - 2 * r,
   180 + r,
   180 - r,
-  180
+  180,
 ];
 var xs = [
   575,
@@ -86,7 +71,7 @@ var xs = [
   65 + 2 * h,
   65 + 3 * h,
   65 + 3 * h,
-  65 + 4 * h
+  65 + 4 * h,
 ];
 var Vxs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //10*Math.cos(theta)
 var Vys = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //10*Math.sin(theta)
@@ -111,7 +96,7 @@ var colors = [
   c1,
   c3,
   c3,
-  c1
+  c1,
 ];
 var cueImage = new Image(370, 15);
 var distanceFromCueToBall = 20;
@@ -239,7 +224,7 @@ function rescaleCanvases() {
   livesCanvas.height = Math.round(520 * scale);
   livesContext.scale(scale, scale);
   if (isMobile) {
-    setTimeout(function() {
+    setTimeout(function () {
       window.scrollTo(0, y0);
       centerAllCanvases();
     }, 500);
@@ -278,7 +263,7 @@ function smoke7() {
   imageContext.fill();
   explosiveImages[21] = new Image(100, 100);
   explosiveImages[21].src = imageCanvas.toDataURL("image/png");
-  explosiveImages[21].onload = function() {
+  explosiveImages[21].onload = function () {
     drawLives();
     rescaleCanvases();
     cursorCanvas.addEventListener("mousemove", mouseMotionDetector);
@@ -287,7 +272,7 @@ function smoke7() {
     cursorCanvas.addEventListener("touchmove", mouseMotionDetector);
     cursorCanvas.addEventListener("touchstart", mouseDown);
     cursorCanvas.addEventListener("touchend", mouseUp);
-    scrollPreventCanvas.addEventListener("touchmove", function(evt) {
+    scrollPreventCanvas.addEventListener("touchmove", function (evt) {
       evt.preventDefault();
     });
     window.addEventListener("resize", rescaleCanvases);
@@ -878,8 +863,8 @@ function loadAudio() {
     var request = new XMLHttpRequest();
     request.open("GET", audioURL, true);
     request.responseType = "arraybuffer";
-    request.onload = function() {
-      audioContext.decodeAudioData(request.response, function(buffer) {
+    request.onload = function () {
+      audioContext.decodeAudioData(request.response, function (buffer) {
         audioBuffer = buffer;
         isCollisionAudioLoaded = 1;
       });
@@ -891,8 +876,8 @@ function loadAudio() {
     var request2 = new XMLHttpRequest();
     request2.open("GET", explosionURL, true);
     request2.responseType = "arraybuffer";
-    request2.onload = function() {
-      audioContext.decodeAudioData(request2.response, function(buffer) {
+    request2.onload = function () {
+      audioContext.decodeAudioData(request2.response, function (buffer) {
         explosionBuffer = buffer;
         isExplosionAudioLoaded = 1;
       });
@@ -927,7 +912,7 @@ function createBallImage(i) {
   imageContext.fill();
   ballImages[i] = new Image(20, 20);
   ballImages[i].src = imageCanvas.toDataURL("image/png");
-  ballImages[i].onload = function() {
+  ballImages[i].onload = function () {
     createBallImage(i + 1);
   };
 }
@@ -949,7 +934,7 @@ function initializeGlobals() {
     180 - 2 * r,
     180 + r,
     180 - r,
-    180
+    180,
   ];
   xs = [
     575,
@@ -967,7 +952,7 @@ function initializeGlobals() {
     65 + 2 * h,
     65 + 3 * h,
     65 + 3 * h,
-    65 + 4 * h
+    65 + 4 * h,
   ];
   Vxs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //10*Math.cos(theta)
   Vys = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //10*Math.sin(theta)
@@ -978,22 +963,7 @@ function initializeGlobals() {
   myTimerIsRunning = 0;
   ballTimerIsRunning = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   explosiveIndex = [
-    -1,
-    -1,
-    -1,
-    -1,
-    -1,
-    -1,
-    -1,
-    -1,
-    -1,
-    -1,
-    -1,
-    -1,
-    -1,
-    -1,
-    -1,
-    -1
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
   ];
 }
 
@@ -1262,7 +1232,7 @@ function drawCueImage() {
   cueContext.closePath();
   cueContext.fill();
   cueImage.src = cueCanvas.toDataURL("image/png");
-  cueImage.onload = function() {
+  cueImage.onload = function () {
     createBallImage(0);
   };
 }
@@ -1298,7 +1268,7 @@ function mouseDown(evt) {
     return;
   }
   mouseMotionDetector(evt);
-  cueTimer = setInterval(function() {
+  cueTimer = setInterval(function () {
     if (distanceFromCueToBall <= 120) {
       distanceFromCueToBall++;
       drawCue();
@@ -1324,7 +1294,7 @@ function mouseUp(evt) {
     cueTimerIsRunning = 0;
   }
   cueIsStriking = 1;
-  cueTimer = setInterval(function() {
+  cueTimer = setInterval(function () {
     if (distanceFromCueToBall >= r) {
       distanceFromCueToBall -= 5;
       drawCue();
@@ -1705,7 +1675,7 @@ function explodeBall(i) {
   if (!explosiveTimerIsRunning[i]) {
     explosionSound();
     explosiveIndex[i] = 0;
-    explosiveTimer[i] = setInterval(function() {
+    explosiveTimer[i] = setInterval(function () {
       if (explosiveIndex[i] < 21) {
         explosiveIndex[i]++;
       } else {
@@ -1756,8 +1726,8 @@ function collideBalls(i, j) {
   }
   if (i === 0 && opacity[j] === 0) {
     if (!ballTimerIsRunning[j]) {
-      ballTimer[j] = setInterval(function() {
-        (function(index) {
+      ballTimer[j] = setInterval(function () {
+        (function (index) {
           explosionCountDown(index);
         })(j);
       }, 1000);
@@ -1766,8 +1736,8 @@ function collideBalls(i, j) {
   }
   if (j === 0 && opacity[i] === 0) {
     if (!ballTimerIsRunning[i]) {
-      ballTimer[i] = setInterval(function() {
-        (function(index) {
+      ballTimer[i] = setInterval(function () {
+        (function (index) {
           explosionCountDown(index);
         })(i);
       }, 1000);
@@ -1917,7 +1887,7 @@ function endGame() {
   context.textBaseline = "middle";
   context.strokeText("You Win!", 320, 180);
   context.fillText("You Win!", 320, 180);
-  setTimeout(function() {
+  setTimeout(function () {
     if (myTimerIsRunning) {
       clearInterval(myTimer);
       myTimerIsRunning = 0;
@@ -1953,7 +1923,7 @@ function loseGame() {
   context.textBaseline = "middle";
   context.strokeText("You Lose!", 320, 180);
   context.fillText("You Lose!", 320, 180);
-  setTimeout(function() {
+  setTimeout(function () {
     if (myTimerIsRunning) {
       clearInterval(myTimer);
       myTimerIsRunning = 0;
@@ -2026,7 +1996,7 @@ export class PoolDynamite extends React.Component {
             top: "80",
             left: "80",
             zIndex: 0,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -2038,7 +2008,7 @@ export class PoolDynamite extends React.Component {
             top: "80",
             left: "80",
             zIndex: 4,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -2050,7 +2020,7 @@ export class PoolDynamite extends React.Component {
             top: "80",
             left: "80",
             zIndex: 5,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -2062,7 +2032,7 @@ export class PoolDynamite extends React.Component {
             top: "50",
             left: "50",
             zIndex: 3,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -2074,7 +2044,7 @@ export class PoolDynamite extends React.Component {
             top: "50",
             left: "50",
             zIndex: 2,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -2086,7 +2056,7 @@ export class PoolDynamite extends React.Component {
             top: "0",
             left: "0",
             zIndex: 7,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -2098,7 +2068,7 @@ export class PoolDynamite extends React.Component {
             top: "50",
             left: "50",
             zIndex: 2,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -2110,7 +2080,7 @@ export class PoolDynamite extends React.Component {
             top: "0",
             left: "0",
             zIndex: 1,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -2122,7 +2092,7 @@ export class PoolDynamite extends React.Component {
             top: "80",
             left: "80",
             zIndex: 6,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -2134,7 +2104,7 @@ export class PoolDynamite extends React.Component {
             top: "0",
             left: "0",
             zIndex: 2,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
       </div>

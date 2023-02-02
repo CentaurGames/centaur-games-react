@@ -2,7 +2,7 @@ import * as React from "react";
 import audioURL from "../Eight-Ball Pool/audio.mp3";
 import {
   startGlobalLoadingIndicator,
-  stopGlobalLoadingIndicator
+  stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
@@ -43,7 +43,7 @@ var ys = [
   180 - 2 * r,
   180 + r,
   180 - r,
-  180
+  180,
 ];
 var xs = [
   575,
@@ -61,7 +61,7 @@ var xs = [
   65 + 2 * h,
   65 + 3 * h,
   65 + 3 * h,
-  65 + 4 * h
+  65 + 4 * h,
 ];
 var Vxs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //10*Math.cos(theta)
 var Vys = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //10*Math.sin(theta)
@@ -83,7 +83,7 @@ var colors = [
   "indigo",
   "navy",
   "lime",
-  "firebrick"
+  "firebrick",
 ];
 var cueImage = new Image(370, 15);
 var distanceFromCueToBall = 20;
@@ -119,7 +119,7 @@ function carpetPattern() {
   imageContext.bezierCurveTo(13, 22, 12, 3, 0, 25);
   imageContext.stroke();
   carpetPatternImage.src = imageCanvas.toDataURL("image/png");
-  carpetPatternImage.onload = function() {
+  carpetPatternImage.onload = function () {
     paintFloorCanvas();
     imageContext.clearRect(0, 0, 50, 50);
   };
@@ -232,7 +232,7 @@ function rescaleCanvases() {
   scoreCanvas.height = Math.round(520 * scale);
   scoreContext.scale(scale, scale);
   if (isMobile) {
-    setTimeout(function() {
+    setTimeout(function () {
       window.scrollTo(0, y0);
       centerAllCanvases();
     }, 500);
@@ -285,8 +285,8 @@ function loadAudio() {
   var request = new XMLHttpRequest();
   request.open("GET", audioURL, true);
   request.responseType = "arraybuffer";
-  request.onload = function() {
-    audioContext.decodeAudioData(request.response, function(buffer) {
+  request.onload = function () {
+    audioContext.decodeAudioData(request.response, function (buffer) {
       audioBuffer = buffer;
       isAudioLoaded = 1;
     });
@@ -305,7 +305,7 @@ function createBallImage(i) {
     cursorCanvas.addEventListener("touchmove", mouseMotionDetector);
     cursorCanvas.addEventListener("touchstart", mouseDown);
     cursorCanvas.addEventListener("touchend", mouseUp);
-    scrollPreventCanvas.addEventListener("touchmove", function(evt) {
+    scrollPreventCanvas.addEventListener("touchmove", function (evt) {
       evt.preventDefault();
     });
     window.addEventListener("resize", rescaleCanvases);
@@ -333,7 +333,7 @@ function createBallImage(i) {
   imageContext.fill();
   ballImages[i] = new Image(20, 20);
   ballImages[i].src = imageCanvas.toDataURL("image/png");
-  ballImages[i].onload = function() {
+  ballImages[i].onload = function () {
     createBallImage(i + 1);
   };
 }
@@ -355,7 +355,7 @@ function initializeGlobals() {
     180 - 2 * r,
     180 + r,
     180 - r,
-    180
+    180,
   ];
   xs = [
     575,
@@ -373,7 +373,7 @@ function initializeGlobals() {
     65 + 2 * h,
     65 + 3 * h,
     65 + 3 * h,
-    65 + 4 * h
+    65 + 4 * h,
   ];
   Vxs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //10*Math.cos(theta)
   Vys = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //10*Math.sin(theta)
@@ -655,7 +655,7 @@ function drawCueImage() {
   cueContext.closePath();
   cueContext.fill();
   cueImage.src = cueCanvas.toDataURL("image/png");
-  cueImage.onload = function() {
+  cueImage.onload = function () {
     createBallImage(0);
   };
 }
@@ -717,7 +717,7 @@ function findClosestBallToAnyHole() {
 
 function mouseDownAI() {
   cueIsStriking = 1;
-  cueTimer = setInterval(function() {
+  cueTimer = setInterval(function () {
     if (distanceFromCueToBall <= 120) {
       distanceFromCueToBall++;
       drawCue();
@@ -732,7 +732,7 @@ function mouseUpAI() {
   strengthOfHit = distanceFromCueToBall / 30;
   clearInterval(cueTimer);
   cueIsStriking = 1;
-  cueTimer = setInterval(function() {
+  cueTimer = setInterval(function () {
     if (distanceFromCueToBall >= r) {
       distanceFromCueToBall -= 5;
       drawCue();
@@ -792,7 +792,7 @@ function mouseDown(evt) {
     return;
   }
   mouseMotionDetector(evt);
-  cueTimer = setInterval(function() {
+  cueTimer = setInterval(function () {
     if (distanceFromCueToBall <= 120) {
       distanceFromCueToBall++;
       drawCue();
@@ -817,7 +817,7 @@ function mouseUp(evt) {
   strengthOfHit = distanceFromCueToBall / 30;
   clearInterval(cueTimer);
   cueIsStriking = 1;
-  cueTimer = setInterval(function() {
+  cueTimer = setInterval(function () {
     if (distanceFromCueToBall >= r) {
       distanceFromCueToBall -= 5;
       drawCue();
@@ -1367,7 +1367,7 @@ export class StraightPool extends React.Component {
             top: "30",
             left: "30",
             zIndex: 0,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1379,7 +1379,7 @@ export class StraightPool extends React.Component {
             top: "30",
             left: "30",
             zIndex: 3,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1391,7 +1391,7 @@ export class StraightPool extends React.Component {
             top: "30",
             left: "30",
             zIndex: 4,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1403,7 +1403,7 @@ export class StraightPool extends React.Component {
             top: "0",
             left: "0",
             zIndex: 2,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1415,7 +1415,7 @@ export class StraightPool extends React.Component {
             top: "0",
             left: "0",
             zIndex: 1,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1427,7 +1427,7 @@ export class StraightPool extends React.Component {
             top: "0",
             left: "0",
             zIndex: 5,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1439,7 +1439,7 @@ export class StraightPool extends React.Component {
             top: "0",
             left: "0",
             zIndex: 1,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1451,7 +1451,7 @@ export class StraightPool extends React.Component {
             top: "0",
             left: "0",
             zIndex: 1,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1463,7 +1463,7 @@ export class StraightPool extends React.Component {
             top: "0",
             left: "0",
             zIndex: 2,
-            border: "1px solid black"
+            border: "1px solid black",
           }}
         />
       </div>

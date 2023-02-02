@@ -10,7 +10,7 @@ export class MenuHamburger extends React.Component {
         <div className="menu-hamburger-placeholder" />
         <div className="menu-hamburger">
           <Menu>
-            {Object.keys(LIST_PAGE_META_INFO).map(listPageName => (
+            {Object.keys(LIST_PAGE_META_INFO).map((listPageName) => (
               <a
                 href={BASE_URL + "?pageType=list&pageName=" + listPageName}
                 key={listPageName}

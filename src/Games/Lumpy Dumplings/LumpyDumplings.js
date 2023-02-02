@@ -2,7 +2,7 @@ import * as React from "react";
 import audioURL from "./audio.mp3";
 import {
   startGlobalLoadingIndicator,
-  stopGlobalLoadingIndicator
+  stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
@@ -82,8 +82,8 @@ function loadAudio() {
   var request = new XMLHttpRequest();
   request.open("GET", audioURL, true);
   request.responseType = "arraybuffer";
-  request.onload = function() {
-    audioContext.decodeAudioData(request.response, function(buffer) {
+  request.onload = function () {
+    audioContext.decodeAudioData(request.response, function (buffer) {
       audioBuffer = buffer;
       isAudioLoaded = 1;
       playBackgroundAudio();
@@ -140,7 +140,7 @@ function rescaleAllCanvases() {
   rescaleCanvas(dumplingCanvas, dumplingContext, scale);
   rescaleCanvas(scoreCanvas, scoreContext, scale);
   if (isMobile) {
-    setTimeout(function() {
+    setTimeout(function () {
       window.scrollTo(0, rect.top);
       centerAllCanvases();
     }, 500);
@@ -246,7 +246,7 @@ function keyDownEvent(evt) {
     clearTimeout(keyTimer);
     keyTimerIsRunning = 0;
   }
-  keyTimer = setTimeout(function() {
+  keyTimer = setTimeout(function () {
     keyDownEvent(evt);
   }, 10);
   keyTimerIsRunning = 1;
@@ -311,7 +311,7 @@ function setEventListeners() {
   scoreCanvas.addEventListener("touchend", touchEndEvent);
   document.addEventListener("mouseup", touchEndEvent);
   window.addEventListener("resize", rescaleAllCanvases);
-  scrollPreventCanvas.addEventListener("touchmove", function(evt) {
+  scrollPreventCanvas.addEventListener("touchmove", function (evt) {
     evt.preventDefault();
   });
 }
@@ -418,7 +418,7 @@ function drawBackgroundImage() {
   imageContext.fillStyle = grad;
   imageContext.fillRect(0, 0, canvasWidth, canvasHeight);
   backgroundImage.src = imageCanvas.toDataURL("image/png");
-  backgroundImage.onload = function() {
+  backgroundImage.onload = function () {
     isReplayOn = 1;
     gameOver = 1;
     playerX = canvasWidth / 2;
@@ -741,7 +741,7 @@ export class LumpyDumplings extends React.Component {
             top: "10",
             left: "10",
             zIndex: 0,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -753,7 +753,7 @@ export class LumpyDumplings extends React.Component {
             top: "10",
             left: "10",
             zIndex: 1,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -765,7 +765,7 @@ export class LumpyDumplings extends React.Component {
             top: "10",
             left: "10",
             zIndex: 2,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -777,7 +777,7 @@ export class LumpyDumplings extends React.Component {
             top: "10",
             left: "10",
             zIndex: 3,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -789,7 +789,7 @@ export class LumpyDumplings extends React.Component {
             top: "10",
             left: "10",
             zIndex: 4,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
       </div>

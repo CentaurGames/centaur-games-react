@@ -111,5 +111,5 @@ export const imageSources = [
   imageSources_51,
   imageSources_52,
   imageSources_53,
-  imageSources_54
+  imageSources_54,
 ];

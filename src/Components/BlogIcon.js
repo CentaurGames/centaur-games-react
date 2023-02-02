@@ -29,7 +29,7 @@ export class BlogIcon extends React.Component {
           <div
             className="blog-icon__description"
             dangerouslySetInnerHTML={{
-              __html: BLOG_META_INFO[this.props.blogName].description
+              __html: BLOG_META_INFO[this.props.blogName].description,
             }}
           />
         </div>

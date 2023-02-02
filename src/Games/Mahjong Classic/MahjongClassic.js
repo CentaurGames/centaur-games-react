@@ -4,7 +4,7 @@ import backgroundAudioURL from "./backgroundAudio.mp3";
 import swipeAudioURL from "../Mahjong Alchemy/swipeAudio.mp3";
 import {
   startGlobalLoadingIndicator,
-  stopGlobalLoadingIndicator
+  stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
@@ -65,8 +65,8 @@ function loadBackgroundAudio() {
   var request = new XMLHttpRequest();
   request.open("GET", backgroundAudioURL, true);
   request.responseType = "arraybuffer";
-  request.onload = function() {
-    backgroundAudioContext.decodeAudioData(request.response, function(buffer) {
+  request.onload = function () {
+    backgroundAudioContext.decodeAudioData(request.response, function (buffer) {
       backgroundBuffer = buffer;
       isBackgroundAudioLoaded = 1;
       playBackgroundSound();
@@ -86,8 +86,8 @@ function loadSwipeAudio() {
   var request = new XMLHttpRequest();
   request.open("GET", swipeAudioURL, true);
   request.responseType = "arraybuffer";
-  request.onload = function() {
-    swipeAudioContext.decodeAudioData(request.response, function(buffer) {
+  request.onload = function () {
+    swipeAudioContext.decodeAudioData(request.response, function (buffer) {
       isSwipeAudioLoaded = 1;
       swipeBuffer = buffer;
     });
@@ -195,7 +195,7 @@ function rescaleCanvases() {
   imageCanvas.width = 0;
   imageCanvas.height = 0;
   if (isMobile) {
-    setTimeout(function() {
+    setTimeout(function () {
       window.scrollTo(0, y0);
       centerAllCanvases();
     }, 500);
@@ -225,7 +225,7 @@ function detectGameOver() {
 function gameOverSequence() {
   gameOver = 1;
   var numOfSecs = 3;
-  var countDown = setInterval(function() {
+  var countDown = setInterval(function () {
     if (numOfSecs <= 0) {
       clearInterval(countDown);
       createGrid();
@@ -311,7 +311,7 @@ function drawTiles(index) {
   }
   tileImages[index] = new Image(50, 50);
   tileImages[index].src = imageSources[index];
-  tileImages[index].onload = function() {
+  tileImages[index].onload = function () {
     drawTiles(index + 1);
   };
 }
@@ -473,7 +473,7 @@ function drawFrontTiles(index) {
     tileHeight + tileDepth
   );
   highlightedTiles[index].src = imageCanvas.toDataURL("image/png");
-  highlightedTiles[index].onload = function() {
+  highlightedTiles[index].onload = function () {
     drawFrontTiles(index + 1);
   };
 }
@@ -495,7 +495,7 @@ function drawShadedTiles(index) {
   imageContext.restore();
   shadedTiles[index] = new Image(tileWidth + tileDepth, tileHeight + tileDepth);
   shadedTiles[index].src = imageCanvas.toDataURL("image/png");
-  shadedTiles[index].onload = function() {
+  shadedTiles[index].onload = function () {
     drawShadedTiles(index + 1);
   };
 }
@@ -688,7 +688,7 @@ function setEventListeners() {
     scrollPreventCanvas.addEventListener("mousedown", makeFirstSelection);
   }
   window.addEventListener("resize", rescaleCanvases);
-  scrollPreventCanvas.addEventListener("touchmove", function(evt) {
+  scrollPreventCanvas.addEventListener("touchmove", function (evt) {
     evt.preventDefault();
   });
 }
@@ -946,7 +946,7 @@ export class MahjongClassic extends React.Component {
             top: "0",
             left: "0",
             zIndex: 4,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -958,7 +958,7 @@ export class MahjongClassic extends React.Component {
             top: "0",
             left: "0",
             zIndex: 0,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -970,7 +970,7 @@ export class MahjongClassic extends React.Component {
             top: "0",
             left: "0",
             zIndex: 1,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -982,7 +982,7 @@ export class MahjongClassic extends React.Component {
             top: "0",
             left: "0",
             zIndex: 2,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -994,7 +994,7 @@ export class MahjongClassic extends React.Component {
             top: "0",
             left: "0",
             zIndex: 3,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
       </div>

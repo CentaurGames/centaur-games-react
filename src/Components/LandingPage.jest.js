@@ -9,17 +9,13 @@ describe("LandingPage component", () => {
     cleanup();
   });
 
-  it.each(Object.keys(GAME_META_INFO))("displays %s correctly", gameName => {
+  it.each(Object.keys(GAME_META_INFO))("displays %s correctly", (gameName) => {
     const { getByText, getByTestId, queryByText, queryAllByTestId } = render(
       <LandingPage game={gameName} />
     );
 
-    const {
-      iosURL,
-      androidURL,
-      recommendedGames,
-      screenshotImages
-    } = GAME_META_INFO[gameName];
+    const { iosURL, androidURL, recommendedGames, screenshotImages } =
+      GAME_META_INFO[gameName];
 
     const playGame = getByText("Play Game");
     expect(playGame.parentElement.getAttribute("href")).toEqual(
@@ -44,9 +40,9 @@ describe("LandingPage component", () => {
       expect(otherGames).toBeNull();
     }
 
-    const recommendedGameUrls = queryAllByTestId(
-      "icon-landing-page"
-    ).map(icon => icon.getAttribute("href"));
+    const recommendedGameUrls = queryAllByTestId("icon-landing-page").map(
+      (icon) => icon.getAttribute("href")
+    );
     expect(recommendedGameUrls.length).toEqual(recommendedGames.length);
 
     for (let i = 0; i < recommendedGames.length; i++) {

@@ -19,7 +19,7 @@ export class MobileGamesListPage extends React.Component {
           <MenuBar />
         </div>
         <div className="mobile-games">
-          {LIST_PAGE_META_INFO[this.props.name].games.map(gameName => (
+          {LIST_PAGE_META_INFO[this.props.name].games.map((gameName) => (
             <a
               href={GAME_META_INFO[gameName][mobileUrl]}
               key={gameName}

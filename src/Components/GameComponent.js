@@ -12,22 +12,32 @@ export class GameComponent extends React.Component {
     let Game;
     switch (this.props.gameName) {
       case "Brimstone":
-        Game = React.lazy(() => import("../Games/Brimstone/BrimstoneComponent"));
+        Game = React.lazy(() =>
+          import("../Games/Brimstone/BrimstoneComponent")
+        );
         break;
       case "BubbleShooter":
-        Game = React.lazy(() => import("../Games/Bubble Shooter/BubbleShooter"));
+        Game = React.lazy(() =>
+          import("../Games/Bubble Shooter/BubbleShooter")
+        );
         break;
       case "ChickenWings":
         Game = React.lazy(() => import("../Games/Chicken Wings/ChickenWings"));
         break;
       case "ChickenWings2":
-        Game = React.lazy(() => import("../Games/Chicken Wings 2/ChickenWings2"));
+        Game = React.lazy(() =>
+          import("../Games/Chicken Wings 2/ChickenWings2")
+        );
         break;
       case "ChickenWings3":
-        Game = React.lazy(() => import("../Games/Chicken Wings 3/ChickenWings3"));
+        Game = React.lazy(() =>
+          import("../Games/Chicken Wings 3/ChickenWings3")
+        );
         break;
       case "EightBallPool":
-        Game = React.lazy(() => import("../Games/Eight-Ball Pool/EightBallPool"));
+        Game = React.lazy(() =>
+          import("../Games/Eight-Ball Pool/EightBallPool")
+        );
         break;
       case "Entombed":
         Game = React.lazy(() => import("../Games/Entombed/Entombed"));
@@ -71,7 +81,9 @@ export class GameComponent extends React.Component {
         );
         break;
       case "MahjongZodiac":
-        Game = React.lazy(() => import("../Games/Mahjong Zodiac/MahjongZodiac"));
+        Game = React.lazy(() =>
+          import("../Games/Mahjong Zodiac/MahjongZodiac")
+        );
         break;
       case "Minesweeper":
         Game = React.lazy(() => import("../Games/Minesweeper/Minesweeper"));
@@ -88,13 +100,17 @@ export class GameComponent extends React.Component {
         Game = React.lazy(() => import("../Games/Pool Outbreak/PoolOutbreak"));
         break;
       case "PoolSolitaire":
-        Game = React.lazy(() => import("../Games/Pool Solitaire/PoolSolitaire"));
+        Game = React.lazy(() =>
+          import("../Games/Pool Solitaire/PoolSolitaire")
+        );
         break;
       case "RocketRacers":
         Game = React.lazy(() => import("../Games/Rocket Racers/RocketRacers"));
         break;
       case "RocketRacers2":
-        Game = React.lazy(() => import("../Games/Rocket Racers 2/RocketRacers2"));
+        Game = React.lazy(() =>
+          import("../Games/Rocket Racers 2/RocketRacers2")
+        );
         break;
       case "RocketRacersNitro":
         Game = React.lazy(() =>
@@ -116,7 +132,9 @@ export class GameComponent extends React.Component {
         );
         break;
       case "VolcanoFrenzy":
-        Game = React.lazy(() => import("../Games/Volcano Frenzy/VolcanoFrenzy"));
+        Game = React.lazy(() =>
+          import("../Games/Volcano Frenzy/VolcanoFrenzy")
+        );
         break;
       case "VolcanoFrenzy2":
         Game = React.lazy(() =>
@@ -127,11 +145,11 @@ export class GameComponent extends React.Component {
         return <></>;
     }
     return (
-        <React.Suspense fallback={<LoadingIndicator />}>
-          <GlobalLoadingIndicator>
-            <Game />
-          </GlobalLoadingIndicator>
-        </React.Suspense>
+      <React.Suspense fallback={<LoadingIndicator />}>
+        <GlobalLoadingIndicator>
+          <Game />
+        </GlobalLoadingIndicator>
+      </React.Suspense>
     );
   }
 }

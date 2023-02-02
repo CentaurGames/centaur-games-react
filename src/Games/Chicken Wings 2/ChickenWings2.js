@@ -4,12 +4,12 @@ import {
   mushroomDataURL,
   eggDataURL,
   replayDataURL,
-  scoreDataURL
+  scoreDataURL,
 } from "./ChickenWings2ImageSources";
 import backgroundAudioURL from "../Chicken Wings/backgroundAudio.mp3";
 import {
   startGlobalLoadingIndicator,
-  stopGlobalLoadingIndicator
+  stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
@@ -64,8 +64,8 @@ function loadBackgroundAudio() {
   var request = new XMLHttpRequest();
   request.open("GET", backgroundAudioURL, true);
   request.responseType = "arraybuffer";
-  request.onload = function() {
-    backgroundAudioContext.decodeAudioData(request.response, function(buffer) {
+  request.onload = function () {
+    backgroundAudioContext.decodeAudioData(request.response, function (buffer) {
       backgroundBuffer = buffer;
       isAudioLoaded = 1;
       playBackgroundSound();
@@ -339,7 +339,7 @@ function setTimingEvents() {
   if (isScrollIntervalRunning) {
     return;
   }
-  scrollInterval = setInterval(function() {
+  scrollInterval = setInterval(function () {
     scrollAll();
   }, 30);
   isScrollIntervalRunning = 1;
@@ -468,7 +468,7 @@ function rescaleCanvases() {
   replayCanvas.height = Math.round(1136 * scale);
   replayContext.scale(scale, scale);
   if (isMobile) {
-    setTimeout(function() {
+    setTimeout(function () {
       window.scrollTo(0, y0);
       centerAllCanvases();
     }, 500);
@@ -535,7 +535,7 @@ function setEventListeners() {
   replayCanvas.addEventListener("mousemove", mouseMoveEvent);
   replayCanvas.addEventListener("mousedown", mouseClickEvent);
   replayCanvas.addEventListener("touchmove", mouseMoveEvent);
-  scrollPreventCanvas.addEventListener("touchmove", function(evt) {
+  scrollPreventCanvas.addEventListener("touchmove", function (evt) {
     evt.preventDefault();
   });
 }
@@ -716,7 +716,7 @@ export class ChickenWings2 extends React.Component {
             top: "0",
             left: "0",
             zIndex: 0,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -728,7 +728,7 @@ export class ChickenWings2 extends React.Component {
             top: "0",
             left: "0",
             zIndex: 1,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -740,7 +740,7 @@ export class ChickenWings2 extends React.Component {
             top: "0",
             left: "0",
             zIndex: 2,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -752,7 +752,7 @@ export class ChickenWings2 extends React.Component {
             top: "0",
             left: "0",
             zIndex: 3,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -764,7 +764,7 @@ export class ChickenWings2 extends React.Component {
             top: "0",
             left: "0",
             zIndex: 4,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
       </div>

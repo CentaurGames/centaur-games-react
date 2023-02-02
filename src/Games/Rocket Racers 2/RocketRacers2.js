@@ -3,7 +3,7 @@ import pingURL from "../Rocket Racers/ping.wav";
 import explosionURL from "../Rocket Racers/explosion.mp3";
 import {
   startGlobalLoadingIndicator,
-  stopGlobalLoadingIndicator
+  stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
@@ -61,7 +61,7 @@ var isPingAudioLoaded = 0,
 var rotationMatrix = [
   [1, 0, 0],
   [0, 1, 0],
-  [0, 0, 1]
+  [0, 0, 1],
 ];
 var phiX = (-50 * Math.PI) / 180;
 var phiY = (-20 * Math.PI) / 180;
@@ -133,7 +133,7 @@ function matrixProduct(mat1, mat2) {
   var mat3 = [
     [0, 0, 0],
     [0, 0, 0],
-    [0, 0, 0]
+    [0, 0, 0],
   ];
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
@@ -161,7 +161,7 @@ function rotateX(angle) {
   var rx = [
     [1, 0, 0],
     [0, c, -s],
-    [0, s, c]
+    [0, s, c],
   ];
   rotationMatrix = matrixProduct(rx, rotationMatrix);
 }
@@ -172,7 +172,7 @@ function rotateY(angle) {
   var ry = [
     [c, 0, s],
     [0, 1, 0],
-    [-s, 0, c]
+    [-s, 0, c],
   ];
   rotationMatrix = matrixProduct(ry, rotationMatrix);
 }
@@ -183,7 +183,7 @@ function rotateZ(angle) {
   var rz = [
     [c, -s, 0],
     [s, c, 0],
-    [0, 0, 1]
+    [0, 0, 1],
   ];
   rotationMatrix = matrixProduct(rz, rotationMatrix);
 }
@@ -277,8 +277,8 @@ function loadExplosionAudio() {
   var request = new XMLHttpRequest();
   request.open("GET", explosionURL, true);
   request.responseType = "arraybuffer";
-  request.onload = function() {
-    audioContext.decodeAudioData(request.response, function(buffer) {
+  request.onload = function () {
+    audioContext.decodeAudioData(request.response, function (buffer) {
       explosionBuffer = buffer;
       isExplosionAudioLoaded = 1;
       if (isIOS) initializeGame();
@@ -296,8 +296,8 @@ function loadPingAudio() {
   var request = new XMLHttpRequest();
   request.open("GET", pingURL, true);
   request.responseType = "arraybuffer";
-  request.onload = function() {
-    audioContext.decodeAudioData(request.response, function(buffer) {
+  request.onload = function () {
+    audioContext.decodeAudioData(request.response, function (buffer) {
       pingBuffer = buffer;
       isPingAudioLoaded = 1;
     });
@@ -414,7 +414,7 @@ function rescaleCanvases() {
   imageCanvas.width = 0;
   imageCanvas.height = 0;
   if (isMobile) {
-    setTimeout(function() {
+    setTimeout(function () {
       window.scrollTo(0, y0);
       centerAllCanvases();
     }, 500);
@@ -598,10 +598,10 @@ function startGame() {
   stopGlobalLoadingIndicator();
   screenCanvas.addEventListener("mousedown", userClick);
   screenCanvas.addEventListener("touchstart", userClick);
-  screenCanvas.addEventListener("touchmove", function(evt) {
+  screenCanvas.addEventListener("touchmove", function (evt) {
     evt.preventDefault();
   });
-  scrollPreventCanvas.addEventListener("touchmove", function(evt) {
+  scrollPreventCanvas.addEventListener("touchmove", function (evt) {
     evt.preventDefault();
   });
 }
@@ -1201,7 +1201,7 @@ function animateCollision() {
     return;
   }
   ignoreClicks = 1;
-  explosiveTimer = setInterval(function() {
+  explosiveTimer = setInterval(function () {
     if (explosiveIndex < 22) {
       carContext.clearRect(0, 0, 700, 700);
       carContext.save();
@@ -1844,7 +1844,7 @@ export class RocketRacers2 extends React.Component {
             top: "100",
             left: "100",
             zIndex: 0,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1856,7 +1856,7 @@ export class RocketRacers2 extends React.Component {
             top: "100",
             left: "100",
             zIndex: 1,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1868,7 +1868,7 @@ export class RocketRacers2 extends React.Component {
             top: "0",
             left: "0",
             zIndex: 2,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1880,7 +1880,7 @@ export class RocketRacers2 extends React.Component {
             top: "0",
             left: "250",
             zIndex: 3,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1892,7 +1892,7 @@ export class RocketRacers2 extends React.Component {
             top: "0",
             left: "250",
             zIndex: 4,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1904,7 +1904,7 @@ export class RocketRacers2 extends React.Component {
             top: "0",
             left: "0",
             zIndex: 5,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1916,7 +1916,7 @@ export class RocketRacers2 extends React.Component {
             top: "0",
             left: "0",
             zIndex: 6,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
       </div>

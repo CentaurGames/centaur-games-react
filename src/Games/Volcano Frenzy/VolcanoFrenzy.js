@@ -5,12 +5,12 @@ import {
   tileImageURLs,
   cartImageURL,
   coinEdgeURL,
-  coinImageURL
+  coinImageURL,
 } from "./VolcanoFrenzyImageSources";
 import audioURL from "./audio.mp3";
 import {
   startGlobalLoadingIndicator,
-  stopGlobalLoadingIndicator
+  stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
@@ -126,8 +126,8 @@ function loadAudio() {
   var request = new XMLHttpRequest();
   request.open("GET", audioURL, true);
   request.responseType = "arraybuffer";
-  request.onload = function() {
-    audioContext.decodeAudioData(request.response, function(buffer) {
+  request.onload = function () {
+    audioContext.decodeAudioData(request.response, function (buffer) {
       audioBuffer = buffer;
       isAudioLoaded = 1;
       playAudio();
@@ -140,7 +140,7 @@ function matrixMultiply(mat1, mat2) {
   var matrix = [
     [0, 0, 0],
     [0, 0, 0],
-    [0, 0, 0]
+    [0, 0, 0],
   ];
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
@@ -156,7 +156,7 @@ function rotateX(angle, matrix) {
   var xRotation = [
     [1, 0, 0],
     [0, 1, 0],
-    [0, 0, 1]
+    [0, 0, 1],
   ];
   xRotation[1][1] = Math.cos(angle);
   xRotation[2][2] = xRotation[1][1];
@@ -169,7 +169,7 @@ function rotateY(angle, matrix) {
   var yRotation = [
     [1, 0, 0],
     [0, 1, 0],
-    [0, 0, 1]
+    [0, 0, 1],
   ];
   yRotation[0][0] = Math.cos(angle);
   yRotation[2][2] = yRotation[0][0];
@@ -182,7 +182,7 @@ function rotateZ(angle, matrix) {
   var zRotation = [
     [1, 0, 0],
     [0, 1, 0],
-    [0, 0, 1]
+    [0, 0, 1],
   ];
   zRotation[0][0] = Math.cos(angle);
   zRotation[1][1] = zRotation[0][0];
@@ -205,7 +205,7 @@ function restartLevel() {
 
 function setLavaInterval() {
   scrollY = 0;
-  var lavaInterval = setInterval(function() {
+  var lavaInterval = setInterval(function () {
     scrollY++;
     scrollY %= canvasHeight;
     lavaContext.clearRect(0, 0, canvasWidth, canvasHeight);
@@ -241,7 +241,7 @@ function setFallingCartInterval() {
   var top = (canvasHeight - gridHeight) / 2;
   fallingCartX = left + cartX * tileWidth + tileWidth / 2;
   fallingCartY = top + cartY * tileHeight + tileHeight / 2;
-  fallingCartInterval = setInterval(function() {
+  fallingCartInterval = setInterval(function () {
     var x0, y0, radius, theta;
     x0 = fallingCartX - canvasWidth / 2;
     y0 = fallingCartY - canvasHeight / 2;
@@ -360,7 +360,7 @@ function setCoinTimer() {
   rotationMatrix = [
     [1, 0, 0],
     [0, 1, 0],
-    [0, 0, 1]
+    [0, 0, 1],
   ];
   rotationMatrix = rotateX(thetaX, rotationMatrix);
   rotationMatrix = rotateY(thetaY, rotationMatrix);
@@ -674,7 +674,7 @@ function rescaleCanvases() {
   placardCanvas.height = Math.round(canvasHeight * scale);
   placardContext.scale(scale, scale);
   if (isMobile) {
-    setTimeout(function() {
+    setTimeout(function () {
       window.scrollTo(0, y0);
       centerAllCanvases();
     }, 500);
@@ -836,7 +836,7 @@ function moveCart(newDirection, newX, newY) {
     fallingDebrisMatrix.push([
       [1, 0, 0],
       [0, 1, 0],
-      [0, 0, 1]
+      [0, 0, 1],
     ]);
     grid[cartX][cartY] = convertCrossroads(newDirection);
   } else {
@@ -847,12 +847,12 @@ function moveCart(newDirection, newX, newY) {
     fallingDebrisMatrix.push([
       [1, 0, 0],
       [0, 1, 0],
-      [0, 0, 1]
+      [0, 0, 1],
     ]);
     grid[cartX][cartY] = 0;
   }
   cartIsRolling = 1;
-  setTimeout(function() {
+  setTimeout(function () {
     if (cartDirection === 0 && newDirection === 3) {
       transitionBetweenTiles(4, cartX, cartY, newDirection, newX, newY, 0);
     } else if (cartDirection === 3 && newDirection === 0) {
@@ -936,7 +936,7 @@ function transitionBetweenTiles(
   cartX = (index * (newX - oldX)) / numberOfCartTransitions + oldX;
   cartY = (index * (newY - oldY)) / numberOfCartTransitions + oldY;
   render();
-  setTimeout(function() {
+  setTimeout(function () {
     transitionBetweenTiles(
       oldDirection,
       oldX,
@@ -974,7 +974,7 @@ function swipeEndEvent(evt) {
   }
   //alert(key);
   var newEvent = {
-    keyCode: key
+    keyCode: key,
   };
   arrowKeyEvent(newEvent);
 }
@@ -1081,7 +1081,7 @@ function setEventListeners() {
   placardCanvas.addEventListener("mousedown", clickEvent);
   placardCanvas.addEventListener("touchstart", swipeStartEvent);
   placardCanvas.addEventListener("touchmove", swipeMoveEvent);
-  scrollPreventCanvas.addEventListener("touchmove", function(evt) {
+  scrollPreventCanvas.addEventListener("touchmove", function (evt) {
     evt.preventDefault();
   });
   document.addEventListener("keydown", arrowKeyEvent);
@@ -1116,7 +1116,7 @@ function Rectangle(x, y, w, h) {
   this.top = y;
   this.width = w;
   this.height = h;
-  this.fillGrid = function() {
+  this.fillGrid = function () {
     switch (grid[this.left][this.top]) {
       case 0:
         grid[this.left][this.top] = 3;
@@ -1426,7 +1426,7 @@ function Rectangle(x, y, w, h) {
       }
     }
   };
-  this.distanceToIntersect = function(x0, y0, angle) {
+  this.distanceToIntersect = function (x0, y0, angle) {
     var dx, dy, angleTL, angleTR, angleBL, angleBR;
     dx = this.left - x0;
     dy = this.top - y0;
@@ -1476,7 +1476,7 @@ function Rectangle(x, y, w, h) {
     dx = x1 - x0;
     return Math.sqrt(dx * dx + dy * dy);
   };
-  this.checkForIntersect = function(rect) {
+  this.checkForIntersect = function (rect) {
     if (
       this.left === rect.left ||
       this.left + this.width === rect.left + rect.width ||
@@ -1493,7 +1493,7 @@ function Rectangle(x, y, w, h) {
       return 1;
     return 0;
   };
-  this.checkArrayForIntersect = function(rects) {
+  this.checkArrayForIntersect = function (rects) {
     if (
       this.top < 0 ||
       this.left < 0 ||
@@ -1651,7 +1651,7 @@ function initializeGrid() {
   numberOfRectangles = Math.round(8 / (1 + Math.exp(-currentLevel)));
   isPlacardOn = 1;
   gameOver = 1;
-  var placardTimer = setTimeout(function() {
+  var placardTimer = setTimeout(function () {
     isPlacardOn = 0;
     gameOver = 0;
     cartIsRolling = 0;
@@ -1716,7 +1716,7 @@ function loadTileImage(index) {
   }
   tileImages[index] = new Image();
   tileImages[index].src = tileImageURLs[index];
-  tileImages[index].onload = function() {
+  tileImages[index].onload = function () {
     loadTileImage(index + 1);
   };
 }
@@ -1724,7 +1724,7 @@ function loadTileImage(index) {
 function loadCavernImage() {
   cavernImage = new Image();
   cavernImage.src = cavernImageURL;
-  cavernImage.onload = function() {
+  cavernImage.onload = function () {
     loadTileImage(0);
   };
 }
@@ -1772,7 +1772,7 @@ export class VolcanoFrenzy extends React.Component {
             top: "0",
             left: "0",
             zIndex: 0,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1784,7 +1784,7 @@ export class VolcanoFrenzy extends React.Component {
             top: "0",
             left: "0",
             zIndex: 1,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1796,7 +1796,7 @@ export class VolcanoFrenzy extends React.Component {
             top: "0",
             left: "0",
             zIndex: 2,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1808,7 +1808,7 @@ export class VolcanoFrenzy extends React.Component {
             top: "0",
             left: "0",
             zIndex: 3,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1820,7 +1820,7 @@ export class VolcanoFrenzy extends React.Component {
             top: "0",
             left: "0",
             zIndex: 4,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1832,7 +1832,7 @@ export class VolcanoFrenzy extends React.Component {
             top: "0",
             left: "0",
             zIndex: 5,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1844,7 +1844,7 @@ export class VolcanoFrenzy extends React.Component {
             top: "0",
             left: "0",
             zIndex: 6,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1856,7 +1856,7 @@ export class VolcanoFrenzy extends React.Component {
             top: "0",
             left: "0",
             zIndex: 7,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
       </div>

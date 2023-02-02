@@ -128,7 +128,7 @@ export const GAME_META_INFO = {
       "BubbleShooter",
       "Minesweeper",
       "SpeedPool",
-      "PoolSolitaire"
+      "PoolSolitaire",
     ],
     description:
       "Instructions: Move the snake and eat the apples. If you bump into your body you will die.\nControls: If you are playing on a keyboard, use the arrow keys to move. If you are on a touchscreen device, tap an area of the screen in the direction you want the snake to move. Example: if you want the snake to move to the left, tap to the left of the snake's head.",
@@ -136,7 +136,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.snakeretro",
     largeImageURL: SnakeLargeImage,
-    appImageURL: SnakeAppImage
+    appImageURL: SnakeAppImage,
   },
   Minesweeper: {
     name: "Minesweeper",
@@ -148,7 +148,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.minesweeper",
     largeImageURL: MinesweeperLargeImage,
-    appImageURL: MinesweeperAppImage
+    appImageURL: MinesweeperAppImage,
   },
   BubbleShooter: {
     name: "Bubble Shooter",
@@ -161,7 +161,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.bubbleshooter",
     largeImageURL: BubbleShooterLargeImage,
-    appImageURL: BubbleShooterAppImage
+    appImageURL: BubbleShooterAppImage,
   },
   Brimstone: {
     name: "Brimstone",
@@ -170,7 +170,7 @@ export const GAME_META_INFO = {
       "Entombed",
       "VolcanoFrenzy",
       "MahjongPyramid",
-      "ChickenWings2"
+      "ChickenWings2",
     ],
     description:
       "Fearless archaeologist Jack Logan is back with more adventures in the underworld! While pilfering the tomb of occultist Aleister Crowley, he finds himself transported to a strange world of dark mazes and corridors. Help him escape each level but beware: once the darkness closes in, you will be lost to the underworld forever.\n Instructions: Collect all the coins to open the next level. Golden shaktis will give you extra lives, while the burning brimstone embers will push back the darkness for a little while longer. Brimstone embers can only be activated by passing over a pentacle, so take note of where your pentacles are!\n Controls: Keyboard: Use the arrow keys to move around. Touchscreen: Tap any tile you want the character to walk to. He will automatically avoid obstacles to the best of his ability. (He is capable of planning seven steps ahead.)",
@@ -191,8 +191,8 @@ export const GAME_META_INFO = {
       BrimstoneLevel9,
       BrimstoneLevel10,
       BrimstoneLevel12,
-      BrimstoneLevel1
-    ]
+      BrimstoneLevel1,
+    ],
   },
   PoolChampions: {
     name: "Pool Champions",
@@ -201,7 +201,7 @@ export const GAME_META_INFO = {
       "EightBallPool",
       "PoolDynamite",
       "PoolOutbreak",
-      "SpeedPool"
+      "SpeedPool",
     ],
     description:
       "Test your skills against Annie Smokely, the sharpest cue in the west!  This game defers from previous versions with its more realistic graphics and a much smarter AI.\nInstructions: Strike the cue ball to hit the other balls into the pockets. The stripes player must sink all the stripes, and the solids player must sink all the solids. If you sink the eight ball before your balls are cleared, you lose the game - if you sink it after your balls are cleared, you win. (Stripes and solids are determined by the first ball to be sunk into a pocket, and the first player to sink it.)\nControls: Once the cue appears, tap and hold or click and hold in the direction you would like to hit the ball. The longer you press, the harder the cue will strike. (The cue will only appear on the screen when all of the balls have stopped moving.)\nNote: Works best on desktop - though compatible with modern mobile devices, the game will lag a little due to the 3d graphics.",
@@ -216,8 +216,8 @@ export const GAME_META_INFO = {
       PoolChampionsScreenshot2,
       PoolChampionsScreenshot3,
       PoolChampionsScreenshot4,
-      PoolChampionsScreenshot5
-    ]
+      PoolChampionsScreenshot5,
+    ],
   },
   MahjongPyramid: {
     name: "Mahjong Pyramid",
@@ -226,7 +226,7 @@ export const GAME_META_INFO = {
       "BubbleShooter",
       "MahjongClassic",
       "PoolDynamite",
-      "Entombed"
+      "Entombed",
     ],
     description:
       "Instructions: Challenge yourself with our new Mahjong Pyramid game. Remove the tiles and win the game! Controls: Click or tap the tiles to begin the game.",
@@ -234,7 +234,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.mahjongpyramid",
     largeImageURL: MahjongPyramidLargeImage,
-    appImageURL: MahjongPyramidAppImage
+    appImageURL: MahjongPyramidAppImage,
   },
   ChickenWings2: {
     name: "Chicken Wings 2",
@@ -243,7 +243,7 @@ export const GAME_META_INFO = {
       "RocketRacers2",
       "PoolOutbreak",
       "UltimateRocketRacers",
-      "MahjongMycenaean"
+      "MahjongMycenaean",
     ],
     description:
       "Instructions: Challenge yourself with one of our latest games. Avoid the mushrooms and save our baby chick HENrietta! (Game gets faster as your score increases.) Controls: Click or tap to begin the game.",
@@ -256,8 +256,8 @@ export const GAME_META_INFO = {
     screenshotImages: [
       ChickenWingsScreenshot1,
       ChickenWingsScreenshot2,
-      ChickenWingsScreenshot3
-    ]
+      ChickenWingsScreenshot3,
+    ],
   },
   RocketRacersNitro: {
     name: "Rocket Racers Nitro",
@@ -266,7 +266,7 @@ export const GAME_META_INFO = {
       "RocketRacers2",
       "PoolChampions",
       "PoolOutbreak",
-      "Entombed"
+      "Entombed",
     ],
     description:
       "Instructions: See how long you can play without crashing into the other car! The cars will get faster with each lap. Controls: Click or tap the screen to make the car change lanes.",
@@ -280,8 +280,8 @@ export const GAME_META_INFO = {
     screenshotImages: [
       RocketRacersScreenshot1,
       RocketRacersScreenshot2,
-      RocketRacersScreenshot3
-    ]
+      RocketRacersScreenshot3,
+    ],
   },
   LumpyDumplings2: {
     name: "Lumpy Dumplings 2",
@@ -290,7 +290,7 @@ export const GAME_META_INFO = {
       "Entombed",
       "PoolDynamite",
       "UltimateRocketRacers",
-      "BubbleShooter"
+      "BubbleShooter",
     ],
     description:
       "Instructions: Catch the dumplings in the bowl - miss any of them and the game will end! (Game gets faster as you play.)\n Controls: Touchpad: Move the bowl to the left or right by touching where on the screen you want it to appear. Mouse: The bowl will follow the mouse as it moves around the screen. Keyboard: Use the left and right arrow keys to move the bowl in those directions.\n The music in this game is 'Xia Yu' by Guifrog, and was not changed in any way from its original source. Please support this artist by visiting their page: \n http://freemusicarchive.org/music/Guifrog/Xia_Yu/Guifrog_-_Xia_Yu \n This music is distributable under the Attribution License: https://creativecommons.org/licenses/by/4.0/",
@@ -298,7 +298,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.lumpydumplings",
     largeImageURL: LumpyDumplings2LargeImage,
-    youtubeLink: "KADPseajCsE"
+    youtubeLink: "KADPseajCsE",
   },
   VolcanoFrenzy2: {
     name: "Volcano Frenzy 2",
@@ -307,7 +307,7 @@ export const GAME_META_INFO = {
       "VolcanoFrenzy",
       "RocketRacersNitro",
       "ChickenWings2",
-      "Entombed"
+      "Entombed",
     ],
     description:
       "Based on a little-known puzzle by Lewis Carroll, this game adds an adventure twist that's sure to keep you hooked for hours!\n Note: This is a more challenging version of Volcano Frenzy, in which the cart won't stop at each junction. You have to be quick! Once it reaches a junction, it will move in the last direction that you gave it.\n Instructions: Clear all the tracks to pass to the next level. Be careful - drive off the edge and you will fall to your death. (Level restarts when you die.)\n Controls: The cart will drive whichever way you want when it reaches crossroads. On tracks where only one direction is possible, it will go only in that direction.\n Keyboard: Use the arrow keys to tell the cart which way you want it to go.\n Touch screen: Swipe the screen in the direction you want the cart to move.",
@@ -321,8 +321,8 @@ export const GAME_META_INFO = {
       VolcanoFrenzyScreenshot1,
       VolcanoFrenzyScreenshot2,
       VolcanoFrenzyScreenshot3,
-      VolcanoFrenzyScreenshot4
-    ]
+      VolcanoFrenzyScreenshot4,
+    ],
   },
   MahjongAlchemy: {
     name: "Mahjong Alchemy",
@@ -331,7 +331,7 @@ export const GAME_META_INFO = {
       "MahjongClassic",
       "MahjongPyramid",
       "MahjongZodiac",
-      "MahjongEmoji"
+      "MahjongEmoji",
     ],
     description:
       "Instructions: Challenge yourself with our new Mahjong Alchemy game. Remove the tiles and win the game! Controls: Click or tap the tiles to begin the game.",
@@ -339,7 +339,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.mahjongalchemy",
     largeImageURL: MahjongAlchemyLargeImage,
-    appImageURL: MahjongAlchemyAppImage
+    appImageURL: MahjongAlchemyAppImage,
   },
   Entombed: {
     name: "Entombed",
@@ -348,7 +348,7 @@ export const GAME_META_INFO = {
       "PoolChampions",
       "EightBallPool",
       "RocketRacers2",
-      "BubbleShooter"
+      "BubbleShooter",
     ],
     description:
       "Distinguished archaeologist Jack Logan has finally done it - after years of tireless searching, he has finally uncovered the tomb of the sun-god Ra. Unbeknownst to him, the tomb is an entrance to a much more sinister place: the Duat, the underworld of Ancient Egypt. To escape, he must venture through its twelve deadly chambers and defeat the enemies of Ra. But beware...only the most intrepid souls will escape the torments of the Duat. \nInstructions: Lure the monsters into the traps, but avoid falling into the traps yourself. Blue ankhs will give you extra lives, and the red embers dropped by the sun god will help brighten your torch. (You lose all red embers every time you die.) Once each level is clear of monsters, pass through the pyramid to proceed to the next level. \nControls: Desktop: Use the arrow keys to move around. Touchscreen: Tap a tile to move towards it. The character will automatically avoid obstacles and traps, but it is your job to keep him safe from the monsters! \nThe background music in this game is Firesong by Kevin MacLeod, which is licensed under a Creative Commons Attribution license (https://creativecommons.org/licenses/by/4.0/)\n Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100598\n Artist: http://incompetech.com/ \nAdditional sound effects obtained from https://www.zapsplat.com.",
@@ -367,8 +367,8 @@ export const GAME_META_INFO = {
       EntombedLevel8,
       EntombedLevel10,
       EntombedLevel11,
-      EntombedLevel1
-    ]
+      EntombedLevel1,
+    ],
   },
   PoolOutbreak: {
     name: "Pool Outbreak",
@@ -377,14 +377,14 @@ export const GAME_META_INFO = {
       "PoolDynamite",
       "SpeedPool",
       "PoolSolitaire",
-      "BubbleShooter"
+      "BubbleShooter",
     ],
     description:
       "Instructions: Strike the cue ball to hit the other balls into the pockets. Any ball the cue touches must be sunk in a pocket within 60 seconds or it will explode. In addition, any balls near the explosion will be 'contaminated' and will have their explosion timers started as well.\nControls: Once the cue appears, tap and hold or click and hold in the direction you would like to hit the ball. The longer you press, the harder the cue will strike.\nNote: The cue will only appear on the screen when all of the balls have stopped moving.",
     iosURL: "https://apps.apple.com/us/app/pool-dynamite/id1451104795?ls=1",
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.pooldynamite",
-    largeImageURL: PoolOutbreakLargeImage
+    largeImageURL: PoolOutbreakLargeImage,
   },
   UltimateRocketRacers: {
     name: "Ultimate Rocket Racers",
@@ -393,7 +393,7 @@ export const GAME_META_INFO = {
       "RocketRacers",
       "Entombed",
       "RocketRacersNitro",
-      "StraightPool"
+      "StraightPool",
     ],
     description:
       "Instructions: This is your ultimate Rocket Racers Challenge. See how long you can play without crashing into the other two cars!\nControls: Click or tap the screen to make the car change lanes.",
@@ -406,8 +406,8 @@ export const GAME_META_INFO = {
     screenshotImages: [
       RocketRacersScreenshot1,
       RocketRacersScreenshot2,
-      RocketRacersScreenshot3
-    ]
+      RocketRacersScreenshot3,
+    ],
   },
   EightBallPool: {
     name: "Eight Ball Pool",
@@ -416,7 +416,7 @@ export const GAME_META_INFO = {
       "PoolDynamite",
       "PoolOutbreak",
       "SpeedPool",
-      "PoolChampions"
+      "PoolChampions",
     ],
     description:
       "Try your luck against Grumpy Joe - he may give you a run for your money! Looking for a more challenging opponent? Try Pool Champions in the link below.\nInstructions: Strike the cue ball to hit the other balls into the pockets. The stripes player must sink all the stripes, and the solids player must sink all the solids. If you sink the eight ball before your balls are cleared, you lose the game - if you sink it after your balls are cleared, you win. (Stripes and solids are determined by the first ball to be sunk into a pocket, and the first player to sink it.)\nControls: Once the cue appears, tap and hold or click and hold in the direction you would like to hit the ball. The longer you press, the harder the cue will strike. (The cue will only appear on the screen when all of the balls have stopped moving.)\nNote: Works best on desktop - though compatible with modern mobile devices, the game will lag a little due to the 3d graphics.",
@@ -430,8 +430,8 @@ export const GAME_META_INFO = {
       PoolChampionsScreenshot2,
       PoolChampionsScreenshot3,
       PoolChampionsScreenshot4,
-      PoolChampionsScreenshot5
-    ]
+      PoolChampionsScreenshot5,
+    ],
   },
   MahjongZodiac: {
     name: "Mahjong Zodiac",
@@ -440,7 +440,7 @@ export const GAME_META_INFO = {
       "MahjongClassic",
       "MahjongPyramid",
       "RocketRacersNitro",
-      "LumpyDumplings2"
+      "LumpyDumplings2",
     ],
     description:
       "Instructions: Challenge yourself with our latest Mahjong game. Remove the tiles and win the game! Controls: Click or tap the tiles to begin the game.",
@@ -448,7 +448,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.mahjongzodiac",
     largeImageURL: MahjongZodiacLargeImage,
-    appImageURL: MahjongZodiacAppImage
+    appImageURL: MahjongZodiacAppImage,
   },
   ChickenWings3: {
     name: "Chicken Wings 3",
@@ -457,7 +457,7 @@ export const GAME_META_INFO = {
       "RocketRacers",
       "VolcanoFrenzy2",
       "ChickenWings2",
-      "MahjongAlchemy"
+      "MahjongAlchemy",
     ],
     description:
       "Instructions: Challenge yourself with the hardest version of this game. Avoid the moving mushrooms and save our baby chick HENrietta! (Game gets faster as your score increases.) Controls: Click or tap to begin the game.",
@@ -470,8 +470,8 @@ export const GAME_META_INFO = {
     screenshotImages: [
       ChickenWingsScreenshot1,
       ChickenWingsScreenshot2,
-      ChickenWingsScreenshot3
-    ]
+      ChickenWingsScreenshot3,
+    ],
   },
   MahjongClassic: {
     name: "Mahjong Classic",
@@ -480,7 +480,7 @@ export const GAME_META_INFO = {
       "UltimateRocketRacers",
       "Minesweeper",
       "SpeedPool",
-      "LumpyDumplings2"
+      "LumpyDumplings2",
     ],
     description:
       "Instructions: Challenge yourself with a classic Mahjong game. Remove the tiles and win the game! Controls: Click or tap the tiles to begin the game.",
@@ -488,7 +488,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.mahjongclassic",
     largeImageURL: MahjongClassicLargeImage,
-    appImageURL: MahjongClassicAppImage
+    appImageURL: MahjongClassicAppImage,
   },
   PoolDynamite: {
     name: "Pool Dynamite",
@@ -497,7 +497,7 @@ export const GAME_META_INFO = {
       "PoolOutbreak",
       "SpeedPool",
       "PoolSolitaire",
-      "BubbleShooter"
+      "BubbleShooter",
     ],
     description:
       "Instructions: Strike the cue ball to hit the other balls into the pockets. Any ball the cue touches must be sunk in a pocket within 60 seconds or it will explode.\nControls: Once the cue appears, tap and hold or click and hold in the direction you would like to hit the ball. The longer you press, the harder the cue will strike.\nNote: The cue will only appear on the screen when all of the balls have stopped moving.",
@@ -505,7 +505,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.pooldynamite",
     largeImageURL: PoolDynamiteLargeImage,
-    appImageURL: PoolDynamiteAppImage
+    appImageURL: PoolDynamiteAppImage,
   },
   LumpyDumplings3: {
     name: "Lumpy Dumplings 3",
@@ -514,7 +514,7 @@ export const GAME_META_INFO = {
       "Entombed",
       "PoolDynamite",
       "UltimateRocketRacers",
-      "BubbleShooter"
+      "BubbleShooter",
     ],
     description:
       "Instructions: Catch the dumplings in the bowl - miss any of them and the game will end!\nControls: Touchpad: Move the bowl to the left or right by touching where on the screen you want it to appear. Mouse: The bowl will follow the mouse as it moves around the screen. Keyboard: Use the left and right arrow keys to move the bowl in those directions.\nThe music in this game is 'Xia Yu' by Guifrog, and was not changed in any way from its original source. Please support this artist by visiting their page:\nhttp://freemusicarchive.org/music/Guifrog/Xia_Yu/Guifrog_-_Xia_Yu\nThis music is distributable under the Attribution License: https://creativecommons.org/licenses/by/4.0/",
@@ -522,7 +522,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.lumpydumplings",
     largeImageURL: LumpyDumplings3LargeImage,
-    youtubeLink: "KADPseajCsE"
+    youtubeLink: "KADPseajCsE",
   },
   RocketRacers: {
     name: "Rocket Racers",
@@ -531,7 +531,7 @@ export const GAME_META_INFO = {
       "BubbleShooter",
       "Minesweeper",
       "Snake",
-      "PoolChampions"
+      "PoolChampions",
     ],
     description:
       "Instructions: See how long you can play without crashing into the other car! Controls: Click or tap the screen to make the car change lanes.",
@@ -544,8 +544,8 @@ export const GAME_META_INFO = {
     screenshotImages: [
       RocketRacersScreenshot1,
       RocketRacersScreenshot2,
-      RocketRacersScreenshot3
-    ]
+      RocketRacersScreenshot3,
+    ],
   },
   StraightPool: {
     name: "Straight Pool",
@@ -554,7 +554,7 @@ export const GAME_META_INFO = {
       "PoolOutbreak",
       "SpeedPool",
       "PoolSolitaire",
-      "EightBallPool"
+      "EightBallPool",
     ],
     description:
       "Do you need to improve your pool game? We've got you covered! Experience the opportunity to sharpen your pool shots in a calm, relaxing game with easy rules and a carefree attitude.\nInstructions: Strike the cue ball to hit the other balls into the pockets.\nControls: Once the cue appears, tap and hold or click and hold in the direction you would like to hit the ball. The longer you press, the harder the cue will strike.\nNote: The cue will only appear on the screen when all of the balls have stopped moving.",
@@ -562,7 +562,7 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.straightpool",
     largeImageURL: StraightPoolLargeImage,
     appImageURL: StraightPoolAppImage,
-    youtubeLink: "GxZ1b3N8KfU"
+    youtubeLink: "GxZ1b3N8KfU",
   },
   VolcanoFrenzy: {
     name: "Volcano Frenzy",
@@ -571,7 +571,7 @@ export const GAME_META_INFO = {
       "VolcanoFrenzy2",
       "RocketRacersNitro",
       "ChickenWings2",
-      "Entombed"
+      "Entombed",
     ],
     description:
       "Based on a little-known puzzle by Lewis Carroll, this game adds an adventure twist that's sure to keep you hooked for hours!\nInstructions: Clear all the tracks to pass to the next level. Be careful - drive off the edge and you will fall to your death. (Level restarts when you die.)\nControls: The cart will drive whichever way you want when it reaches crossroads. On tracks where only one direction is possible, it will go only in that direction.\nNote: Looking for more of a challenge? Try Volcano Frenzy 2 in the link below!\nKeyboard: Use the arrow keys to tell the cart which way you want it to go.\nTouch screen: Swipe the screen in the direction you want the cart to move.",
@@ -586,8 +586,8 @@ export const GAME_META_INFO = {
       VolcanoFrenzyScreenshot1,
       VolcanoFrenzyScreenshot2,
       VolcanoFrenzyScreenshot3,
-      VolcanoFrenzyScreenshot4
-    ]
+      VolcanoFrenzyScreenshot4,
+    ],
   },
   MahjongMycenaean: {
     name: "Mahjong Mycenaean",
@@ -596,7 +596,7 @@ export const GAME_META_INFO = {
       "MahjongClassic",
       "MahjongPyramid",
       "MahjongZodiac",
-      "MahjongEmoji"
+      "MahjongEmoji",
     ],
     description:
       "Instructions: Challenge yourself with our new Mahjong Mycenaean game. Remove the tiles and win the game! Controls: Click or tap the tiles to begin the game.",
@@ -604,7 +604,7 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.mahjongmycenaean",
     largeImageURL: MahjongMycenaeanLargeImage,
-    appImageURL: MahjongMycenaeanAppImage
+    appImageURL: MahjongMycenaeanAppImage,
   },
   ChickenWings: {
     name: "Chicken Wings",
@@ -613,7 +613,7 @@ export const GAME_META_INFO = {
       "RocketRacersNitro",
       "Entombed",
       "LumpyDumplings2",
-      "MahjongPyramid"
+      "MahjongPyramid",
     ],
     description:
       "Instructions: Challenge yourself with one of our latest games. Avoid the mushrooms and save our baby chick HENrietta! Controls: Click or tap to begin the game.",
@@ -627,8 +627,8 @@ export const GAME_META_INFO = {
     screenshotImages: [
       ChickenWingsScreenshot1,
       ChickenWingsScreenshot2,
-      ChickenWingsScreenshot3
-    ]
+      ChickenWingsScreenshot3,
+    ],
   },
   SpeedPool: {
     name: "Speed Pool",
@@ -637,7 +637,7 @@ export const GAME_META_INFO = {
       "PoolOutbreak",
       "PoolDynamite",
       "PoolSolitaire",
-      "EightBallPool"
+      "EightBallPool",
     ],
     description:
       "Instructions: Strike the cue ball to hit the other balls into the pockets. Hurry though - you only have three minutes to win the game!\nControls: Once the cue appears, tap and hold or click and hold in the direction you would like to hit the ball. The longer you press, the harder the cue will strike.\nNote: The cue will only appear on the screen when all of the balls have stopped moving.",
@@ -645,7 +645,7 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.speedpool",
     largeImageURL: SpeedPoolLargeImage,
     appImageURL: SpeedPoolAppImage,
-    youtubeLink: "OyTziuQpmXI"
+    youtubeLink: "OyTziuQpmXI",
   },
   LumpyDumplings: {
     name: "Lumpy Dumplings",
@@ -654,7 +654,7 @@ export const GAME_META_INFO = {
       "Entombed",
       "PoolDynamite",
       "UltimateRocketRacers",
-      "BubbleShooter"
+      "BubbleShooter",
     ],
     description:
       "Instructions: Catch the dumplings in the bowl - miss any of them and the game will end!\nControls: Touchpad: Move the bowl to the left or right by touching where on the screen you want it to appear. Mouse: The bowl will follow the mouse as it moves around the screen. Keyboard: Use the left and right arrow keys to move the bowl in those directions.\nThe music in this game is 'Xia Yu' by Guifrog, and was not changed in any way from its original source. Please support this artist by visiting their page:\nhttp://freemusicarchive.org/music/Guifrog/Xia_Yu/Guifrog_-_Xia_Yu\nThis music is distributable under the Attribution License: https://creativecommons.org/licenses/by/4.0/",
@@ -663,7 +663,7 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.lumpydumplings",
     largeImageURL: LumpyDumplingsLargeImage,
     appImageURL: LumpyDumplingsAppImage,
-    youtubeLink: "https://youtu.be/KADPseajCsE"
+    youtubeLink: "https://youtu.be/KADPseajCsE",
   },
   PoolSolitaire: {
     name: "Pool Solitaire",
@@ -672,7 +672,7 @@ export const GAME_META_INFO = {
       "PoolDynamite",
       "SpeedPool",
       "PoolOutbreak",
-      "BubbleShooter"
+      "BubbleShooter",
     ],
     description:
       "Do you need to improve your pool game? We've got you covered! Experience the opportunity to sharpen your pool shots in a calm, relaxing game with easy rules and a carefree attitude.\nInstructions: Strike the cue ball to hit the other balls into the pockets.\nControls: Once the cue appears, tap and hold or click and hold in the direction you would like to hit the ball. The longer you press, the harder the cue will strike.\nNote: The cue will only appear on the screen when all of the balls have stopped moving.",
@@ -681,7 +681,7 @@ export const GAME_META_INFO = {
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.poolsolitaire",
     largeImageURL: PoolSolitaireLargeImage,
     appImageURL: PoolSolitaireAppImage,
-    youtubeLink: "lQcNicHDpls"
+    youtubeLink: "lQcNicHDpls",
   },
   RocketRacers2: {
     name: "Rocket Racers 2",
@@ -690,7 +690,7 @@ export const GAME_META_INFO = {
       "BubbleShooter",
       "RocketRacers",
       "Minesweeper",
-      "PoolDynamite"
+      "PoolDynamite",
     ],
     description:
       "Instructions: Collect as many gold coins as you can without crashing into the other car! Controls: Click or tap the screen to make the car change lanes.",
@@ -703,8 +703,8 @@ export const GAME_META_INFO = {
     screenshotImages: [
       RocketRacersScreenshot1,
       RocketRacersScreenshot2,
-      RocketRacersScreenshot3
-    ]
+      RocketRacersScreenshot3,
+    ],
   },
   MahjongEmoji: {
     name: "Mahjong Emoji",
@@ -713,7 +713,7 @@ export const GAME_META_INFO = {
       "MahjongClassic",
       "MahjongPyramid",
       "MahjongZodiac",
-      "Entombed"
+      "Entombed",
     ],
     description:
       "Instructions: Challenge yourself with our new Mahjong Emoji game. Remove the tiles and win the game! Controls: Click or tap the tiles to begin the game.",
@@ -721,8 +721,8 @@ export const GAME_META_INFO = {
     androidURL:
       "https://play.google.com/store/apps/details?id=com.centaurgamesonline.mahjongemoji",
     largeImageURL: MahjongEmojiLargeImage,
-    appImageURL: MahjongEmojiAppImage
-  }
+    appImageURL: MahjongEmojiAppImage,
+  },
 };
 
 export const LIST_PAGE_META_INFO = {
@@ -757,10 +757,10 @@ export const LIST_PAGE_META_INFO = {
       "LumpyDumplings",
       "PoolSolitaire",
       "RocketRacers2",
-      "MahjongEmoji"
+      "MahjongEmoji",
     ],
     youtubeLink: "0ynT_XL4F_I",
-    sliderImageURL: FinalColoredLogo
+    sliderImageURL: FinalColoredLogo,
   },
   iOS: {
     games: [
@@ -781,8 +781,8 @@ export const LIST_PAGE_META_INFO = {
       "VolcanoFrenzy",
       "Snake",
       "ChickenWings",
-      "LumpyDumplings"
-    ]
+      "LumpyDumplings",
+    ],
   },
   Android: {
     games: [
@@ -805,8 +805,8 @@ export const LIST_PAGE_META_INFO = {
       "ChickenWings",
       "LumpyDumplings",
       "StraightPool",
-      "SpeedPool"
-    ]
+      "SpeedPool",
+    ],
   },
   Featured: {
     games: [
@@ -825,10 +825,10 @@ export const LIST_PAGE_META_INFO = {
       "Snake",
       "UltimateRocketRacers",
       "ChickenWings3",
-      "MahjongZodiac"
+      "MahjongZodiac",
     ],
     youtubeLink: "XVAl59LLJtk",
-    sliderImageURL: FeaturedGames
+    sliderImageURL: FeaturedGames,
   },
   Strategy: {
     games: [
@@ -851,10 +851,10 @@ export const LIST_PAGE_META_INFO = {
       "PoolSolitaire",
       "MahjongMycenaean",
       "MahjongEmoji",
-      "SpeedPool"
+      "SpeedPool",
     ],
     youtubeLink: "C-yHTpcv3mg",
-    sliderImageURL: StrategyLogo
+    sliderImageURL: StrategyLogo,
   },
   Addictive: {
     games: [
@@ -868,10 +868,10 @@ export const LIST_PAGE_META_INFO = {
       "ChickenWings",
       "Entombed",
       "RocketRacers2",
-      "LumpyDumplings"
+      "LumpyDumplings",
     ],
     youtubeLink: "KADPseajCsE",
-    sliderImageURL: AddictiveLogo
+    sliderImageURL: AddictiveLogo,
   },
   Puzzle: {
     games: [
@@ -887,10 +887,10 @@ export const LIST_PAGE_META_INFO = {
       "BubbleShooter",
       "MahjongPyramid",
       "Snake",
-      "MahjongMycenaean"
+      "MahjongMycenaean",
     ],
     youtubeLink: "0ynT_XL4F_I",
-    sliderImageURL: PuzzleLogo
+    sliderImageURL: PuzzleLogo,
   },
   Adventure: {
     games: [
@@ -904,10 +904,10 @@ export const LIST_PAGE_META_INFO = {
       "ChickenWings2",
       "RocketRacers2",
       "ChickenWings",
-      "RocketRacers"
+      "RocketRacers",
     ],
     youtubeLink: "GLt7s2C_80E",
-    sliderImageURL: ActionAndAdventureLogo
+    sliderImageURL: ActionAndAdventureLogo,
   },
   Classics: {
     games: [
@@ -921,10 +921,10 @@ export const LIST_PAGE_META_INFO = {
       "MahjongZodiac",
       "Snake",
       "MahjongMycenaean",
-      "MahjongPyramid"
+      "MahjongPyramid",
     ],
     youtubeLink: "aQIitNAlMSc",
-    sliderImageURL: ClassicsLogo
+    sliderImageURL: ClassicsLogo,
   },
   Sports: {
     games: [
@@ -938,12 +938,12 @@ export const LIST_PAGE_META_INFO = {
       "RocketRacers2",
       "PoolOutbreak",
       "RocketRacers",
-      "PoolSolitaire"
+      "PoolSolitaire",
     ],
     youtubeLink: "2m4nYnKI96s",
-    sliderImageURL: SportsLogo
+    sliderImageURL: SportsLogo,
   },
-  Blog: true
+  Blog: true,
 };
 
 export const BLOG_META_INFO = {
@@ -952,97 +952,97 @@ export const BLOG_META_INFO = {
     description:
       "We developed a sophisticated target-tracking system to make it easier to guide your character through the labyrinthine levels of <i>Entombed</i> and <i>Brimstone</i>. Find out how in this blog.",
     featureGraphic: "Brimstone",
-    gamesMentioned: ["Brimstone", "Entombed"]
+    gamesMentioned: ["Brimstone", "Entombed"],
   },
   TipsForCrossPlatformCompatibilityInJavascript: {
     title: "Tips for Cross-Platform Compatibility in Javascript",
     description:
       "Looking to make your game perform smoothly on any device? Find out more in this blog post.",
     featureGraphic: "PoolDynamite",
-    gamesMentioned: ["Brimstone", "Entombed", "VolcanoFrenzy"]
+    gamesMentioned: ["Brimstone", "Entombed", "VolcanoFrenzy"],
   },
   DynamicResizingOfTheWindow: {
     title: "Dynamic Resizing of the Window",
     description:
       "In this blog, we explore the subtle art of managing multiple device sizes when making a game.",
     featureGraphic: "VolcanoFrenzy",
-    gamesMentioned: []
+    gamesMentioned: [],
   },
   TakingAdvantageOfCanvasRotations: {
     title: "Taking Advantage of Canvas Rotations",
     description:
       "When creating a fast-paced game like Rocket Racers, your graphics need to be able to keep up the speed. Find out how we optimized the performance of this racing game using simple canvas rotations.",
     featureGraphic: "RocketRacersNitro",
-    gamesMentioned: ["RocketRacersNitro", "PoolChampions", "BubbleShooter"]
+    gamesMentioned: ["RocketRacersNitro", "PoolChampions", "BubbleShooter"],
   },
   Creating3DRotationsWithTheCanvasTransformationProperty: {
     title: "Creating 3D Rotations with the Canvas Transformation Property",
     description:
       "You don't need a complicated 3D engine to make realistic effects in your game. Read this blog to find out how we used a simple 2D canvas context to create 3D effects like rotating coins in our games.",
     featureGraphic: "Entombed",
-    gamesMentioned: ["RocketRacers2", "Brimstone", "Entombed", "VolcanoFrenzy"]
+    gamesMentioned: ["RocketRacers2", "Brimstone", "Entombed", "VolcanoFrenzy"],
   },
   CreatingAScrollingEffect: {
     title: "Creating a Scrolling Effect",
     description:
       "Looking to add a scrolling background to your game? We've got you covered. Read more about how we used scrolling effects to create flowing water, lava, and even the tree in Chicken Wings.",
     featureGraphic: "ChickenWings",
-    gamesMentioned: ["ChickenWings", "Brimstone", "Entombed"]
+    gamesMentioned: ["ChickenWings", "Brimstone", "Entombed"],
   },
   MechanicsOfBilliards: {
     title: "The Mechanics of Billiards",
     description:
       "Creating a realistic-looking pool game requires an intimate understanding of the physics that makes pool work. Take a sneak peak under the hood of our physics algorithms in this post.",
     featureGraphic: "StraightPool",
-    gamesMentioned: ["PoolChampions"]
+    gamesMentioned: ["PoolChampions"],
   },
   CreatingAnAIWhichPlaysPool: {
     title: "Creating an AI Which Plays Pool",
     description:
       "We demonstrate how to create any pool bot you could ask for - from the simplest to the hardest to beat.",
     featureGraphic: "PoolChampions",
-    gamesMentioned: ["StraightPool", "PoolChampions", "EightBallPool"]
+    gamesMentioned: ["StraightPool", "PoolChampions", "EightBallPool"],
   },
   CreatingShadowsWhichMoveWithThePlayer: {
     title: "Creating Shadows Which Move with the Player",
     description:
       "Curious how we made the shadows follow you around in Entombed and Brimstone? Find out how in this blog post.",
     featureGraphic: "Entombed",
-    gamesMentioned: ["Brimstone", "Entombed"]
+    gamesMentioned: ["Brimstone", "Entombed"],
   },
   StructureOfAnyGame: {
     title: "Structure of Any Game",
     description:
       "We explore the basic underlying architecture that makes any Javascript game work.",
     featureGraphic: "Minesweeper",
-    gamesMentioned: []
+    gamesMentioned: [],
   },
   CreatingRealisticLookingLava: {
     title: "Creating Realistic-Looking Lava",
     description:
       "Learn how we created the lava effect that gave Brimstone its signature graphics.",
     featureGraphic: "VolcanoFrenzy",
-    gamesMentioned: ["ChickenWings", "Brimstone"]
+    gamesMentioned: ["ChickenWings", "Brimstone"],
   },
   AnimatingFirePart1TwoDimensionalFlames: {
     title: "Animating Fire Part 1: Two-Dimensional Flames",
     description:
       "Learn how to create simple but effective two-dimensional flames, like the ones showcased in the Pool Dynamite graphic to the left.",
     featureGraphic: "PoolDynamite",
-    gamesMentioned: ["Brimstone"]
+    gamesMentioned: ["Brimstone"],
   },
   AnimatingFirePart2ThreeDimensionalFlames: {
     title: "Animating Fire Part 2: Three-Dimensional Flames",
     description:
       "We show how you can use simple 2D context transformations to achieve a realistic three-dimensional flame for birds-eye platformers.",
     featureGraphic: "Brimstone",
-    gamesMentioned: ["Brimstone"]
+    gamesMentioned: ["Brimstone"],
   },
   WrappingImagesAroundASphereInTHREE: {
     title: "Wrapping Images around a Sphere in THREE.js",
     description:
       "We take a look at the process involved in creating a three-dimensional pool ball for Pool Champions and Eight-Ball Pool.",
     featureGraphic: "PoolChampions",
-    gamesMentioned: ["PoolChampions", "EightBallPool"]
-  }
+    gamesMentioned: ["PoolChampions", "EightBallPool"],
+  },
 };

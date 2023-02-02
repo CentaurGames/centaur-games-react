@@ -87,5 +87,5 @@ export const imageSources = [
   imageSources_39,
   imageSources_40,
   imageSources_41,
-  imageSources_42
+  imageSources_42,
 ];

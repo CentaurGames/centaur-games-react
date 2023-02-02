@@ -9,7 +9,7 @@ describe("BlogIcon component", () => {
     cleanup();
   });
 
-  it.each(Object.keys(BLOG_META_INFO))("displays %s correctly", blogName => {
+  it.each(Object.keys(BLOG_META_INFO))("displays %s correctly", (blogName) => {
     const { getByText } = render(<BlogIcon blogName={blogName} />);
 
     const { title } = BLOG_META_INFO[blogName];
