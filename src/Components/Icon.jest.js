@@ -9,7 +9,7 @@ describe("Icon component", () => {
     cleanup();
   });
 
-  it.each(Object.keys(GAME_META_INFO))("displays %s properly", gameName => {
+  it.each(Object.keys(GAME_META_INFO))("displays %s properly", (gameName) => {
     const { getByTestId } = render(<Icon game={gameName} />);
 
     const icon = getByTestId("icon");

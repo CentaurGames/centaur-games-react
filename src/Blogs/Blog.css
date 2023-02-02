@@ -72,8 +72,10 @@
 
 .previous-blog {
     float: left;
+    text-decoration: none;
 }
 
 .next-blog {
     float: right;
+    text-decoration: none;
 }

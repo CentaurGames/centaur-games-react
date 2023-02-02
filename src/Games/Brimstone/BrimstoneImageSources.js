@@ -189,7 +189,7 @@ export const lightningDataURLs = [
   lightningDataURLs_26,
   lightningDataURLs_27,
   lightningDataURLs_28,
-  lightningDataURLs_29
+  lightningDataURLs_29,
 ];
 export const mazeImageSourceLevels = [
   mazeImageSourceLevels_0,
@@ -203,7 +203,7 @@ export const mazeImageSourceLevels = [
   mazeImageSourceLevels_8,
   mazeImageSourceLevels_9,
   mazeImageSourceLevels_10,
-  mazeImageSourceLevels_11
+  mazeImageSourceLevels_11,
 ];
 export const underImageSourceLevels = [
   underImageSourceLevels_0,
@@ -217,7 +217,7 @@ export const underImageSourceLevels = [
   underImageSourceLevels_8,
   underImageSourceLevels_9,
   underImageSourceLevels_10,
-  underImageSourceLevels_11
+  underImageSourceLevels_11,
 ];
 export const overImageSourceLevels = [
   overImageSourceLevels_0,
@@ -231,7 +231,7 @@ export const overImageSourceLevels = [
   overImageSourceLevels_8,
   overImageSourceLevels_9,
   overImageSourceLevels_10,
-  overImageSourceLevels_11
+  overImageSourceLevels_11,
 ];
 export const flameDataURLs = [
   flameDataURLs_0,
@@ -273,17 +273,17 @@ export const flameDataURLs = [
   flameDataURLs_36,
   flameDataURLs_37,
   flameDataURLs_38,
-  flameDataURLs_39
+  flameDataURLs_39,
 ];
 export const footstepImageURLs = [
   footstepImageURLs_0,
   footstepImageURLs_1,
   footstepImageURLs_2,
-  footstepImageURLs_3
+  footstepImageURLs_3,
 ];
 export const playerImageURLs = [
   playerImageURLs_0,
   playerImageURLs_1,
   playerImageURLs_2,
-  playerImageURLs_3
+  playerImageURLs_3,
 ];

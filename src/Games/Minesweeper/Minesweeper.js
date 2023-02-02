@@ -1,7 +1,7 @@
 import * as React from "react";
 import {
   startGlobalLoadingIndicator,
-  stopGlobalLoadingIndicator
+  stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
@@ -75,14 +75,14 @@ function setEventListeners() {
   window.addEventListener("resize", rescaleAllCanvases);
   smileyCanvas.addEventListener(
     "touchstart",
-    function(e) {
+    function (e) {
       if (e.targetTouches.length > 1) {
         return;
       }
       var click = {
         clientX: e.targetTouches[0].clientX,
         clientY: e.targetTouches[0].clientY,
-        which: 0
+        which: 0,
       };
       clickStuff(click);
     },
@@ -90,7 +90,7 @@ function setEventListeners() {
   );
   smileyCanvas.addEventListener(
     "touchmove",
-    function(e) {
+    function (e) {
       if (e.targetTouches.length === 1) {
         e.preventDefault();
       }
@@ -99,14 +99,14 @@ function setEventListeners() {
   );
   smileyCanvas.addEventListener(
     "touchend",
-    function(e) {
+    function (e) {
       e.preventDefault();
     },
     false
   );
   clockCanvas.addEventListener(
     "touchmove",
-    function(e) {
+    function (e) {
       if (e.targetTouches.length === 1) {
         e.preventDefault();
       }
@@ -115,14 +115,14 @@ function setEventListeners() {
   );
   clockCanvas.addEventListener(
     "touchend",
-    function(e) {
+    function (e) {
       e.preventDefault();
     },
     false
   );
   scoreCanvas.addEventListener(
     "touchmove",
-    function(e) {
+    function (e) {
       if (e.targetTouches.length === 1) {
         e.preventDefault();
       }
@@ -131,14 +131,14 @@ function setEventListeners() {
   );
   scoreCanvas.addEventListener(
     "touchend",
-    function(e) {
+    function (e) {
       e.preventDefault();
     },
     false
   );
   timerCanvas.addEventListener(
     "touchmove",
-    function(e) {
+    function (e) {
       if (e.targetTouches.length === 1) {
         e.preventDefault();
       }
@@ -147,14 +147,14 @@ function setEventListeners() {
   );
   timerCanvas.addEventListener(
     "touchend",
-    function(e) {
+    function (e) {
       e.preventDefault();
     },
     false
   );
   backgroundCanvas.addEventListener(
     "touchmove",
-    function(e) {
+    function (e) {
       if (e.targetTouches.length === 1) {
         e.preventDefault();
       }
@@ -163,20 +163,20 @@ function setEventListeners() {
   );
   backgroundCanvas.addEventListener(
     "touchend",
-    function(e) {
+    function (e) {
       e.preventDefault();
     },
     false
   );
   flagCanvas.addEventListener(
     "touchstart",
-    function(e) {
+    function (e) {
       if (e.targetTouches.length > 1) {
         return;
       }
       lastTap = e;
       tapCounter = 0;
-      tapTimer = setInterval(function() {
+      tapTimer = setInterval(function () {
         tapCounter++;
       }, 10);
       smileyContext.clearRect(0, 0, smileyWidth, smileyHeight);
@@ -186,7 +186,7 @@ function setEventListeners() {
   );
   flagCanvas.addEventListener(
     "touchmove",
-    function(e) {
+    function (e) {
       if (e.targetTouches.length === 1) {
         e.preventDefault();
       }
@@ -195,13 +195,13 @@ function setEventListeners() {
   );
   flagCanvas.addEventListener(
     "touchend",
-    function(e) {
+    function (e) {
       e.preventDefault();
       clearInterval(tapTimer);
       var click = {
         clientX: lastTap.targetTouches[0].clientX,
         clientY: lastTap.targetTouches[0].clientY,
-        which: tapCounter > 20 ? 3 : 0
+        which: tapCounter > 20 ? 3 : 0,
       };
       clickStuff(click);
       smileyContext.clearRect(0, 0, smileyWidth, smileyHeight);
@@ -209,15 +209,15 @@ function setEventListeners() {
     },
     false
   );
-  scrollPreventCanvas.addEventListener("touchmove", function(evt) {
+  scrollPreventCanvas.addEventListener("touchmove", function (evt) {
     evt.preventDefault();
   });
-  document.onmousedown = function() {
+  document.onmousedown = function () {
     smileyContext.clearRect(0, 0, smileyWidth, smileyHeight);
     smileyContext.drawImage(smiley2, 0, 0);
     lastSmiley = 1;
   };
-  document.onmouseup = function() {
+  document.onmouseup = function () {
     if (gameOver) {
       return;
     }
@@ -225,7 +225,7 @@ function setEventListeners() {
     smileyContext.drawImage(smiley1, 0, 0);
     lastSmiley = 0;
   };
-  document.oncontextmenu = function(e) {
+  document.oncontextmenu = function (e) {
     e.preventDefault();
     var ev = e;
     ev.button = 2;
@@ -339,7 +339,7 @@ function rescaleAllCanvases() {
   hiddenCanvas.style.left = "0px";
   hiddenCanvas.style.top = "0px";
   if (isMobile) {
-    setTimeout(function() {
+    setTimeout(function () {
       window.scrollTo(0, rect.top);
       centerAllCanvases();
     }, 500);
@@ -383,7 +383,7 @@ function initialize() {
   hiddenCanvas.height = 0;
   secondsCounter = 0;
   if (!isMyTimerRunning) {
-    myTimer = setInterval(function() {
+    myTimer = setInterval(function () {
       drawClock();
       secondsCounter++;
     }, 1000);
@@ -617,7 +617,7 @@ function drawNumber(num) {
       break;
   }
   img.src = imageCanvas.toDataURL("image/png");
-  img.onload = function() {
+  img.onload = function () {
     clockDigits[num] = img;
     drawNumber(num + 1);
   };
@@ -1242,7 +1242,7 @@ function play() {
   } else {
     secondsCounter = 0;
     if (!isMyTimerRunning) {
-      myTimer = setInterval(function() {
+      myTimer = setInterval(function () {
         drawClock();
         secondsCounter++;
       }, 1000);
@@ -1302,7 +1302,7 @@ export class Minesweeper extends React.Component {
             left: "3",
             top: "56",
             zIndex: 0,
-            border: "0px solid grey"
+            border: "0px solid grey",
           }}
         />
         <canvas
@@ -1314,7 +1314,7 @@ export class Minesweeper extends React.Component {
             left: "3",
             top: "56",
             zIndex: 2,
-            border: "1px solid grey"
+            border: "1px solid grey",
           }}
         />
         <canvas
@@ -1326,7 +1326,7 @@ export class Minesweeper extends React.Component {
             left: "3",
             top: "56",
             zIndex: 3,
-            border: "1px solid grey"
+            border: "1px solid grey",
           }}
         />
         <canvas
@@ -1338,7 +1338,7 @@ export class Minesweeper extends React.Component {
             left: "3",
             top: "56",
             zIndex: 4,
-            border: "1px solid grey"
+            border: "1px solid grey",
           }}
         />
         <canvas
@@ -1350,7 +1350,7 @@ export class Minesweeper extends React.Component {
             left: "0",
             top: "0",
             zIndex: 1,
-            border: "1px solid grey"
+            border: "1px solid grey",
           }}
         />
         <canvas
@@ -1362,7 +1362,7 @@ export class Minesweeper extends React.Component {
             left: "3",
             top: "3",
             zIndex: 2,
-            border: "1px solid grey"
+            border: "1px solid grey",
           }}
         />
         <canvas
@@ -1374,7 +1374,7 @@ export class Minesweeper extends React.Component {
             left: "303",
             top: "10",
             zIndex: 3,
-            border: "1px solid grey"
+            border: "1px solid grey",
           }}
         />
         <canvas
@@ -1386,7 +1386,7 @@ export class Minesweeper extends React.Component {
             left: "28",
             top: "10",
             zIndex: 3,
-            border: "1px solid grey"
+            border: "1px solid grey",
           }}
         />
         <canvas
@@ -1398,7 +1398,7 @@ export class Minesweeper extends React.Component {
             left: "188",
             top: "13",
             zIndex: 3,
-            border: "2px solid grey"
+            border: "2px solid grey",
           }}
         />
         <canvas
@@ -1410,7 +1410,7 @@ export class Minesweeper extends React.Component {
             top: "30",
             left: "100",
             zIndex: 1,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -1422,7 +1422,7 @@ export class Minesweeper extends React.Component {
             left: "0",
             top: "0",
             zIndex: 5,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
       </div>

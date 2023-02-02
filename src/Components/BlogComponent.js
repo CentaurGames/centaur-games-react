@@ -79,7 +79,7 @@ export class BlogComponent extends React.Component {
             </div>
             <div className="recommended-games">
               {BLOG_META_INFO[this.props.blogName].gamesMentioned.map(
-                gameName => (
+                (gameName) => (
                   <IconLandingPage key={gameName} game={gameName} />
                 )
               )}

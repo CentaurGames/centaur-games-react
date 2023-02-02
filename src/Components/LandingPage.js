@@ -21,8 +21,8 @@ export class LandingPage extends React.Component {
       width: "900",
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
-        autoplay: 0
-      }
+        autoplay: 0,
+      },
     };
     return (
       <div>
@@ -85,7 +85,7 @@ export class LandingPage extends React.Component {
         {/*Recommended Games*/}
         <div className="recommended-games">
           {GAME_META_INFO[this.props.game].recommendedGames.map(
-            recommendGame => (
+            (recommendGame) => (
               <IconLandingPage key={recommendGame} game={recommendGame} />
             )
           )}
@@ -95,9 +95,9 @@ export class LandingPage extends React.Component {
         {GAME_META_INFO[this.props.game].screenshotImages && (
           <div className="landing-page__screenshot-slider">
             <div className="screenshot-text">Screenshots From App</div>
-            <Carousel>
+            <Carousel indicators={false} controls={false}>
               {GAME_META_INFO[this.props.game].screenshotImages.map(
-                screenshotImage => (
+                (screenshotImage) => (
                   <Carousel.Item key={screenshotImage}>
                     <img
                       width={450}

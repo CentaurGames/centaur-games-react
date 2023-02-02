@@ -7,10 +7,10 @@ const INITIAL_STATE = {
   grid: [
     ["", "", ""],
     ["", "", ""],
-    ["", "", ""]
+    ["", "", ""],
   ],
   isPlayer: true,
-  isGameOver: false
+  isGameOver: false,
 };
 
 export class TicTacToe extends React.Component {
@@ -20,7 +20,7 @@ export class TicTacToe extends React.Component {
   }
 
   testRow(row) {
-    const result = row.filter(ele => ele === row[0] && ele !== "");
+    const result = row.filter((ele) => ele === row[0] && ele !== "");
     return result.length === row.length;
   }
 
@@ -29,7 +29,7 @@ export class TicTacToe extends React.Component {
       if (this.testRow(grid[i])) {
         return true;
       }
-      if (this.testRow(grid.map(row => row[i]))) {
+      if (this.testRow(grid.map((row) => row[i]))) {
         return true;
       }
     }
@@ -70,10 +70,10 @@ export class TicTacToe extends React.Component {
     }
     const newGrid = this.deepCopy(grid);
     newGrid[i][j] = "O";
-    this.setState(oldState => ({
+    this.setState((oldState) => ({
       ...oldState,
       grid: this.deepCopy(newGrid),
-      isPlayer: true
+      isPlayer: true,
     }));
   }
 
@@ -87,11 +87,11 @@ export class TicTacToe extends React.Component {
         newGrid[i][j] = "O";
         if (this.checkIfGameIsOver(newGrid)) {
           newGrid[i][j] = "O";
-          this.setState(oldState => ({
+          this.setState((oldState) => ({
             ...oldState,
             grid: this.deepCopy(newGrid),
             isPlayer: true,
-            isGameOver: true
+            isGameOver: true,
           }));
           setTimeout(() => {
             this.setState(INITIAL_STATE);
@@ -113,10 +113,10 @@ export class TicTacToe extends React.Component {
         newGrid[i][j] = "X";
         if (this.checkIfGameIsOver(newGrid)) {
           newGrid[i][j] = "O";
-          this.setState(oldState => ({
+          this.setState((oldState) => ({
             ...oldState,
             grid: this.deepCopy(newGrid),
-            isPlayer: true
+            isPlayer: true,
           }));
           return;
         }
@@ -132,15 +132,15 @@ export class TicTacToe extends React.Component {
     } else {
       return;
     }
-    this.setState(oldState => ({
+    this.setState((oldState) => ({
       ...oldState,
       grid: newGrid,
-      isPlayer: false
+      isPlayer: false,
     }));
     if (this.checkIfGameIsOver(newGrid)) {
-      this.setState(oldState => ({
+      this.setState((oldState) => ({
         ...oldState,
-        isGameOver: true
+        isGameOver: true,
       }));
       setTimeout(() => {
         this.setState(INITIAL_STATE);
@@ -153,7 +153,7 @@ export class TicTacToe extends React.Component {
   }
 
   deepCopy(grid) {
-    return grid.map(row => [...row]);
+    return grid.map((row) => [...row]);
   }
 
   convertCellToIcon(cell) {

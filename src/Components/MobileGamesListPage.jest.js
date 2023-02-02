@@ -13,7 +13,7 @@ describe("MobileGamesListPage component", () => {
 
     const { games } = LIST_PAGE_META_INFO.Android;
 
-    const iconUrls = getAllByTestId("mobile-games-icon").map(icon =>
+    const iconUrls = getAllByTestId("mobile-games-icon").map((icon) =>
       icon.getAttribute("href")
     );
 
@@ -30,7 +30,7 @@ describe("MobileGamesListPage component", () => {
 
     const { games } = LIST_PAGE_META_INFO.iOS;
 
-    const iconUrls = getAllByTestId("mobile-games-icon").map(icon =>
+    const iconUrls = getAllByTestId("mobile-games-icon").map((icon) =>
       icon.getAttribute("href")
     );
 

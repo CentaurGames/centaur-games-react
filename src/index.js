@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDom from "react-dom";
+import * as ReactDOM from "react-dom";
 import { MainWebsite } from "./Components/MainWebsite";
 
-ReactDom.render(<MainWebsite />, document.getElementById("app"));
+ReactDOM.render(<MainWebsite />, document.getElementById("app"));

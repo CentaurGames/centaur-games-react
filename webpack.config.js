@@ -9,7 +9,6 @@ module.exports = {
       filename: 'index_bundle.js'
    },
    devServer: {
-      inline: true,
       port: 8001
    },
    module: {
@@ -18,8 +17,14 @@ module.exports = {
             test: /\.jsx?$/,
             exclude: /node_modules/,
             loader: 'babel-loader',
-            query: {
+            options: {
                presets: ['@babel/env', '@babel/react']
+            }
+         },
+         {
+            test: /\.m?js/,
+            resolve: {
+              fullySpecified: false
             }
          },
          {

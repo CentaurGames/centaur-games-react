@@ -11,8 +11,8 @@ export class MechanicsOfBilliards extends React.Component {
       width: "800",
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
-        autoplay: 0
-      }
+        autoplay: 0,
+      },
     };
     return (
       <div className="blog-text">

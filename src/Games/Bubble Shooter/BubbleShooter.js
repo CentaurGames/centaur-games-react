@@ -1,7 +1,7 @@
 import * as React from "react";
 import {
   startGlobalLoadingIndicator,
-  stopGlobalLoadingIndicator
+  stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
@@ -45,7 +45,7 @@ var colorStop3 = [
   "lime",
   "dodgerblue",
   "rgb(255,255,0)",
-  "darkorchid"
+  "darkorchid",
 ];
 var colorStop4 = ["darkred", "darkgreen", "mediumblue", "red", "darkmagenta"];
 var pixelWidth = 2 * bubbleRadius;
@@ -124,7 +124,7 @@ function rescaleAllCanvases() {
     rescaleCanvas(canvases[i], contexts[i], scale);
   }
   if (isMobile) {
-    setTimeout(function() {
+    setTimeout(function () {
       window.scrollTo(0, rect.top);
       centerAllCanvases();
     }, 500);
@@ -193,11 +193,11 @@ function clickButton(e) {
     }
     if (gamePaused) {
       if (clockCounter === 0) {
-        clockTimer = setInterval(function() {
+        clockTimer = setInterval(function () {
           clockCounter++;
         }, 10);
       }
-      layerTimer = setTimeout(function() {
+      layerTimer = setTimeout(function () {
         addNewLayer();
         layerTimer = setInterval(addNewLayer, 45000);
       }, 45000 - (clockCounter + lastLayerTimer) * 10);
@@ -414,7 +414,7 @@ function drawShooter() {
     Math.round((3 * shooterHeight) / 4)
   );
   shooterImage.src = imageCanvas.toDataURL("image/png");
-  shooterImage.onload = function() {
+  shooterImage.onload = function () {
     shooterContext.drawImage(
       shooterImage,
       Math.round((canvasWidth - shooterWidth) / 2),
@@ -437,13 +437,13 @@ function drawBubbleImage(index, mag) {
     document.onclick = clickButton;
     window.addEventListener(
       "touchstart",
-      function(e) {
+      function (e) {
         if (e.targetTouches.length > 1) {
           return;
         }
         var ev = {
           clientX: e.targetTouches[0].clientX,
-          clientY: e.targetTouches[0].clientY
+          clientY: e.targetTouches[0].clientY,
         };
         clickButton(ev);
         mouseMotionDetector(ev);
@@ -452,13 +452,13 @@ function drawBubbleImage(index, mag) {
     );
     buttonCanvas.addEventListener(
       "touchmove",
-      function(e) {
+      function (e) {
         if (e.targetTouches.length === 1) {
           e.preventDefault();
         }
         var ev = {
           clientX: e.targetTouches[0].clientX,
-          clientY: e.targetTouches[0].clientY
+          clientY: e.targetTouches[0].clientY,
         };
         mouseMotionDetector(ev);
       },
@@ -466,12 +466,12 @@ function drawBubbleImage(index, mag) {
     );
     buttonCanvas.addEventListener(
       "touchend",
-      function(e) {
+      function (e) {
         e.preventDefault();
       },
       false
     );
-    scrollPreventCanvas.addEventListener("touchmove", function(evt) {
+    scrollPreventCanvas.addEventListener("touchmove", function (evt) {
       evt.preventDefault();
     });
     if (!gamePaused) {
@@ -510,7 +510,7 @@ function drawBubbleImage(index, mag) {
   imageContext.arc(bubbleRadius, bubbleRadius, bR, 0, 2 * Math.PI);
   imageContext.fill();
   bubbleImages[index][mag].src = imageCanvas.toDataURL("image/png");
-  bubbleImages[index][mag].onload = function() {
+  bubbleImages[index][mag].onload = function () {
     imageCanvas.width = 0;
     imageCanvas.height = 0;
     drawBubbleImage(index, mag + 1);
@@ -749,8 +749,8 @@ function popAllBubbles(mag) {
   drawScore();
   var im = new Image(canvasWidth, canvasHeight);
   im.src = bubbleCanvas.toDataURL("image/png");
-  im.onload = function() {
-    setTimeout(function() {
+  im.onload = function () {
+    setTimeout(function () {
       popAllBubbles(mag + 1);
     }, 30);
   };
@@ -954,7 +954,7 @@ export class BubbleShooter extends React.Component {
       bubbleCanvas,
       launchCanvas,
       imageCanvas,
-      buttonCanvas
+      buttonCanvas,
     ];
     contexts = [
       scrollPreventContext,
@@ -963,7 +963,7 @@ export class BubbleShooter extends React.Component {
       bubbleContext,
       launchContext,
       imageContext,
-      buttonContext
+      buttonContext,
     ];
     window.addEventListener("resize", rescaleAllCanvases);
     document.documentElement.style.overflow = "hidden";
@@ -989,7 +989,7 @@ export class BubbleShooter extends React.Component {
             left: "0",
             top: "0",
             zIndex: 0,
-            border: "1px solid black"
+            border: "1px solid black",
           }}
         />
         <canvas
@@ -1006,7 +1006,7 @@ export class BubbleShooter extends React.Component {
             left: "0",
             top: "0",
             zIndex: 2,
-            border: "1px solid black"
+            border: "1px solid black",
           }}
         />
         <canvas
@@ -1023,7 +1023,7 @@ export class BubbleShooter extends React.Component {
             left: "0",
             top: "0",
             zIndex: 3,
-            border: "1px solid black"
+            border: "1px solid black",
           }}
         />
         <canvas
@@ -1040,7 +1040,7 @@ export class BubbleShooter extends React.Component {
             left: "0",
             top: "0",
             zIndex: 4,
-            border: "1px solid black"
+            border: "1px solid black",
           }}
         />
         <canvas
@@ -1057,7 +1057,7 @@ export class BubbleShooter extends React.Component {
             left: "0",
             top: "0",
             zIndex: 5,
-            border: "1px solid black"
+            border: "1px solid black",
           }}
         />
         <canvas
@@ -1074,7 +1074,7 @@ export class BubbleShooter extends React.Component {
             left: "0",
             top: "0",
             zIndex: 1,
-            border: "1px solid black"
+            border: "1px solid black",
           }}
         />
         <canvas
@@ -1091,7 +1091,7 @@ export class BubbleShooter extends React.Component {
             left: "0",
             top: "0",
             zIndex: 6,
-            border: "1px solid black"
+            border: "1px solid black",
           }}
         />
       </div>

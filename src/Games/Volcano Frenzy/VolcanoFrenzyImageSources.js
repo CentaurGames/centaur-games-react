@@ -31,5 +31,5 @@ export const tileImageURLs = [
   tileImageURLs_7,
   tileImageURLs_8,
   tileImageURLs_9,
-  tileImageURLs_10
+  tileImageURLs_10,
 ];

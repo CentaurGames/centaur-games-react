@@ -16,7 +16,7 @@ export class BlogListPage extends React.Component {
           <MenuBar />
         </div>
         <div>
-          {blogNameArray.map(blogName => (
+          {blogNameArray.map((blogName) => (
             <BlogIcon key={blogName} blogName={blogName} />
           ))}
         </div>

@@ -1,7 +1,7 @@
 import * as React from "react";
 import {
   startGlobalLoadingIndicator,
-  stopGlobalLoadingIndicator
+  stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
 
@@ -87,7 +87,7 @@ function rescaleAllCanvases() {
   rescaleCanvas(buttonCanvas, buttonContext, scale);
   rescaleCanvas(textCanvas, textContext, scale);
   if (isMobile) {
-    setTimeout(function() {
+    setTimeout(function () {
       window.scrollTo(0, rect.top);
       centerAllCanvases();
     }, 500);
@@ -179,9 +179,9 @@ function touchButton(e) {
       key = {
         evnt: e,
         keyCode: code,
-        preventDefault: function() {
+        preventDefault: function () {
           this.evnt.preventDefault();
-        }
+        },
       };
       click_stuff(key);
     }
@@ -378,7 +378,7 @@ function create_apple() {
   return;
 }
 
-Array.prototype.update = function(x) {
+Array.prototype.update = function (x) {
   var newx = x;
   var oldx;
   for (var i = 0; i < this.length; i++) {
@@ -503,21 +503,21 @@ function initializeEventListeners() {
   window.addEventListener("touchstart", touchButton, false);
   textCanvas.addEventListener(
     "touchend",
-    function(e) {
+    function (e) {
       e.preventDefault();
     },
     false
   );
   textCanvas.addEventListener(
     "touchmove",
-    function(e) {
+    function (e) {
       if (e.targetTouches.length === 1) {
         e.preventDefault();
       }
     },
     false
   );
-  scrollPreventCanvas.addEventListener("touchmove", function(evt) {
+  scrollPreventCanvas.addEventListener("touchmove", function (evt) {
     evt.preventDefault();
   });
 }
@@ -571,7 +571,7 @@ export class Snake extends React.Component {
             left: "0",
             top: "0",
             zIndex: 0,
-            border: "0px solid black"
+            border: "0px solid black",
           }}
         />
         <canvas
@@ -583,7 +583,7 @@ export class Snake extends React.Component {
             left: "0",
             top: "0",
             zIndex: 2,
-            border: "1px solid black"
+            border: "1px solid black",
           }}
         />
         <canvas
@@ -595,7 +595,7 @@ export class Snake extends React.Component {
             left: "0",
             top: "0",
             zIndex: 1,
-            border: "1px solid black"
+            border: "1px solid black",
           }}
         />
         <canvas
@@ -607,7 +607,7 @@ export class Snake extends React.Component {
             left: "0",
             top: "0",
             zIndex: 3,
-            border: "1px solid black"
+            border: "1px solid black",
           }}
         />
         <canvas
@@ -619,7 +619,7 @@ export class Snake extends React.Component {
             left: "0",
             top: "0",
             zIndex: 4,
-            border: "1px solid black"
+            border: "1px solid black",
           }}
         />
       </div>

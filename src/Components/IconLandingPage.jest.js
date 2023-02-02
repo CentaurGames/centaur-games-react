@@ -9,7 +9,7 @@ describe("IconLandingPage component", () => {
     cleanup();
   });
 
-  it.each(Object.keys(GAME_META_INFO))("displays %s correctly", gameName => {
+  it.each(Object.keys(GAME_META_INFO))("displays %s correctly", (gameName) => {
     const { getByTestId } = render(<IconLandingPage game={gameName} />);
 
     const icon = getByTestId("icon-landing-page");

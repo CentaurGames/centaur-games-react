@@ -26,8 +26,8 @@ export class ListPage extends React.Component {
       width: "990",
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
-        autoplay: 0
-      }
+        autoplay: 0,
+      },
     };
     return (
       <div className="list-page-scroll-wrapper">
@@ -37,14 +37,14 @@ export class ListPage extends React.Component {
         </div>
         <div className="list-page">
           <div className="wrap-div">
-            <Carousel>
+            <Carousel indicators={false} controls={false}>
               <Carousel.Item>
                 <img
                   src={LIST_PAGE_META_INFO[this.props.name].sliderImageURL}
                   className="carousel-icon mx-auto d-block img-fluid"
                 />
               </Carousel.Item>
-              {LIST_PAGE_META_INFO[this.props.name].games.map(gameName => (
+              {LIST_PAGE_META_INFO[this.props.name].games.map((gameName) => (
                 <Carousel.Item key={gameName}>
                   <a
                     href={BASE_URL + "?pageType=landing&pageName=" + gameName}
@@ -60,7 +60,7 @@ export class ListPage extends React.Component {
               ))}
             </Carousel>
           </div>
-          {LIST_PAGE_META_INFO[this.props.name].games.map(gameName => (
+          {LIST_PAGE_META_INFO[this.props.name].games.map((gameName) => (
             <Icon game={gameName} key={gameName} />
           ))}
         </div>
