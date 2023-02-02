@@ -1,12 +1,12 @@
 {
   "name": "centaur_games_react_files",
-  "version": "2.0.10",
+  "version": "2.1.0",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "centaur_games_react_files",
-      "version": "2.0.10",
+      "version": "2.1.0",
       "license": "SEE LICENSE IN LICENSE.md",
       "dependencies": {
         "@fortawesome/fontawesome": "^1.1.8",
