@@ -37,7 +37,7 @@ export class ListPage extends React.Component {
         </div>
         <div className="list-page">
           <div className="wrap-div">
-            <Carousel indicators={false}>
+            <Carousel indicators={false} controls={false}>
               <Carousel.Item>
                 <img
                   src={LIST_PAGE_META_INFO[this.props.name].sliderImageURL}

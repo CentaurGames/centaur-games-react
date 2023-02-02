@@ -95,7 +95,7 @@ export class LandingPage extends React.Component {
         {GAME_META_INFO[this.props.game].screenshotImages && (
           <div className="landing-page__screenshot-slider">
             <div className="screenshot-text">Screenshots From App</div>
-            <Carousel indicators={false}>
+            <Carousel indicators={false} controls={false}>
               {GAME_META_INFO[this.props.game].screenshotImages.map(
                 screenshotImage => (
                   <Carousel.Item key={screenshotImage}>
