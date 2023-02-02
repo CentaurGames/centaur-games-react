@@ -1,6 +1,6 @@
 import { BASE_URL } from "../Util/UrlHelper";
 import { GAME_META_INFO, LIST_PAGE_META_INFO } from "../Util/SiteUtil";
-import { Icon } from "../Components/Icon";
+import { Icon } from "./Icon";
 import "./ListPage.css";
 import * as React from "react";
 import YouTube from "react-youtube";
