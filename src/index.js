@@ -1,5 +1,6 @@
 import * as React from "react";
-import * as ReactDom from "react-dom";
+import { createRoot } from "react-dom/client";
 import { MainWebsite } from "./Components/MainWebsite";
 
-ReactDom.render(<MainWebsite />, document.getElementById("app"));
+const rootNode = document.getElementById("app");
+createRoot(rootNode).render(<MainWebsite />);
