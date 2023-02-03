@@ -118,3 +118,19 @@
 .tabbed-code {
     margin-left: 20px;
 }
+
+.math {
+    font-style: oblique;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-align: center;
+}
+
+.math-equation {
+    text-align: center;
+}
+
+.math-symbol {
+    position: relative;
+    top: 2px;
+}
