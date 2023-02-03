@@ -3,14 +3,16 @@ const SRC = path.resolve(__dirname, 'src/main/js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-   entry: './src/index.js',
+   entry: './src/index.jsx',
    output: {
       path: path.join(__dirname, '/bundle'),
       filename: 'index_bundle.js'
    },
    devServer: {
-      inline: true,
       port: 8001
+   },
+   stats: {
+      errorDetails: true,
    },
    module: {
       rules: [
@@ -18,8 +20,17 @@ module.exports = {
             test: /\.jsx?$/,
             exclude: /node_modules/,
             loader: 'babel-loader',
-            query: {
+            options: {
                presets: ['@babel/env', '@babel/react']
+            },
+            resolve: {
+               extensions: ['.js', '.jsx'],
+            }
+         },
+         {
+            test: /\.m?js/,
+            resolve: {
+              fullySpecified: false
             }
          },
          {

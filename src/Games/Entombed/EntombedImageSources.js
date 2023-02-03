@@ -196,71 +196,71 @@ export const snakeImageSources0 = [
   snakeImageSources0_0,
   snakeImageSources0_1,
   snakeImageSources0_2,
-  snakeImageSources0_3
+  snakeImageSources0_3,
 ];
 export const snakeImageSources1 = [
   snakeImageSources1_0,
   snakeImageSources1_1,
   snakeImageSources1_2,
-  snakeImageSources1_3
+  snakeImageSources1_3,
 ];
 export const snakeImageSources2 = [
   snakeImageSources2_0,
   snakeImageSources2_1,
   snakeImageSources2_2,
-  snakeImageSources2_3
+  snakeImageSources2_3,
 ];
 export const snakeImageSources3 = [
   snakeImageSources3_0,
   snakeImageSources3_1,
   snakeImageSources3_2,
-  snakeImageSources3_3
+  snakeImageSources3_3,
 ];
 export const snakeImageSources4 = [
   snakeImageSources4_0,
   snakeImageSources4_1,
   snakeImageSources4_2,
-  snakeImageSources4_3
+  snakeImageSources4_3,
 ];
 export const spiderImageSources0 = [
   spiderImageSources0_0,
   spiderImageSources0_1,
   spiderImageSources0_2,
-  spiderImageSources0_3
+  spiderImageSources0_3,
 ];
 export const spiderImageSources1 = [
   spiderImageSources1_0,
   spiderImageSources1_1,
   spiderImageSources1_2,
-  spiderImageSources1_3
+  spiderImageSources1_3,
 ];
 export const spiderImageSources2 = [
   spiderImageSources2_0,
   spiderImageSources2_1,
   spiderImageSources2_2,
-  spiderImageSources2_3
+  spiderImageSources2_3,
 ];
 export const spiderImageSources3 = [
   spiderImageSources3_0,
   spiderImageSources3_1,
   spiderImageSources3_2,
-  spiderImageSources3_3
+  spiderImageSources3_3,
 ];
 export const spiderImageSources4 = [
   spiderImageSources4_0,
   spiderImageSources4_1,
   spiderImageSources4_2,
-  spiderImageSources4_3
+  spiderImageSources4_3,
 ];
 export const footstepImageURLs = [
   footstepImageURLs_0,
   footstepImageURLs_1,
   footstepImageURLs_2,
-  footstepImageURLs_3
+  footstepImageURLs_3,
 ];
 export const playerImageURLs = [
   playerImageURLs_0,
   playerImageURLs_1,
   playerImageURLs_2,
-  playerImageURLs_3
+  playerImageURLs_3,
 ];

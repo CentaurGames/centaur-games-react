@@ -16,6 +16,7 @@
     line-height: 2;
     font-size: 17px;
     font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
 }
 
 @media (max-width: 900px), (max-device-width: 812px) {
