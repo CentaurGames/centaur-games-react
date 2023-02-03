@@ -1355,118 +1355,118 @@ export function StraightPool() {
     run();
   }, []);
 
-    return (
-      <div>
-        <canvas
-          id="scrollPreventCanvas"
-          width="640"
-          height="360"
-          style={{
-            position: "absolute",
-            top: "30",
-            left: "30",
-            zIndex: 0,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="myCanvas"
-          width="640"
-          height="360"
-          style={{
-            position: "absolute",
-            top: "30",
-            left: "30",
-            zIndex: 3,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="ballCanvas"
-          width="640"
-          height="360"
-          style={{
-            position: "absolute",
-            top: "30",
-            left: "30",
-            zIndex: 4,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="tableCanvas"
-          width="700"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 2,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="cueCanvas"
-          width="370"
-          height="15"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 1,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="cursorCanvas"
-          width="800"
-          height="520"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 5,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="imageCanvas"
-          width="20"
-          height="20"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 1,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="floorCanvas"
-          width="800"
-          height="520"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 1,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="scoreCanvas"
-          width="800"
-          height="520"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 2,
-            border: "1px solid black",
-          }}
-        />
-      </div>
-    );
+  return (
+    <div>
+      <canvas
+        id="scrollPreventCanvas"
+        width="640"
+        height="360"
+        style={{
+          position: "absolute",
+          top: "30",
+          left: "30",
+          zIndex: 0,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="myCanvas"
+        width="640"
+        height="360"
+        style={{
+          position: "absolute",
+          top: "30",
+          left: "30",
+          zIndex: 3,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="ballCanvas"
+        width="640"
+        height="360"
+        style={{
+          position: "absolute",
+          top: "30",
+          left: "30",
+          zIndex: 4,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="tableCanvas"
+        width="700"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 2,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="cueCanvas"
+        width="370"
+        height="15"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 1,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="cursorCanvas"
+        width="800"
+        height="520"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 5,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="imageCanvas"
+        width="20"
+        height="20"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 1,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="floorCanvas"
+        width="800"
+        height="520"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 1,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="scoreCanvas"
+        width="800"
+        height="520"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 2,
+          border: "1px solid black",
+        }}
+      />
+    </div>
+  );
 }
 
 export { StraightPool as default };

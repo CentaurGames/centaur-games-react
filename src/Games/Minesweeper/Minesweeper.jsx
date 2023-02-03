@@ -1290,142 +1290,142 @@ export function Minesweeper() {
     play();
   }, []);
 
-    return (
-      <div>
-        <canvas
-          id="scrollPreventCanvas"
-          width="400"
-          height="400"
-          style={{
-            position: "absolute",
-            left: "3",
-            top: "56",
-            zIndex: 0,
-            border: "0px solid grey",
-          }}
-        />
-        <canvas
-          id="nmbrCanvas"
-          width="400"
-          height="400"
-          style={{
-            position: "absolute",
-            left: "3",
-            top: "56",
-            zIndex: 2,
-            border: "1px solid grey",
-          }}
-        />
-        <canvas
-          id="tlCanvas"
-          width="400"
-          height="400"
-          style={{
-            position: "absolute",
-            left: "3",
-            top: "56",
-            zIndex: 3,
-            border: "1px solid grey",
-          }}
-        />
-        <canvas
-          id="flgCanvas"
-          width="400"
-          height="400"
-          style={{
-            position: "absolute",
-            left: "3",
-            top: "56",
-            zIndex: 4,
-            border: "1px solid grey",
-          }}
-        />
-        <canvas
-          id="bkgrndCanvas"
-          width="406"
-          height="459"
-          style={{
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 1,
-            border: "1px solid grey",
-          }}
-        />
-        <canvas
-          id="tmrCanvas"
-          width="400"
-          height="50"
-          style={{
-            position: "absolute",
-            left: "3",
-            top: "3",
-            zIndex: 2,
-            border: "1px solid grey",
-          }}
-        />
-        <canvas
-          id="clkCanvas"
-          width="75"
-          height="37"
-          style={{
-            position: "absolute",
-            left: "303",
-            top: "10",
-            zIndex: 3,
-            border: "1px solid grey",
-          }}
-        />
-        <canvas
-          id="scrCanvas"
-          width="75"
-          height="37"
-          style={{
-            position: "absolute",
-            left: "28",
-            top: "10",
-            zIndex: 3,
-            border: "1px solid grey",
-          }}
-        />
-        <canvas
-          id="smlyCanvas"
-          width="30"
-          height="30"
-          style={{
-            position: "absolute",
-            left: "188",
-            top: "13",
-            zIndex: 3,
-            border: "2px solid grey",
-          }}
-        />
-        <canvas
-          id="imgCanvas"
-          width="25"
-          height="37"
-          style={{
-            position: "absolute",
-            top: "30",
-            left: "100",
-            zIndex: 1,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="hdnCanvas"
-          width="406"
-          height="460"
-          style={{
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 5,
-            border: "0px solid black",
-          }}
-        />
-      </div>
-    );
+  return (
+    <div>
+      <canvas
+        id="scrollPreventCanvas"
+        width="400"
+        height="400"
+        style={{
+          position: "absolute",
+          left: "3",
+          top: "56",
+          zIndex: 0,
+          border: "0px solid grey",
+        }}
+      />
+      <canvas
+        id="nmbrCanvas"
+        width="400"
+        height="400"
+        style={{
+          position: "absolute",
+          left: "3",
+          top: "56",
+          zIndex: 2,
+          border: "1px solid grey",
+        }}
+      />
+      <canvas
+        id="tlCanvas"
+        width="400"
+        height="400"
+        style={{
+          position: "absolute",
+          left: "3",
+          top: "56",
+          zIndex: 3,
+          border: "1px solid grey",
+        }}
+      />
+      <canvas
+        id="flgCanvas"
+        width="400"
+        height="400"
+        style={{
+          position: "absolute",
+          left: "3",
+          top: "56",
+          zIndex: 4,
+          border: "1px solid grey",
+        }}
+      />
+      <canvas
+        id="bkgrndCanvas"
+        width="406"
+        height="459"
+        style={{
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 1,
+          border: "1px solid grey",
+        }}
+      />
+      <canvas
+        id="tmrCanvas"
+        width="400"
+        height="50"
+        style={{
+          position: "absolute",
+          left: "3",
+          top: "3",
+          zIndex: 2,
+          border: "1px solid grey",
+        }}
+      />
+      <canvas
+        id="clkCanvas"
+        width="75"
+        height="37"
+        style={{
+          position: "absolute",
+          left: "303",
+          top: "10",
+          zIndex: 3,
+          border: "1px solid grey",
+        }}
+      />
+      <canvas
+        id="scrCanvas"
+        width="75"
+        height="37"
+        style={{
+          position: "absolute",
+          left: "28",
+          top: "10",
+          zIndex: 3,
+          border: "1px solid grey",
+        }}
+      />
+      <canvas
+        id="smlyCanvas"
+        width="30"
+        height="30"
+        style={{
+          position: "absolute",
+          left: "188",
+          top: "13",
+          zIndex: 3,
+          border: "2px solid grey",
+        }}
+      />
+      <canvas
+        id="imgCanvas"
+        width="25"
+        height="37"
+        style={{
+          position: "absolute",
+          top: "30",
+          left: "100",
+          zIndex: 1,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="hdnCanvas"
+        width="406"
+        height="460"
+        style={{
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 5,
+          border: "0px solid black",
+        }}
+      />
+    </div>
+  );
 }
 
 export { Minesweeper as default };

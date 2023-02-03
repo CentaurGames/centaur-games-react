@@ -725,70 +725,70 @@ export function LumpyDumplings3() {
     run();
   }, []);
 
-    return (
-      <div>
-        <canvas
-          id="scrollPreventCanvas"
-          width="1136"
-          height="640"
-          style={{
-            position: "absolute",
-            top: "10",
-            left: "10",
-            zIndex: 0,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="imgCanvas"
-          width="40"
-          height="40"
-          style={{
-            position: "absolute",
-            top: "10",
-            left: "10",
-            zIndex: 1,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="bkgrndCanvas"
-          width="1136"
-          height="640"
-          style={{
-            position: "absolute",
-            top: "10",
-            left: "10",
-            zIndex: 2,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="dumplingCanvas"
-          width="1136"
-          height="640"
-          style={{
-            position: "absolute",
-            top: "10",
-            left: "10",
-            zIndex: 3,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="scrCanvas"
-          width="1136"
-          height="640"
-          style={{
-            position: "absolute",
-            top: "10",
-            left: "10",
-            zIndex: 4,
-            border: "0px solid black",
-          }}
-        />
-      </div>
-    );
+  return (
+    <div>
+      <canvas
+        id="scrollPreventCanvas"
+        width="1136"
+        height="640"
+        style={{
+          position: "absolute",
+          top: "10",
+          left: "10",
+          zIndex: 0,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="imgCanvas"
+        width="40"
+        height="40"
+        style={{
+          position: "absolute",
+          top: "10",
+          left: "10",
+          zIndex: 1,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="bkgrndCanvas"
+        width="1136"
+        height="640"
+        style={{
+          position: "absolute",
+          top: "10",
+          left: "10",
+          zIndex: 2,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="dumplingCanvas"
+        width="1136"
+        height="640"
+        style={{
+          position: "absolute",
+          top: "10",
+          left: "10",
+          zIndex: 3,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="scrCanvas"
+        width="1136"
+        height="640"
+        style={{
+          position: "absolute",
+          top: "10",
+          left: "10",
+          zIndex: 4,
+          border: "0px solid black",
+        }}
+      />
+    </div>
+  );
 }
 
 export { LumpyDumplings3 as default };

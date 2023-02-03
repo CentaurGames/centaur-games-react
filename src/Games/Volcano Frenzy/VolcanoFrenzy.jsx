@@ -1760,106 +1760,106 @@ export function VolcanoFrenzy() {
     loadLavaImage();
   }, []);
 
-    return (
-      <div>
-        <canvas
-          id="scrollPreventCanvas"
-          width="1136"
-          height="640"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 0,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="lavaCanvas"
-          width="1136"
-          height="640"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 1,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="cavernCanvas"
-          width="1136"
-          height="640"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 2,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="fallingCanvas"
-          width="1136"
-          height="640"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 3,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="tileCanvas"
-          width="1136"
-          height="640"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 4,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="goldCanvas"
-          width="1136"
-          height="640"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 5,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="cartCanvas"
-          width="1136"
-          height="640"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 6,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="placardCanvas"
-          width="1136"
-          height="640"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 7,
-            border: "0px solid black",
-          }}
-        />
-      </div>
-    );
+  return (
+    <div>
+      <canvas
+        id="scrollPreventCanvas"
+        width="1136"
+        height="640"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 0,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="lavaCanvas"
+        width="1136"
+        height="640"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 1,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="cavernCanvas"
+        width="1136"
+        height="640"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 2,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="fallingCanvas"
+        width="1136"
+        height="640"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 3,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="tileCanvas"
+        width="1136"
+        height="640"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 4,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="goldCanvas"
+        width="1136"
+        height="640"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 5,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="cartCanvas"
+        width="1136"
+        height="640"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 6,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="placardCanvas"
+        width="1136"
+        height="640"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 7,
+          border: "0px solid black",
+        }}
+      />
+    </div>
+  );
 }
 
 export { VolcanoFrenzy as default };

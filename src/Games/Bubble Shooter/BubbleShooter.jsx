@@ -972,129 +972,129 @@ export function BubbleShooter() {
     play();
   }, []);
 
-    return (
-      <div>
-        <canvas
-          id="scrollPreventCanvas"
-          width="610"
-          height="600"
-          style={{
-            paddingLeft: "0",
-            paddingRight: "0",
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "block",
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 0,
-            border: "1px solid black",
-          }}
-        />
-        <canvas
-          id="bkgrndCanvas"
-          width="610"
-          height="600"
-          style={{
-            paddingLeft: "0",
-            paddingRight: "0",
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "block",
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 2,
-            border: "1px solid black",
-          }}
-        />
-        <canvas
-          id="shtrCanvas"
-          width="610"
-          height="600"
-          style={{
-            paddingLeft: "0",
-            paddingRight: "0",
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "block",
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 3,
-            border: "1px solid black",
-          }}
-        />
-        <canvas
-          id="bublCanvas"
-          width="610"
-          height="600"
-          style={{
-            paddingLeft: "0",
-            paddingRight: "0",
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "block",
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 4,
-            border: "1px solid black",
-          }}
-        />
-        <canvas
-          id="lnchCanvas"
-          width="610"
-          height="600"
-          style={{
-            paddingLeft: "0",
-            paddingRight: "0",
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "block",
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 5,
-            border: "1px solid black",
-          }}
-        />
-        <canvas
-          id="imgCanvas"
-          width="0"
-          height="0"
-          style={{
-            paddingLeft: "0",
-            paddingRight: "0",
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "block",
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 1,
-            border: "1px solid black",
-          }}
-        />
-        <canvas
-          id="playButton"
-          width="610"
-          height="600"
-          style={{
-            paddingLeft: "0",
-            paddingRight: "0",
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "block",
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 6,
-            border: "1px solid black",
-          }}
-        />
-      </div>
-    );
+  return (
+    <div>
+      <canvas
+        id="scrollPreventCanvas"
+        width="610"
+        height="600"
+        style={{
+          paddingLeft: "0",
+          paddingRight: "0",
+          marginLeft: "auto",
+          marginRight: "auto",
+          display: "block",
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 0,
+          border: "1px solid black",
+        }}
+      />
+      <canvas
+        id="bkgrndCanvas"
+        width="610"
+        height="600"
+        style={{
+          paddingLeft: "0",
+          paddingRight: "0",
+          marginLeft: "auto",
+          marginRight: "auto",
+          display: "block",
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 2,
+          border: "1px solid black",
+        }}
+      />
+      <canvas
+        id="shtrCanvas"
+        width="610"
+        height="600"
+        style={{
+          paddingLeft: "0",
+          paddingRight: "0",
+          marginLeft: "auto",
+          marginRight: "auto",
+          display: "block",
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 3,
+          border: "1px solid black",
+        }}
+      />
+      <canvas
+        id="bublCanvas"
+        width="610"
+        height="600"
+        style={{
+          paddingLeft: "0",
+          paddingRight: "0",
+          marginLeft: "auto",
+          marginRight: "auto",
+          display: "block",
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 4,
+          border: "1px solid black",
+        }}
+      />
+      <canvas
+        id="lnchCanvas"
+        width="610"
+        height="600"
+        style={{
+          paddingLeft: "0",
+          paddingRight: "0",
+          marginLeft: "auto",
+          marginRight: "auto",
+          display: "block",
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 5,
+          border: "1px solid black",
+        }}
+      />
+      <canvas
+        id="imgCanvas"
+        width="0"
+        height="0"
+        style={{
+          paddingLeft: "0",
+          paddingRight: "0",
+          marginLeft: "auto",
+          marginRight: "auto",
+          display: "block",
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 1,
+          border: "1px solid black",
+        }}
+      />
+      <canvas
+        id="playButton"
+        width="610"
+        height="600"
+        style={{
+          paddingLeft: "0",
+          paddingRight: "0",
+          marginLeft: "auto",
+          marginRight: "auto",
+          display: "block",
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 6,
+          border: "1px solid black",
+        }}
+      />
+    </div>
+  );
 }
 
 export { BubbleShooter as default };
