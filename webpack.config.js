@@ -11,6 +11,9 @@ module.exports = {
    devServer: {
       port: 8001
    },
+   stats: {
+      errorDetails: true,
+   },
    module: {
       rules: [
          {

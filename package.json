@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js -p --progress --colors --display-error-details",
+    "build": "node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js --mode production --progress",
     "prettier": "prettier --write --tab-width 2 \"src/**/*.{js,jsx}\"",
     "test": "jest --transformIgnorePatterns --silent",
     "coverage": "jest --transformIgnorePatterns --silent --coverage"
