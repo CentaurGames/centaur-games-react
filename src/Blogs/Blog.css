@@ -83,8 +83,8 @@
 }
 
 .code-snippet {
-    background-color: #f7eed5;
-    color: #666;
+    background-color: #404142;
+    color: #98bef5;
     padding: 2px;
     border-radius: 2px;
     font-family: monospace;
@@ -96,8 +96,8 @@
 }
 
 .code-block {
-    background-color: #f7eed5;
-    color: #666;
+    background-color: #404142;
+    color: #98bef5;
     padding: 2px;
     border-radius: 2px;
     font-family: monospace;
@@ -111,7 +111,24 @@
 }
 
 .code-comment {
-    color: darkgreen;
+    color: #51db8f;
+}
+
+.code-html {
+    color: #56b7e8;
+}
+
+.code-tag {
+    color: #fa7e37;
+    font-style: italic;
+}
+
+.code-function-declaration {
+    color: white;
+}
+
+.code-static {
+    color: #b3bd95;
 }
 
 .tabbed-code {
@@ -160,4 +177,9 @@
 
 .full-width {
     width: 100%;
+}
+
+.latex-block {
+    display: flex;
+    justify-content: center;
 }

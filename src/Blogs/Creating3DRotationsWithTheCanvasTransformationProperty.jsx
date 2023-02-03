@@ -133,39 +133,45 @@ export function Creating3DRotationsWithTheCanvasTransformationProperty() {
           the page but we can still view its side, the components of its angular
           velocity will be:
         </p>
-        <p className="math-equation">
-          <span className="math">
-            ω<sub>x</sub>
-          </span>{" "}
-          <span className="math-symbol">=</span>{" "}
-          <span className="math-symbol">&minus;</span>
-          <span className="math">ω</span>{" "}
-          <span className="math-symbol">&times;</span> sin(
-          <span className="math">θ</span>){" "}
-          <span className="math-symbol">&times;</span> sin(
-          <span className="math">φ</span>)
+        <p>
+          <div className="math-equation full-width">
+            <span className="math">
+              ω<sub>x</sub>
+            </span>{" "}
+            <span className="math-symbol">=</span>{" "}
+            <span className="math-symbol">&minus;</span>
+            <span className="math">ω</span>{" "}
+            <span className="math-symbol">&times;</span> sin(
+            <span className="math">θ</span>){" "}
+            <span className="math-symbol">&times;</span> sin(
+            <span className="math">φ</span>)
+          </div>
         </p>
-        <p className="math-equation">
-          <span className="math">
-            ω<sub>y</sub>
-          </span>{" "}
-          <span className="math-symbol">=</span>{" "}
-          <span className="math-symbol">&minus;</span>
-          <span className="math">ω</span>{" "}
-          <span className="math-symbol">&times;</span> cos(
-          <span className="math">θ</span>)
+        <p>
+          <div className="math-equation full-width">
+            <span className="math">
+              ω<sub>y</sub>
+            </span>{" "}
+            <span className="math-symbol">=</span>{" "}
+            <span className="math-symbol">&minus;</span>
+            <span className="math">ω</span>{" "}
+            <span className="math-symbol">&times;</span> cos(
+            <span className="math">θ</span>)
+          </div>
         </p>
-        <p className="math-equation">
-          <span className="math">
-            ω<sub>z</sub>
-          </span>{" "}
-          <span className="math-symbol">=</span>{" "}
-          <span className="math-symbol">&minus;</span>
-          <span className="math">ω</span>{" "}
-          <span className="math-symbol">&times;</span> sin(
-          <span className="math">θ</span>){" "}
-          <span className="math-symbol">&times;</span> cos(
-          <span className="math">φ</span>)
+        <p>
+          <div className="math-equation full-width">
+            <span className="math">
+              ω<sub>z</sub>
+            </span>{" "}
+            <span className="math-symbol">=</span>{" "}
+            <span className="math-symbol">&minus;</span>
+            <span className="math">ω</span>{" "}
+            <span className="math-symbol">&times;</span> sin(
+            <span className="math">θ</span>){" "}
+            <span className="math-symbol">&times;</span> cos(
+            <span className="math">φ</span>)
+          </div>
         </p>
         <p>
           With each step we then rotate the coin by the angles (

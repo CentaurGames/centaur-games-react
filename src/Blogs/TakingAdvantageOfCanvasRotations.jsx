@@ -74,7 +74,8 @@ export function TakingAdvantageOfCanvasRotations() {
         </p>
 
         <div className="code-block">
-          let r = Math.sqrt((u-x)*(u-x) + (v-y)*(v-y));
+          <span className="code-tag">const</span> r = Math.sqrt((u-x)*(u-x) +
+          (v-y)*(v-y));
         </div>
 
         <p>

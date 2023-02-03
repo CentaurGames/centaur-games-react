@@ -56,19 +56,26 @@ export function DynamicResizingOfTheWindow() {
       </p>
       <p className="sub-paragraph">
         <div className="code-block">
-          &lt;meta
+          <span className="code-html">&lt;meta</span>
           <div className="tabbed-code">
-            <div>name="viewport"</div>
             <div>
-              content="width=device-width, user-scalable=no, minimum-scale=1.0,
-              maximum-scale=1.0"
+              <span className="code-html">name=</span>"viewport"
+            </div>
+            <div>
+              <span className="code-html">content=</span>"width=device-width,
+              user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
             </div>
           </div>
-          &gt;
+          <span className="code-html">&gt;</span>
           <div className="code-comment">// above the script tag</div>
           &nbsp;
-          <div>document.documentElement.style.overflow = "hidden";</div>
-          <div>document.body.scroll = "no";</div>
+          <div>
+            <span className="code-static">document</span>
+            .documentElement.style.overflow = "hidden";
+          </div>
+          <div>
+            <span className="code-static">document</span>.body.scroll = "no";
+          </div>
         </div>
       </p>
       <p className="sub-paragraph">
@@ -155,24 +162,42 @@ export function DynamicResizingOfTheWindow() {
       </p>
       <p className="sub-paragraph">
         <div className="code-block">
-          <div style={{ color: "#808080" }}>
-            <strong>
-              <em>function</em>
-            </strong>
-            {" centerCanvas(canvas) {"}
+          <div className="code-function-declaration">
+            <span className="code-tag">function</span> centerCanvas(
+            <span className="code-static">canvas</span>) {"{"}
           </div>
           <div className="tabbed-code">
-            <div>canvas.style.left = "0px";</div>
-            <div>canvas.style.top = "0px";</div>
-            <div>var rect = canvas.getBoundingClientRect();</div>
-            <div>var x = (window.innerWidth - canvas.width)/2;</div>
+            <div>
+              <span className="code-static">canvas</span>.style.left = "0px";
+            </div>
+            <div>
+              <span className="code-static">canvas</span>.style.top = "0px";
+            </div>
+            <div>
+              <span className="code-tag">const</span> rect ={" "}
+              <span className="code-static">canvas</span>
+              .getBoundingClientRect();
+            </div>
+            <div>
+              <span className="code-tag">let</span> x = (
+              <span className="code-static">window</span>.innerWidth -
+              canvas.width)/2;
+            </div>
             <div>x -= rect.left;</div>
-            <div>var y = (window.innerHeight - canvas.height)/2;</div>
+            <div>
+              <span className="code-tag">let</span> y = (
+              <span className="code-static">window</span>.innerHeight -
+              canvas.height)/2;
+            </div>
             <div>y -= rect.top;</div>
-            <div>canvas.style.left = x + "px";</div>
-            <div>canvas.style.top = y + "px";</div>
+            <div>
+              <span className="code-static">canvas</span>.style.left = x + "px";
+            </div>
+            <div>
+              <span className="code-static">canvas</span>.style.top = y + "px";
+            </div>
           </div>
-          <div>{"}"}</div>
+          <div className="code-function-declaration">{"}"}</div>
         </div>
       </p>
       <p className="sub-paragraph">
