@@ -49,19 +49,21 @@ export function CreatingAScrollingEffect() {
           <li>
             Clips a canvas-sized rectangle out of the scrollImage at location
             (0,<em>y</em>):
-            <div style={{ color: "#808080" }}>
+            <div className="code-block">
               context.drawImage(scrollImage,0,y,canvas.width,canvas.height,0,0,canvas.width,canvas.height);
             </div>
           </li>
           <li>
             Increments <em>y</em> and uses modulus to ensure it is bound between
             0 and the canvas height:
-            <div style={{ color: "#808080" }}>y++;</div>
-            <div style={{ color: "#808080" }}>y %= canvas.height;</div>
+            <div className="code-block">
+              <div>y++;</div>
+              <div>y %= canvas.height;</div>
+            </div>
           </li>
         </ul>
         Once the <em>scroll</em> function is created, call it periodically
-        within a <span style={{ color: "#00ffff" }}>setInterval</span> event.
+        within a <span className="code-snippet">setInterval</span> event.
       </div>
     </div>
   );

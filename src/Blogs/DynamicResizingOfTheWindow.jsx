@@ -40,9 +40,9 @@ export function DynamicResizingOfTheWindow() {
         <h3>Resizing to Fit the Window</h3>
         The window's width and height can be obtained (in Javascript) through
         <span className="code-snippet">window.innerWidth</span> and
-        <span className="code-snippet">window.innerHeight</span>, but
-        there's a catch: first you need to disable the scrollbar. Once again, we
-        are assuming that the user has no use for it - after all, the game will
+        <span className="code-snippet">window.innerHeight</span>, but there's a
+        catch: first you need to disable the scrollbar. Once again, we are
+        assuming that the user has no use for it - after all, the game will
         appear exactly centered no matter how much they scroll it, so it is a
         useless feature to have at this point. You can enable the scrollbar, but
         your window width and height will be slightly incorrect on some devices
@@ -56,22 +56,19 @@ export function DynamicResizingOfTheWindow() {
       </p>
       <p className="sub-paragraph">
         <div className="code-block">
-          &lt;meta 
+          &lt;meta
           <div className="tabbed-code">
+            <div>name="viewport"</div>
             <div>
-              name="viewport" 
-            </div>
-            <div>
-              content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+              content="width=device-width, user-scalable=no, minimum-scale=1.0,
+              maximum-scale=1.0"
             </div>
           </div>
           &gt;
           <div className="code-comment">// above the script tag</div>
           &nbsp;
-        <div>
-          document.documentElement.style.overflow = "hidden";
-        </div>
-        <div>document.body.scroll = "no";</div>
+          <div>document.documentElement.style.overflow = "hidden";</div>
+          <div>document.body.scroll = "no";</div>
         </div>
       </p>
       <p className="sub-paragraph">
@@ -104,9 +101,7 @@ export function DynamicResizingOfTheWindow() {
       </p>
       <p className="sub-paragraph">
         The final step we must take is to use
-        <span className="code-snippet">
-          context.scale(s, s)
-        </span>
+        <span className="code-snippet">context.scale(s, s)</span>
         to rescale the context (here <em>s</em> is the scale factor that we
         multiplied the canvas by). However, here you should be aware that the
         context will reset its scale every time you reset the canvas width.{" "}
@@ -114,9 +109,7 @@ export function DynamicResizingOfTheWindow() {
           <strong>
             Thus game developers using this method should be wary of using the
             traditional
-            <span className="code-snippet">
-              canvas.width = canvas.width
-            </span>
+            <span className="code-snippet">canvas.width = canvas.width</span>
             method of clearing a canvas, and should always use
             <span className="code-snippet">clearRect</span> instead.
           </strong>
@@ -125,8 +118,8 @@ export function DynamicResizingOfTheWindow() {
       <p className="sub-paragraph">
         <h3>Centering the Canvas</h3>
         Before you center your canvases, you need to do two things: use
-        <span className="code-snippet">window.scrollTo(0,0)</span> to scroll
-        to the top of the page, and set each canvas's top left corner to (0,0).
+        <span className="code-snippet">window.scrollTo(0,0)</span> to scroll to
+        the top of the page, and set each canvas's top left corner to (0,0).
         Each time you center the canvas, it gets pushed down the page a little
         bit. If you do not recalibrate its top-left corner each time you center
         it, the canvas will eventually get pushed beyond the edge of the page's
@@ -142,9 +135,9 @@ export function DynamicResizingOfTheWindow() {
         (0,0) as the top left corner, a closer examination will reveal that our
         canvas is located somewhere else. To find its actual location, we need
         to use
-        <span className="code-snippet">getBoundingClientRect</span> and ask
-        for the top left corner. The values this returns will represent the
-        shift that we need to correct for later.
+        <span className="code-snippet">getBoundingClientRect</span> and ask for
+        the top left corner. The values this returns will represent the shift
+        that we need to correct for later.
       </p>
       <p className="sub-paragraph">
         Upon centering our canvas, there should be just as much space above its
@@ -153,9 +146,7 @@ export function DynamicResizingOfTheWindow() {
           (window.innerHeight-canvas.height)/2
         </span>
         pixels away from the top of the page. Likewise, the left side is located
-        <span className="code-snippet">
-          (window.innerWidth-canvas.width)/2
-        </span>
+        <span className="code-snippet">(window.innerWidth-canvas.width)/2</span>
         pixels away from the left of the page. Note that both of these values
         need to be corrected by the shift we obtained previously.
       </p>
@@ -164,40 +155,24 @@ export function DynamicResizingOfTheWindow() {
       </p>
       <p className="sub-paragraph">
         <div className="code-block">
-        <div style={{ color: "#808080" }}>
-          <strong>
-            <em>function</em>
-          </strong>
-          {" centerCanvas(canvas) {"}
-        </div>
-        <div className="tabbed-code">
-        <div>
-          canvas.style.left = "0px";
-        </div>
-        <div>
-          canvas.style.top = "0px";
-        </div>
-        <div>
-          var rect = canvas.getBoundingClientRect();
-        </div>
-        <div>
-          var x = (window.innerWidth - canvas.width)/2;
-        </div>
-        <div>
-          x -= rect.left;
-        </div>
-        <div>
-          var y = (window.innerHeight - canvas.height)/2;
-        </div>
-        <div>y -= rect.top;</div>
-        <div>
-          canvas.style.left = x + "px";
-        </div>
-        <div>
-          canvas.style.top = y + "px";
-        </div>
-        </div>
-        <div>{"}"}</div>
+          <div style={{ color: "#808080" }}>
+            <strong>
+              <em>function</em>
+            </strong>
+            {" centerCanvas(canvas) {"}
+          </div>
+          <div className="tabbed-code">
+            <div>canvas.style.left = "0px";</div>
+            <div>canvas.style.top = "0px";</div>
+            <div>var rect = canvas.getBoundingClientRect();</div>
+            <div>var x = (window.innerWidth - canvas.width)/2;</div>
+            <div>x -= rect.left;</div>
+            <div>var y = (window.innerHeight - canvas.height)/2;</div>
+            <div>y -= rect.top;</div>
+            <div>canvas.style.left = x + "px";</div>
+            <div>canvas.style.top = y + "px";</div>
+          </div>
+          <div>{"}"}</div>
         </div>
       </p>
       <p className="sub-paragraph">

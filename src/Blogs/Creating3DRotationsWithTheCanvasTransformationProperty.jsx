@@ -71,7 +71,7 @@ export function Creating3DRotationsWithTheCanvasTransformationProperty() {
           </a>{" "}
           property as follows:
         </p>
-        <div style={{ color: "#808080" }}>
+        <div className="code-block">
           context.transform(R[0][0],R[1][0],R[0][1],R[1][1],R[0][2],R[1][2]);
         </div>
         <p>

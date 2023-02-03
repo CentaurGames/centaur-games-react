@@ -112,8 +112,8 @@ export function CreatingShadowsWhichMoveWithThePlayer() {
           the same transparency like would be physical. To fix this, we drew our
           shadows on a separate canvas (hidden from view) in full black and then
           drew the results of this canvas onto the desired one using the{" "}
-          <span style={{ color: "#00ccff" }}>drawImage</span> property (which
-          can except canvases as an argument) with a globalAlpha of our desired
+          <span className="code-snippet">drawImage</span> property (which can
+          except canvases as an argument) with a globalAlpha of our desired
           transparency. We found this technique to be quite effective.
         </p>
       </div>

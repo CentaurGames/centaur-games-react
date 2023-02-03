@@ -70,11 +70,8 @@ export function TakingAdvantageOfCanvasRotations() {
           rotation, which we will call <em>r</em>:
         </p>
 
-        <div style={{ color: "#808080" }}>
-          <em>
-            <strong>var</strong>
-          </em>{" "}
-          r = Math.sqrt((u-x)*(u-x) + (v-y)*(v-y));
+        <div className="code-block">
+          let r = Math.sqrt((u-x)*(u-x) + (v-y)*(v-y));
         </div>
 
         <p>
@@ -83,9 +80,11 @@ export function TakingAdvantageOfCanvasRotations() {
           the axis of rotation in our new coordinate system).
         </p>
 
-        <div style={{ color: "#808080" }}>context.translate(u,v);</div>
-        <div style={{ color: "#808080" }}>context.rotate(θ);</div>
-        <div style={{ color: "#808080" }}>context.translate(0,-r);</div>
+        <div className="code-block">
+          <div>context.translate(u, v);</div>
+          <div>context.rotate(θ);</div>
+          <div>context.translate(0, -r);</div>
+        </div>
 
         <p>
           Remember that we have only translated to the 
@@ -93,9 +92,9 @@ export function TakingAdvantageOfCanvasRotations() {
           top-left corner. We then draw the image at this location.
         </p>
 
-        <div style={{ color: "#808080" }}>context.translate(-w/2.-h/2);</div>
-        <div style={{ color: "#808080" }}>
-          context.drawImage(objectImage,0,0);
+        <div className="code-block">
+          <div>context.translate(-w/2, -h/2);</div>
+          <div>context.drawImage(objectImage, 0, 0);</div>
         </div>
 
         <p>
@@ -103,13 +102,14 @@ export function TakingAdvantageOfCanvasRotations() {
           things, so it is smart to save and restore your context. Combining
           some steps, altogether this looks as follows:
         </p>
-        <div style={{ color: "#808080" }}>context.save();</div>
-        <div style={{ color: "#808080" }}>context.translate(u,v);</div>
-        <div style={{ color: "#808080" }}>context.rotate(θ);</div>
-        <div style={{ color: "#808080" }}>
-          context.drawImage(objectImage,-w/2,-h/2-r);
+
+        <div className="code-block">
+          <div>context.save();</div>
+          <div>context.translate(u, v);</div>
+          <div>context.rotate(θ);</div>
+          <div>context.drawImage(objectImage, -w/2, -h/2-r);</div>
+          <div>context.restore();</div>
         </div>
-        <div style={{ color: "#808080" }}>context.restore();</div>
 
         <p>
           In addition to <em>Rocket Racers</em>, we have also used this
