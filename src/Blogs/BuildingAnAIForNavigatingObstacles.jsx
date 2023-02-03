@@ -54,21 +54,7 @@ export function BuildingAnAIForNavigatingObstacles() {
       </p>
       <p className="sub-paragraph">
         <b>
-          <big>How</big>
-        </b>{" "}
-        <b>
-          <big>the</big>
-        </b>{" "}
-        <b>
-          <i>
-            <big>Entombed</big>
-          </i>
-        </b>{" "}
-        <b>
-          <big>AI</big>
-        </b>{" "}
-        <b>
-          <big>Worked</big>
+          <big>How the <em>Entombed</em> AI Worked</big>
         </b>
       </p>
       <p className="sub-paragraph">
@@ -156,8 +142,7 @@ export function BuildingAnAIForNavigatingObstacles() {
         </li>
         <li>
           If the square doesn't contain an obstacle and <i>n</i> &gt; 0, the 
-          <i>n</i>-proxy is defined by finding the (<i>n</i>
-          -1)-proxy of each of the adjacent squares (top, bottom, left, right)
+          <i>n</i>-proxy is defined by finding the <span className="math-equation">(<span className="math">n</span><span className="math-symbol">&minus;</span>1)</span>-proxy of each of the adjacent squares (top, bottom, left, right)
           and finding the minimum of their values. The <i>n</i>-proxy is then
           the lesser of this value and the square's own 0-proxy.
         </li>
@@ -215,12 +200,10 @@ export function BuildingAnAIForNavigatingObstacles() {
         </li>
         <li>
           If the square is the target square, the&nbsp;<em>n</em>
-          -step is defined as (<em>P - n).</em>
+          -step is defined as <span className="math-equation">(<span className="math">P</span><span className="math-symbol">&minus;</span><span className="math">n</span>)</span>.
         </li>
         <li>
-          If none of these conditions hold true, find the minimum&nbsp;(
-          <em>n</em>-1)-step of the adjacent squares (top, bottom, left, right)
-          and return the lesser of this value and the current square's&nbsp;
+          If none of these conditions hold true, find the minimum <span className="math-equation">(<span className="math">n</span><span className="math-symbol">&minus;</span>1)</span>-step of the adjacent squares (top, bottom, left, right) and return the lesser of this value and the current square's&nbsp;
           <em>n</em>-step.
         </li>
       </ol>
