@@ -59,9 +59,12 @@ export function TakingAdvantageOfCanvasRotations() {
 
         <p>
           As an example, let's say that we wish to draw an object whose center
-          is located at point (<span className="math">x</span>,<span className="math">y</span>
-          ), rotated by angle θ about the axis point (<span className="math">u</span>,<span className="math">v</span>).
-          The object we wish to draw is an image of width <span className="math">w</span> and height 
+          is located at point (<span className="math">x</span>,
+          <span className="math">y</span>
+          ), rotated by angle θ about the axis point (
+          <span className="math">u</span>,<span className="math">v</span>). The
+          object we wish to draw is an image of width 
+          <span className="math">w</span> and height 
           <span className="math">h</span>.
         </p>
 
@@ -76,8 +79,9 @@ export function TakingAdvantageOfCanvasRotations() {
 
         <p>
           Next we translate to the axis of rotation, rotate by θ and translate
-          back to the center of the object (which is a distance <span className="math">r</span> above
-          the axis of rotation in our new coordinate system).
+          back to the center of the object (which is a distance{" "}
+          <span className="math">r</span> above the axis of rotation in our new
+          coordinate system).
         </p>
 
         <div className="code-block">
