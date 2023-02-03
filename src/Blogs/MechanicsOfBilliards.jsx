@@ -75,20 +75,20 @@ export function MechanicsOfBilliards() {
           for the velocities:&nbsp;
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\vec \mathit w_1 = \vec \mathit v_1 - \vec \mathit v_2$$
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>$$\vec \mathit w_2 = 0$$</Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\vec \mathit s_1 = \vec \mathit u_1 - \vec \mathit v_2$$
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\vec \mathit s_2 = \vec \mathit u_2 - \vec \mathit v_2 $$
         </Latex>
@@ -102,32 +102,34 @@ export function MechanicsOfBilliards() {
           $\vec \mathit v$ and $\vec \mathit u$ values after the dust settles.
         </Latex>
       </p>
-      <p className="sub-paragraph">
-        From conservation of momentum we have &nbsp;
+      <p className="sub-paragraph">From conservation of momentum we have</p>
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\mathit m \vec \mathit w_1 + 0 = m \vec \mathit s_1 + \mathit m \vec
           \mathit s_2$$
         </Latex>
       </p>
-      <p className="sub-paragraph">
-        which can be rearranged as &nbsp;
+      <p className="sub-paragraph">which can be rearranged as</p>
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\vec \mathit s_1 = \vec \mathit w_1 - \vec \mathit s_2$$
         </Latex>
       </p>
       <p className="sub-paragraph">
         Next we apply conservation of kinetic energy (we are presuming an
-        elastic collision) to get &nbsp;
+        elastic collision) to get
+      </p>
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\frac 1 2 \mathit m \mathit w_1^2 + 0 = \frac 1 2 \mathit m \mathit
           s_1^2 + \frac 1 2 \mathit m \mathit s_2^2$$
         </Latex>
       </p>
       <p className="sub-paragraph">which can be rearranged to get</p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>$$\mathit s_1^2 = \mathit w_1^2 - \mathit s_2^2$$</Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\vec \mathit s_1 \cdot \vec \mathit s_1 = \vec \mathit w_1 \cdot
           \vec \mathit w_1 - \vec \mathit s_2 \cdot \vec \mathit s_2$$
@@ -138,14 +140,14 @@ export function MechanicsOfBilliards() {
           Substituting our previous expression for $\vec \mathit s_1$, we have
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$(\vec \mathit w_1 - \vec \mathit s_2) \cdot (\vec \mathit w_1 - \vec
           \mathit s_2) = \vec \mathit w_1 \cdot \vec \mathit w_1 - \vec \mathit
           s_2 \cdot \vec \mathit s_2$$
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\vec \mathit w_1 \cdot \vec \mathit w_1 - 2 \vec \mathit w_1
           \cdot \vec \mathit s_2 + \vec \mathit s_2 \cdot \vec \mathit s_2
@@ -153,13 +155,13 @@ export function MechanicsOfBilliards() {
           \vec \mathit s_2$$
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\vec \mathit w_1 \cdot \vec \mathit s_2 - \vec \mathit s_2 \cdot
           \vec \mathit s_2 = 0$$
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\vec \mathit s_2 \cdot \left( \vec \mathit w_1 - \vec \mathit s_2
           \right) = 0 $$
@@ -192,10 +194,10 @@ export function MechanicsOfBilliards() {
           collision:&nbsp;
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>$$0 + 0 = 0 + m \vec \mathit s_2 \times \vec \mathit d$$</Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>$$\vec \mathit s_2 \times \vec \mathit d = 0 $$</Latex>
       </p>
       <p className="sub-paragraph">
@@ -227,30 +229,30 @@ export function MechanicsOfBilliards() {
           \mathit d$. Hence their dot product must be zero:&nbsp;
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\vec \mathit d \cdot ( \vec \mathit w_1 - \vec \mathit s_2) = 0$$
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\vec \mathit s_2 \cdot \vec \mathit d = \vec \mathit w_1 \cdot \vec
           \mathit d$$
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           Since $\vec \mathit s_2$ is parallel with $\vec \mathit d$, it follows
           that $\vec \mathit s_2 \cdot \vec \mathit d = \mathit s_2 \mathit
           d$:&nbsp;
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           $$\mathit s_2 \mathit d = \vec \mathit w_1 \cdot \vec \mathit d$$
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           {
             "$$\\mathit s_2 = \\frac {1} {\\mathit d} \\vec \\mathit w_1 \\cdot \\vec \\mathit d$$"
@@ -264,36 +266,36 @@ export function MechanicsOfBilliards() {
           }
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph  latex-block">
         <Latex>
           $$\vec \mathit w_1 = \vec \mathit v_1 - \vec \mathit v_2$$
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           {
             "$$\\mathit s_2 = \\frac {1} {\\mathit d} \\vec \\mathit w_1 \\cdot \\vec \\mathit d$$"
           }
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           {
             "$$\\vec \\mathit s_2 = \\frac {\\mathit s_2} {\\mathit d} \\vec \\mathit d$$"
           }
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           &nbsp; $$\vec \mathit s_1 = \vec \mathit w_1 - \vec \mathit s_2$$
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           &nbsp; $$\vec \mathit u_1 = \vec \mathit s_1 + \vec \mathit v_2$$
         </Latex>
       </p>
-      <p className="sub-paragraph">
+      <p className="sub-paragraph latex-block">
         <Latex>
           &nbsp; $$\vec \mathit u_2 = \vec \mathit s_2 + \vec \mathit v_2$$
         </Latex>

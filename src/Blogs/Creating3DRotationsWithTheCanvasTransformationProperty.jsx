@@ -51,27 +51,31 @@ export function Creating3DRotationsWithTheCanvasTransformationProperty() {
           than keeping track of an angle for our object, we will be keeping
           track of an entire rotation matrix. Initially that matrix will be set
           to the 3x3 identity, but every time it rotates we will multiply it by
-          the appropriate matrix. For example: if our object rotates by
-          angles η, θ, and φ in the <em>x</em>, 
-          <em>y</em> and <em>z</em> directions respectively, then its rotation
-          matrix should be multiplied by the corresponding elemental rotation
-          matrix for each of these directions: <em>R</em> = <em>Z</em>(φ)
-          <em>Y</em>
-          (θ)
-          <em>X</em>(η)<em>R</em>
-          <em>. </em>Note that the elemental rotation matrices should always be
-          multiplied in the same order every time, and they should always be
-          multiplied to the left of the rotation matrix <em>R</em>.
+          the appropriate matrix. For example: if our object rotates by angles{" "}
+          <span className="math">η</span>, <span className="math">θ</span>, and{" "}
+          <span className="math">φ</span> in the <span className="math">x</span>
+          ,<span className="math">y</span> and <span className="math">z</span>{" "}
+          directions respectively, then its rotation matrix should be multiplied
+          by the corresponding elemental rotation matrix for each of these
+          directions: <span className="math">R</span> ={" "}
+          <span className="math">Z</span>(<span className="math">φ</span>)
+          <span className="math">Y</span>(<span className="math">θ</span>)
+          <span className="math">X</span>(<span className="math">η</span>)
+          <span className="math">R</span>. Note that the elemental rotation
+          matrices should always be multiplied in the same order every time, and
+          they should always be multiplied to the left of the rotation matrix{" "}
+          <span className="math">R</span>.
         </p>
         <p>
-          The beauty of this is that once we have a rotation matrix <em>R</em>,
-          we can input it directly into the canvas using the{" "}
+          The beauty of this is that once we have a rotation matrix{" "}
+          <span className="math">R</span>, we can input it directly into the
+          canvas using the{" "}
           <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/transform">
             transform
           </a>{" "}
           property as follows:
         </p>
-        <div style={{ color: "#808080" }}>
+        <div className="code-block">
           context.transform(R[0][0],R[1][0],R[0][1],R[1][1],R[0][2],R[1][2]);
         </div>
         <p>
@@ -102,8 +106,8 @@ export function Creating3DRotationsWithTheCanvasTransformationProperty() {
           <li>
             To render each step, we translated to the center of the canvas,
             passed the rotation matrix to the{" "}
-            <span style={{ color: "#00ccff" }}>context.transform</span>{" "}
-            property, and transformed back.
+            <span className="code-snippet">context.transform</span> property,
+            and transformed back.
           </li>
         </ul>
         <p>
@@ -121,20 +125,72 @@ export function Creating3DRotationsWithTheCanvasTransformationProperty() {
         </p>
         <p>
           If the coin were pointing <em>straight</em> out of the page, its
-          angular velocity would point completely in the negative <em>y</em>{" "}
-          direction. If we rotate this vector by θ in the <em>x</em> and φ in
-          the <em>y</em>, such that it points slightly out of the page but we
-          can still view its side, the components of its angular velocity will
-          be:
+          angular velocity would point completely in the negative{" "}
+          <span className="math">y</span> direction. If we rotate this vector by{" "}
+          <span className="math">θ</span> in the <span className="math">x</span>{" "}
+          and <span className="math">φ</span> in the{" "}
+          <span className="math">y</span>, such that it points slightly out of
+          the page but we can still view its side, the components of its angular
+          velocity will be:
         </p>
-        <p style={{ textAlign: "center" }}>ωx = -ω*sin(θ)*sin(φ)</p>
-        <p style={{ textAlign: "center" }}>ωy = -ω*cos(θ)</p>
-        <p style={{ textAlign: "center" }}>ωz = -ω*sin(θ)*cos(φ)</p>
         <p>
-          With each step we then rotate the coin by the angles (ωx,ωy,ωz). The
-          angular speed ω determines how fast the coin rotates (we used 5
-          degrees per 30 milliseconds), and the angles θ and φ determine where
-          its axis points (we used -50 and -20 degrees, respectively).
+          <div className="math-equation full-width">
+            <span className="math">
+              ω<sub>x</sub>
+            </span>{" "}
+            <span className="math-symbol">=</span>{" "}
+            <span className="math-symbol">&minus;</span>
+            <span className="math">ω</span>{" "}
+            <span className="math-symbol">&times;</span> sin(
+            <span className="math">θ</span>){" "}
+            <span className="math-symbol">&times;</span> sin(
+            <span className="math">φ</span>)
+          </div>
+        </p>
+        <p>
+          <div className="math-equation full-width">
+            <span className="math">
+              ω<sub>y</sub>
+            </span>{" "}
+            <span className="math-symbol">=</span>{" "}
+            <span className="math-symbol">&minus;</span>
+            <span className="math">ω</span>{" "}
+            <span className="math-symbol">&times;</span> cos(
+            <span className="math">θ</span>)
+          </div>
+        </p>
+        <p>
+          <div className="math-equation full-width">
+            <span className="math">
+              ω<sub>z</sub>
+            </span>{" "}
+            <span className="math-symbol">=</span>{" "}
+            <span className="math-symbol">&minus;</span>
+            <span className="math">ω</span>{" "}
+            <span className="math-symbol">&times;</span> sin(
+            <span className="math">θ</span>){" "}
+            <span className="math-symbol">&times;</span> cos(
+            <span className="math">φ</span>)
+          </div>
+        </p>
+        <p>
+          With each step we then rotate the coin by the angles (
+          <span className="math">
+            ω<sub>x</sub>
+          </span>
+          ,
+          <span className="math">
+            ω<sub>y</sub>
+          </span>
+          ,
+          <span className="math">
+            ω<sub>z</sub>
+          </span>
+          ). The angular speed <span className="math">ω</span> determines how
+          fast the coin rotates (we used 5 degrees per 30 milliseconds), and the
+          angles <span className="math">θ</span> and{" "}
+          <span className="math">φ</span> determine where its axis points (we
+          used -50 and -20 degrees, respectively).
         </p>
       </div>
     </div>

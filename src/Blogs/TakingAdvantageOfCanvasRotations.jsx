@@ -59,33 +59,37 @@ export function TakingAdvantageOfCanvasRotations() {
 
         <p>
           As an example, let's say that we wish to draw an object whose center
-          is located at point (<em>x</em>,<em>y</em>
-          ), rotated by angle θ about the axis point (<em>u</em>,<em>v</em>).
-          The object we wish to draw is an image of width <em>w</em> and height 
-          <em>h</em>.
+          is located at point (<span className="math">x</span>,
+          <span className="math">y</span>
+          ), rotated by angle θ about the axis point (
+          <span className="math">u</span>,<span className="math">v</span>). The
+          object we wish to draw is an image of width 
+          <span className="math">w</span> and height 
+          <span className="math">h</span>.
         </p>
 
         <p>
           First we find the distance from the object's center to the axis of
-          rotation, which we will call <em>r</em>:
+          rotation, which we will call <span className="math">r</span>:
         </p>
 
-        <div style={{ color: "#808080" }}>
-          <em>
-            <strong>var</strong>
-          </em>{" "}
-          r = Math.sqrt((u-x)*(u-x) + (v-y)*(v-y));
+        <div className="code-block">
+          <span className="code-tag">const</span> r = Math.sqrt((u-x)*(u-x) +
+          (v-y)*(v-y));
         </div>
 
         <p>
           Next we translate to the axis of rotation, rotate by θ and translate
-          back to the center of the object (which is a distance <em>r</em> above
-          the axis of rotation in our new coordinate system).
+          back to the center of the object (which is a distance{" "}
+          <span className="math">r</span> above the axis of rotation in our new
+          coordinate system).
         </p>
 
-        <div style={{ color: "#808080" }}>context.translate(u,v);</div>
-        <div style={{ color: "#808080" }}>context.rotate(θ);</div>
-        <div style={{ color: "#808080" }}>context.translate(0,-r);</div>
+        <div className="code-block">
+          <div>context.translate(u, v);</div>
+          <div>context.rotate(θ);</div>
+          <div>context.translate(0, -r);</div>
+        </div>
 
         <p>
           Remember that we have only translated to the 
@@ -93,9 +97,9 @@ export function TakingAdvantageOfCanvasRotations() {
           top-left corner. We then draw the image at this location.
         </p>
 
-        <div style={{ color: "#808080" }}>context.translate(-w/2.-h/2);</div>
-        <div style={{ color: "#808080" }}>
-          context.drawImage(objectImage,0,0);
+        <div className="code-block">
+          <div>context.translate(-w/2, -h/2);</div>
+          <div>context.drawImage(objectImage, 0, 0);</div>
         </div>
 
         <p>
@@ -103,13 +107,14 @@ export function TakingAdvantageOfCanvasRotations() {
           things, so it is smart to save and restore your context. Combining
           some steps, altogether this looks as follows:
         </p>
-        <div style={{ color: "#808080" }}>context.save();</div>
-        <div style={{ color: "#808080" }}>context.translate(u,v);</div>
-        <div style={{ color: "#808080" }}>context.rotate(θ);</div>
-        <div style={{ color: "#808080" }}>
-          context.drawImage(objectImage,-w/2,-h/2-r);
+
+        <div className="code-block">
+          <div>context.save();</div>
+          <div>context.translate(u, v);</div>
+          <div>context.rotate(θ);</div>
+          <div>context.drawImage(objectImage, -w/2, -h/2-r);</div>
+          <div>context.restore();</div>
         </div>
-        <div style={{ color: "#808080" }}>context.restore();</div>
 
         <p>
           In addition to <em>Rocket Racers</em>, we have also used this

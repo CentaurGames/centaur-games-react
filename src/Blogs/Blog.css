@@ -9,10 +9,12 @@
 
 .sub-paragraph a {
     color: #62b6cb;
+    text-decoration: none;
 }
 
 .sub-paragraph a:hover {
     color: rgba(98, 182, 203, 0.8);
+    text-decoration: underline;
 }
 
 .sub-paragraph img {
@@ -78,4 +80,106 @@
 .next-blog {
     float: right;
     text-decoration: none;
+}
+
+.code-snippet {
+    background-color: #404142;
+    color: #98bef5;
+    padding: 2px;
+    border-radius: 2px;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 100;
+    font-style: normal;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.code-block {
+    background-color: #404142;
+    color: #98bef5;
+    padding: 2px;
+    border-radius: 2px;
+    font-family: monospace;
+    font-size: 14px;
+    overflow: scroll;
+    white-space: nowrap;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.code-comment {
+    color: #51db8f;
+}
+
+.code-html {
+    color: #56b7e8;
+}
+
+.code-tag {
+    color: #fa7e37;
+    font-style: italic;
+}
+
+.code-function-declaration {
+    color: white;
+}
+
+.code-static {
+    color: #b3bd95;
+}
+
+.tabbed-code {
+    margin-left: 20px;
+}
+
+.math {
+    font-style: oblique;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-align: center;
+}
+
+.math-equation {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.math-symbol {
+    position: relative;
+    top: 2px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.math sub {
+    font-style: normal;
+}
+
+.math sub.non-numeric {
+    font-style: oblique;
+}
+
+.math-fraction {
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.math-fraction > :first-child {
+    border-bottom: 1px solid white;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.latex-block {
+    display: flex;
+    justify-content: center;
 }
