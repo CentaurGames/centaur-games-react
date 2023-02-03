@@ -110,7 +110,6 @@
     font-style: normal;
 }
 
-
 .code-comment {
     color: darkgreen;
 }
@@ -133,4 +132,12 @@
 .math-symbol {
     position: relative;
     top: 2px;
+}
+
+.math sub {
+    font-style: normal;
+}
+
+.math sub.non-numeric {
+    font-style: oblique;
 }
