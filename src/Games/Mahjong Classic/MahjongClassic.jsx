@@ -916,14 +916,14 @@ function sketch() {
   drawTiles(0);
 }
 
-export class MahjongClassic extends React.Component {
-  componentDidMount() {
+export function MahjongClassic() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
-    scrollPreventCanvas = this.refs.scrollPreventCanvas;
-    imageCanvas = this.refs.imageCanvas;
-    backgroundCanvas = this.refs.backgroundCanvas;
-    tileCanvas = this.refs.tileCanvas;
-    scoreCanvas = this.refs.scoreCanvas;
+    scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
+    imageCanvas = document.getElementById("imageCanvas");
+    backgroundCanvas = document.getElementById("backgroundCanvas");
+    tileCanvas = document.getElementById("tileCanvas");
+    scoreCanvas = document.getElementById("scoreCanvas");
     imageContext = imageCanvas.getContext("2d");
     backgroundContext = backgroundCanvas.getContext("2d");
     tileContext = tileCanvas.getContext("2d");
@@ -932,13 +932,12 @@ export class MahjongClassic extends React.Component {
     document.body.scroll = "no";
 
     sketch();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
-          ref="scrollPreventCanvas"
+          id="scrollPreventCanvas"
           width="40"
           height="40"
           style={{
@@ -950,7 +949,7 @@ export class MahjongClassic extends React.Component {
           }}
         />
         <canvas
-          ref="imageCanvas"
+          id="imageCanvas"
           width="40"
           height="40"
           style={{
@@ -962,7 +961,7 @@ export class MahjongClassic extends React.Component {
           }}
         />
         <canvas
-          ref="backgroundCanvas"
+          id="backgroundCanvas"
           width="1050"
           height="700"
           style={{
@@ -974,7 +973,7 @@ export class MahjongClassic extends React.Component {
           }}
         />
         <canvas
-          ref="tileCanvas"
+          id="tileCanvas"
           width="1050"
           height="700"
           style={{
@@ -986,7 +985,7 @@ export class MahjongClassic extends React.Component {
           }}
         />
         <canvas
-          ref="scoreCanvas"
+          id="scoreCanvas"
           width="1050"
           height="700"
           style={{
@@ -999,7 +998,6 @@ export class MahjongClassic extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { MahjongClassic as default };

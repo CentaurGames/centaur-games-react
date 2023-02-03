@@ -5230,8 +5230,8 @@ function play() {
   return;
 }
 
-export class Entombed extends React.Component {
-  componentDidMount() {
+export function Entombed() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     imageCanvas = document.getElementById("imgCanvas");
@@ -5272,9 +5272,8 @@ export class Entombed extends React.Component {
     document.body.scroll = "no";
 
     play();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -5495,7 +5494,6 @@ export class Entombed extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { Entombed as default };

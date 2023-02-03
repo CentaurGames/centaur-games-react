@@ -931,8 +931,8 @@ function sketch() {
   drawTiles(0);
 }
 
-export class MahjongEmoji extends React.Component {
-  componentDidMount() {
+export function MahjongEmoji() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     imageCanvas = document.getElementById("imgCanvas");
@@ -947,9 +947,8 @@ export class MahjongEmoji extends React.Component {
     document.body.scroll = "no";
 
     sketch();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1014,7 +1013,6 @@ export class MahjongEmoji extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { MahjongEmoji as default };

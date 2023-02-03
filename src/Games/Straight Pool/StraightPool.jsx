@@ -1329,8 +1329,8 @@ function checkIfGameIsOver() {
   endGame();
 }
 
-export class StraightPool extends React.Component {
-  componentDidMount() {
+export function StraightPool() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     myCanvas = document.getElementById("myCanvas");
@@ -1353,9 +1353,8 @@ export class StraightPool extends React.Component {
     document.body.scroll = "no";
 
     run();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1468,7 +1467,6 @@ export class StraightPool extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { StraightPool as default };

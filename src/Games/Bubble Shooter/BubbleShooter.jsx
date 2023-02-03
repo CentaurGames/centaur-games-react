@@ -930,8 +930,8 @@ function play() {
   return;
 }
 
-export class BubbleShooter extends React.Component {
-  componentDidMount() {
+export function BubbleShooter() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     scrollPreventContext = scrollPreventCanvas.getContext("2d");
@@ -970,9 +970,8 @@ export class BubbleShooter extends React.Component {
     document.body.scroll = "no";
 
     play();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1096,7 +1095,6 @@ export class BubbleShooter extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { BubbleShooter as default };

@@ -1968,8 +1968,8 @@ function checkIfGameIsOver() {
   endGame();
 }
 
-export class PoolOutbreak extends React.Component {
-  componentDidMount() {
+export function PoolOutbreak() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     myCanvas = document.getElementById("myCanvas");
@@ -1994,9 +1994,8 @@ export class PoolOutbreak extends React.Component {
     document.body.scroll = "no";
 
     run();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -2121,7 +2120,6 @@ export class PoolOutbreak extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { PoolOutbreak as default };

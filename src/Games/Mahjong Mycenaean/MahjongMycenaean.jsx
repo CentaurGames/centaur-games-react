@@ -945,8 +945,8 @@ function sketch() {
   drawTiles(0);
 }
 
-export class MahjongMycenaean extends React.Component {
-  componentDidMount() {
+export function MahjongMycenaean() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     imageCanvas = document.getElementById("imgCanvas");
@@ -961,9 +961,8 @@ export class MahjongMycenaean extends React.Component {
     document.body.scroll = "no";
 
     sketch();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1028,7 +1027,6 @@ export class MahjongMycenaean extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { MahjongMycenaean as default };

@@ -1726,8 +1726,8 @@ function checkIfGameIsOver() {
   }
 }
 
-export class PoolChampions extends React.Component {
-  componentDidMount() {
+export function PoolChampions() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     myCanvas = document.getElementById("myCanvas");
@@ -1753,9 +1753,8 @@ export class PoolChampions extends React.Component {
     document.body.scroll = "no";
 
     run();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1892,7 +1891,6 @@ export class PoolChampions extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { PoolChampions as default };

@@ -707,8 +707,8 @@ function run() {
   drawReplayButtonImage();
 }
 
-export class LumpyDumplings3 extends React.Component {
-  componentDidMount() {
+export function LumpyDumplings3() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     imageCanvas = document.getElementById("imgCanvas");
@@ -723,9 +723,8 @@ export class LumpyDumplings3 extends React.Component {
     document.body.scroll = "no";
 
     run();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -790,7 +789,6 @@ export class LumpyDumplings3 extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { LumpyDumplings3 as default };

@@ -4588,8 +4588,8 @@ function play() {
   return;
 }
 
-export class Brimstone extends React.Component {
-  componentDidMount() {
+export function Brimstone() {
+  React.useEffect(() =>  {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     imageCanvas = document.getElementById("imgCanvas");
@@ -4626,9 +4626,8 @@ export class Brimstone extends React.Component {
     document.body.scroll = "no";
 
     play();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -4825,7 +4824,6 @@ export class Brimstone extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { Brimstone as default };

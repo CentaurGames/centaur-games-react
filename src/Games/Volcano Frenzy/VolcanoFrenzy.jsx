@@ -1735,8 +1735,8 @@ function loadLavaImage() {
   lavaImage.onload = loadCavernImage;
 }
 
-export class VolcanoFrenzy extends React.Component {
-  componentDidMount() {
+export function VolcanoFrenzy() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     lavaCanvas = document.getElementById("lavaCanvas");
@@ -1758,9 +1758,8 @@ export class VolcanoFrenzy extends React.Component {
     document.body.scroll = "no";
 
     loadLavaImage();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1861,7 +1860,6 @@ export class VolcanoFrenzy extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { VolcanoFrenzy as default };

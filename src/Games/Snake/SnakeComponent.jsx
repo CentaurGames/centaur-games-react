@@ -539,8 +539,8 @@ function play() {
   myTimer = setInterval(move_forward, delta_t);
 }
 
-export class Snake extends React.Component {
-  componentDidMount() {
+export function Snake() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     c = document.getElementById("myCanvas");
@@ -557,9 +557,8 @@ export class Snake extends React.Component {
     play();
     rescaleAllCanvases();
     stopGlobalLoadingIndicator();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -624,7 +623,6 @@ export class Snake extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { Snake as default };

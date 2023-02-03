@@ -934,8 +934,8 @@ function sketch() {
   drawTiles(0);
 }
 
-export class MahjongZodiac extends React.Component {
-  componentDidMount() {
+export function MahjongZodiac() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     imageCanvas = document.getElementById("imgCanvas");
@@ -950,9 +950,8 @@ export class MahjongZodiac extends React.Component {
     document.body.scroll = "no";
 
     sketch();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1017,7 +1016,6 @@ export class MahjongZodiac extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { MahjongZodiac as default };

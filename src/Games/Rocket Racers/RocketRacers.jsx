@@ -1536,8 +1536,8 @@ function run() {
   drawRing0();
 }
 
-export class RocketRacers extends React.Component {
-  componentDidMount() {
+export function RocketRacers() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     trackCanvas = document.getElementById("trackCanvas");
@@ -1552,9 +1552,8 @@ export class RocketRacers extends React.Component {
     document.body.scroll = "no";
 
     run();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1619,7 +1618,6 @@ export class RocketRacers extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { RocketRacers as default };

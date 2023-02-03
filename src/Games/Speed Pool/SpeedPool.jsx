@@ -1164,8 +1164,8 @@ function checkIfGameIsOver() {
   endGame();
 }
 
-export class SpeedPool extends React.Component {
-  componentDidMount() {
+export function SpeedPool() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     myCanvas = document.getElementById("myCanvas");
@@ -1188,9 +1188,8 @@ export class SpeedPool extends React.Component {
     document.body.scroll = "no";
 
     run();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1303,7 +1302,6 @@ export class SpeedPool extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { SpeedPool as default };

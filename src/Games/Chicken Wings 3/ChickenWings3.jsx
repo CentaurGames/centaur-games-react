@@ -693,8 +693,8 @@ function loadTreeImage() {
   treeImage.onload = loadMushroomImage;
 }
 
-export class ChickenWings3 extends React.Component {
-  componentDidMount() {
+export function ChickenWings3() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     treeCanvas = document.getElementById("treeCanvas");
@@ -709,9 +709,8 @@ export class ChickenWings3 extends React.Component {
     document.body.scroll = "no";
 
     initializeGame();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -776,7 +775,6 @@ export class ChickenWings3 extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { ChickenWings3 as default };

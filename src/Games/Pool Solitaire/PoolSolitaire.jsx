@@ -1093,8 +1093,8 @@ function checkIfGameIsOver() {
   endGame();
 }
 
-export class PoolSolitaire extends React.Component {
-  componentDidMount() {
+export function PoolSolitaire() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     myCanvas = document.getElementById("myCanvas");
@@ -1113,9 +1113,8 @@ export class PoolSolitaire extends React.Component {
     document.body.scroll = "no";
 
     run();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1204,7 +1203,6 @@ export class PoolSolitaire extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { PoolSolitaire as default };

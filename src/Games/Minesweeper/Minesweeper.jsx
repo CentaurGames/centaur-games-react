@@ -1260,8 +1260,8 @@ function play() {
   }
 }
 
-export class Minesweeper extends React.Component {
-  componentDidMount() {
+export function Minesweeper() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     numberCanvas = document.getElementById("nmbrCanvas");
@@ -1288,9 +1288,8 @@ export class Minesweeper extends React.Component {
     document.body.scroll = "no";
 
     play();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1427,7 +1426,6 @@ export class Minesweeper extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { Minesweeper as default };

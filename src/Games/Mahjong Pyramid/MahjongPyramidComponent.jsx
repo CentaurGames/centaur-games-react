@@ -937,8 +937,8 @@ function sketch() {
   drawTiles(0);
 }
 
-export class MahjongPyramid extends React.Component {
-  componentDidMount() {
+export function MahjongPyramid() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     imageCanvas = document.getElementById("imgCanvas");
@@ -953,9 +953,8 @@ export class MahjongPyramid extends React.Component {
     document.body.scroll = "no";
 
     sketch();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1020,7 +1019,6 @@ export class MahjongPyramid extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { MahjongPyramid as default };

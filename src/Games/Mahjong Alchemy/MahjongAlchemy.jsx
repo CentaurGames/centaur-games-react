@@ -936,8 +936,8 @@ function sketch() {
   drawTiles(0);
 }
 
-export class MahjongAlchemy extends React.Component {
-  componentDidMount() {
+export function MahjongAlchemy() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     imageCanvas = document.getElementById("imgCanvas");
@@ -952,9 +952,8 @@ export class MahjongAlchemy extends React.Component {
     document.body.scroll = "no";
 
     sketch();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1019,7 +1018,6 @@ export class MahjongAlchemy extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { MahjongAlchemy as default };

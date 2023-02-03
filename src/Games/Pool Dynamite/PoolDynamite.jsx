@@ -1956,8 +1956,8 @@ function checkIfGameIsOver() {
   endGame();
 }
 
-export class PoolDynamite extends React.Component {
-  componentDidMount() {
+export function PoolDynamite() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     myCanvas = document.getElementById("myCanvas");
@@ -1982,9 +1982,8 @@ export class PoolDynamite extends React.Component {
     document.body.scroll = "no";
 
     run();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -2109,7 +2108,6 @@ export class PoolDynamite extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { PoolDynamite as default };

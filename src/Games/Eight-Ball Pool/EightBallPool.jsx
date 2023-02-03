@@ -1582,8 +1582,8 @@ function checkIfGameIsOver() {
   }
 }
 
-export class EightBallPool extends React.Component {
-  componentDidMount() {
+export function EightBallPool() {
+  React.useEffect(() => {
     startGlobalLoadingIndicator();
     scrollPreventCanvas = document.getElementById("scrollPreventCanvas");
     myCanvas = document.getElementById("myCanvas");
@@ -1607,9 +1607,8 @@ export class EightBallPool extends React.Component {
     document.body.scroll = "no";
 
     run();
-  }
+  }, []);
 
-  render() {
     return (
       <div>
         <canvas
@@ -1734,7 +1733,6 @@ export class EightBallPool extends React.Component {
         />
       </div>
     );
-  }
 }
 
 export { EightBallPool as default };
