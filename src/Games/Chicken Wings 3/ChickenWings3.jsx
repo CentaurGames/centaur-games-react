@@ -711,70 +711,70 @@ export function ChickenWings3() {
     initializeGame();
   }, []);
 
-    return (
-      <div>
-        <canvas
-          id="scrollPreventCanvas"
-          width="640"
-          height="1136"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 0,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="treeCanvas"
-          width="640"
-          height="1136"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 1,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="mushroomCanvas"
-          width="640"
-          height="1136"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 2,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="eggCanvas"
-          width="640"
-          height="1136"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 3,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="replayCanvas"
-          width="640"
-          height="1136"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 4,
-            border: "0px solid black",
-          }}
-        />
-      </div>
-    );
+  return (
+    <div>
+      <canvas
+        id="scrollPreventCanvas"
+        width="640"
+        height="1136"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 0,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="treeCanvas"
+        width="640"
+        height="1136"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 1,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="mushroomCanvas"
+        width="640"
+        height="1136"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 2,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="eggCanvas"
+        width="640"
+        height="1136"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 3,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="replayCanvas"
+        width="640"
+        height="1136"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 4,
+          border: "0px solid black",
+        }}
+      />
+    </div>
+  );
 }
 
 export { ChickenWings3 as default };

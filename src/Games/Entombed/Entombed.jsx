@@ -5274,226 +5274,226 @@ export function Entombed() {
     play();
   }, []);
 
-    return (
-      <div>
-        <canvas
-          id="scrollPreventCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 0,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="imgCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 1,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="hddnCanvas"
-          width="620"
-          height="460"
-          style={{
-            position: "absolute",
-            top: "0p",
-            left: "0",
-            zIndex: "2",
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="wtrCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 3,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="bkgrndCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 4,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="ftstpsCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 5,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="trpsCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 5,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="cnsCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 9,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="pwrupsCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 9,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="undrCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 8,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="plyrCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 10,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="mnstrCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 6,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="shdwCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 7,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="ovrCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 11,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="hrglCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 13,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="dmrCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 12,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="txtCanvas"
-          width="420"
-          height="420"
-          style={{
-            position: "absolute",
-            top: "40",
-            left: "100",
-            zIndex: 14,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="scrCanvas"
-          width="420"
-          height="460"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "100",
-            zIndex: 14,
-            border: "0px solid black",
-          }}
-        />
-      </div>
-    );
+  return (
+    <div>
+      <canvas
+        id="scrollPreventCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 0,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="imgCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 1,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="hddnCanvas"
+        width="620"
+        height="460"
+        style={{
+          position: "absolute",
+          top: "0p",
+          left: "0",
+          zIndex: "2",
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="wtrCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 3,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="bkgrndCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 4,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="ftstpsCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 5,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="trpsCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 5,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="cnsCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 9,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="pwrupsCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 9,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="undrCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 8,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="plyrCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 10,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="mnstrCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 6,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="shdwCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 7,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="ovrCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 11,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="hrglCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 13,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="dmrCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 12,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="txtCanvas"
+        width="420"
+        height="420"
+        style={{
+          position: "absolute",
+          top: "40",
+          left: "100",
+          zIndex: 14,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="scrCanvas"
+        width="420"
+        height="460"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "100",
+          zIndex: 14,
+          border: "0px solid black",
+        }}
+      />
+    </div>
+  );
 }
 
 export { Entombed as default };

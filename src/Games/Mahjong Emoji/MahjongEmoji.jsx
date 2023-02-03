@@ -949,70 +949,70 @@ export function MahjongEmoji() {
     sketch();
   }, []);
 
-    return (
-      <div>
-        <canvas
-          id="scrollPreventCanvas"
-          width="50"
-          height="50"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 4,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="imgCanvas"
-          width="50"
-          height="50"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 0,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="backgroundCanvas"
-          width="1050"
-          height="700"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 1,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="tileCanvas"
-          width="1050"
-          height="700"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 2,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="scoreCanvas"
-          width="1050"
-          height="700"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: 3,
-            border: "0px solid black",
-          }}
-        />
-      </div>
-    );
+  return (
+    <div>
+      <canvas
+        id="scrollPreventCanvas"
+        width="50"
+        height="50"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 4,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="imgCanvas"
+        width="50"
+        height="50"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 0,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="backgroundCanvas"
+        width="1050"
+        height="700"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 1,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="tileCanvas"
+        width="1050"
+        height="700"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 2,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="scoreCanvas"
+        width="1050"
+        height="700"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: 3,
+          border: "0px solid black",
+        }}
+      />
+    </div>
+  );
 }
 
 export { MahjongEmoji as default };

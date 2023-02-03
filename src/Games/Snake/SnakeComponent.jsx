@@ -559,70 +559,70 @@ export function Snake() {
     stopGlobalLoadingIndicator();
   }, []);
 
-    return (
-      <div>
-        <canvas
-          id="scrollPreventCanvas"
-          width="400"
-          height="400"
-          style={{
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 0,
-            border: "0px solid black",
-          }}
-        />
-        <canvas
-          id="myCanvas"
-          width="400"
-          height="400"
-          style={{
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 2,
-            border: "1px solid black",
-          }}
-        />
-        <canvas
-          id="background"
-          width="400"
-          height="400"
-          style={{
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 1,
-            border: "1px solid black",
-          }}
-        />
-        <canvas
-          id="playButton"
-          width="400"
-          height="400"
-          style={{
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 3,
-            border: "1px solid black",
-          }}
-        />
-        <canvas
-          id="txtCanvas"
-          width="400"
-          height="400"
-          style={{
-            position: "absolute",
-            left: "0",
-            top: "0",
-            zIndex: 4,
-            border: "1px solid black",
-          }}
-        />
-      </div>
-    );
+  return (
+    <div>
+      <canvas
+        id="scrollPreventCanvas"
+        width="400"
+        height="400"
+        style={{
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 0,
+          border: "0px solid black",
+        }}
+      />
+      <canvas
+        id="myCanvas"
+        width="400"
+        height="400"
+        style={{
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 2,
+          border: "1px solid black",
+        }}
+      />
+      <canvas
+        id="background"
+        width="400"
+        height="400"
+        style={{
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 1,
+          border: "1px solid black",
+        }}
+      />
+      <canvas
+        id="playButton"
+        width="400"
+        height="400"
+        style={{
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 3,
+          border: "1px solid black",
+        }}
+      />
+      <canvas
+        id="txtCanvas"
+        width="400"
+        height="400"
+        style={{
+          position: "absolute",
+          left: "0",
+          top: "0",
+          zIndex: 4,
+          border: "1px solid black",
+        }}
+      />
+    </div>
+  );
 }
 
 export { Snake as default };
