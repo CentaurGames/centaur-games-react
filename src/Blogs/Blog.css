@@ -126,12 +126,17 @@
 }
 
 .math-equation {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .math-symbol {
     position: relative;
     top: 2px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .math sub {
@@ -140,4 +145,19 @@
 
 .math sub.non-numeric {
     font-style: oblique;
+}
+
+.math-fraction {
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.math-fraction > :first-child {
+    border-bottom: 1px solid white;
+}
+
+.full-width {
+    width: 100%;
 }

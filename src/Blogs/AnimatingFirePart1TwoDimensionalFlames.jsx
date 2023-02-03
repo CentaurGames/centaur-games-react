@@ -14,48 +14,150 @@ export function AnimatingFirePart1TwoDimensionalFlames() {
         <p style={{ marginTop: "40px" }}>
           Before we can create a roaring fire, we first need to define how a
           single <em>flame </em>behaves. For our purposes, a single flame is
-          defined uniquely by four properties: <em>x0</em>, <em>y0</em>, 
-          <em>v0</em> and <em>θ</em>. From these four defining properties, in
-          addition to a globally-defined angular dispersion <em>φ</em> and flame
-          height <em>h</em> both of which are the same for all flames, we can
-          define some other useful variables as follows:
+          defined uniquely by four properties:{" "}
+          <span className="math">
+            x<sub>0</sub>
+          </span>
+          ,{" "}
+          <span className="math">
+            y<sub>0</sub>
+          </span>
+          ,
+          <span className="math">
+            v<sub>0</sub>
+          </span>{" "}
+          and <span className="math">θ</span>. From these four defining
+          properties, in addition to a globally-defined angular dispersion{" "}
+          <span className="math">φ</span> and flame height{" "}
+          <span className="math">h</span> both of which are the same for all
+          flames, we can define some other useful variables as follows:
         </p>
         <ol className="bulleted-list">
           <li>
-            Each flame has four points, consisting of (<em>x</em>,<em>y</em>)
+            Each flame has four points, consisting of (
+            <span className="math">x</span>,<span className="math">y</span>)
             coordinate pairs, which will change over the course of the
             animation. These points will be called Left, Right, Top and Bottom.
           </li>
           <li>
-            The Bottom point is initially set to (<em>x0</em>,<em>y0</em>).
+            The Bottom point is initially set to (
+            <span className="math">
+              x<sub>0</sub>
+            </span>
+            ,
+            <span className="math">
+              y<sub>0</sub>
+            </span>
+            ).
           </li>
           <li>
-            The Left point is initially set to (<em>x0 + </em>
-            0.5 <em>h</em> cos (<em>θ</em> - φ) , <em>y</em>
-            <em>0 + </em>0.5 <em>h</em> sin (<em>θ</em> - φ)).
+            The Left point is initially set to{" "}
+            <p>
+              <div className="math-equation full-width">
+                (
+                <span className="math">
+                  x<sub>0</sub>
+                </span>{" "}
+                <span className="math-symbol">+</span> 0.5
+                <span className="math">h</span>cos(
+                <span className="math">θ</span>
+                <span className="math-symbol">&minus;</span>
+                <span className="math">φ</span>) ,{" "}
+                <span className="math">
+                  y<sub>0</sub>
+                </span>{" "}
+                <span className="math-symbol">+</span> 0.5
+                <span className="math">h</span>sin(
+                <span className="math">θ</span>
+                <span className="math-symbol">&minus;</span>
+                <span className="math">φ</span>))
+              </div>
+            </p>
           </li>
           <li>
-            The Right point is initially set to (<em>x0 + </em>
-            0.5 <em>h</em> cos (<em>θ</em> + φ) , <em>y</em>
-            <em>0 + </em>0.5 <em>h</em> sin (<em>θ</em> + φ)).
+            The Right point is initially set to{" "}
+            <p>
+              <div className="math-equation full-width">
+                (
+                <span className="math">
+                  x<sub>0</sub>
+                </span>{" "}
+                <span className="math-symbol">+</span> 0.5
+                <span className="math">h</span>cos(
+                <span className="math">θ</span>
+                <span className="math-symbol">+</span>
+                <span className="math">φ</span>) ,{" "}
+                <span className="math">
+                  y<sub>0</sub>
+                </span>{" "}
+                <span className="math-symbol">+</span> 0.5
+                <span className="math">h</span>sin(
+                <span className="math">θ</span>
+                <span className="math-symbol">+</span>
+                <span className="math">φ</span>))
+              </div>
+            </p>
           </li>
           <li>
-            The Top point is initially set to (<em>x0</em> + 
-            <em>h</em> cos
-            <em>θ</em> , <em>y0</em> + <em>h</em> sinθ).
+            The Top point is initially set to{" "}
+            <p>
+              <div className="math-equation full-width">
+                (
+                <span className="math">
+                  x<sub>0</sub>
+                </span>{" "}
+                <span className="math-symbol">+</span>{" "}
+                <span className="math">h</span>cos(
+                <span className="math">θ</span>) ,{" "}
+                <span className="math">
+                  y<sub>0</sub>
+                </span>{" "}
+                <span className="math-symbol">+</span>{" "}
+                <span className="math">h</span>sin(
+                <span className="math">θ</span>))
+              </div>
+            </p>
           </li>
           <li>
             All four points have an associated velocity, which is initially set
-            to (<em>v0</em> cos<em>θ</em> , 
-            <em>v0</em> sin<em>θ</em>) for all four.
+            to{" "}
+            <span className="math-equation">
+              (
+              <span className="math">
+                v<sub>0</sub>
+              </span>{" "}
+              cos<span className="math">θ</span>,{" "}
+              <span className="math">
+                v<sub>0</sub>
+              </span>{" "}
+              sin<span className="math">θ</span>)
+            </span>{" "}
+            for all four.
           </li>
         </ol>
         <p>
-          In addition, we define  an attraction force <em>A</em> which has
-          constant magnitude but points left everywhere to the right of{" "}
-          <em>x0</em>, and points right everywhere to the left of <em>x0</em>.
-          We used a value of 2 for the magnitude of <em>A</em>, for a 20x20
-          canvas. We also used <em>h</em> = 5 and <em>φ</em> = 30°.
+          In addition, we define an attraction force{" "}
+          <span className="math">A</span> which has constant magnitude but
+          points left everywhere to the right of{" "}
+          <span className="math">
+            x<sub>0</sub>
+          </span>
+          , and points right everywhere to the left of{" "}
+          <span className="math">
+            x<sub>0</sub>
+          </span>
+          . We used a value of 2 for the magnitude of{" "}
+          <span className="math">A</span>, for a 20x20 canvas. We also used{" "}
+          <span className="math-equation">
+            <span className="math">h</span>{" "}
+            <span className="math-symbol">=</span> 5
+          </span>{" "}
+          and{" "}
+          <span className="math-equation">
+            <span className="math">φ</span>{" "}
+            <span className="math-symbol">=</span> 30°
+          </span>
+          .
         </p>
         <p>
           We <em>step forward</em> a single point on the flame by performing the
@@ -63,7 +165,8 @@ export function AnimatingFirePart1TwoDimensionalFlames() {
         </p>
         <ol className="bulleted-list">
           <li>
-            Add the attraction force <em>A</em> to the point's velocity.
+            Add the attraction force <span className="math">A</span> to the
+            point's velocity.
           </li>
           <li>Add the velocity to the position of the point.</li>
         </ol>
@@ -92,8 +195,11 @@ export function AnimatingFirePart1TwoDimensionalFlames() {
             <a href="https://www.w3schools.com/tags/canvas_createradialgradient.asp">
               radial gradient
             </a>
-             centered at the Bottom point, with inner radius 0 and outer radius
-            2 <em>h</em>.
+             centered at the Bottom point, with inner radius 0 and outer radius{" "}
+            <span className="math-equation">
+              2<span className="math">h</span>
+            </span>
+            .
           </li>
           <li>Color stop 0 should be yellow and color stop 1 should be red.</li>
           <li>
@@ -113,8 +219,8 @@ export function AnimatingFirePart1TwoDimensionalFlames() {
             control points.
           </li>
           <li>
-            Use a Bezier curve to  move back to the Bottom point, using the
-            Right point for both of the control points.
+            Use a Bezier curve to move back to the Bottom point, using the Right
+            point for both of the control points.
           </li>
           <li>Close the path and fill it.</li>
         </ol>
@@ -125,29 +231,82 @@ export function AnimatingFirePart1TwoDimensionalFlames() {
         </h5>
         <p>
           Now that we have successfully created a single flame from the
-          variables (<em>x0</em>,<em>y0</em>,<em>v0</em>,<em>θ</em>), we can
-          move on to creating an entire fire. To do so, we will need three new
-          variables: (<em>u</em>,<em>η,N</em>). Note that <em>u</em> represents
-          the maximum speed of flames coming out of it, <em>η</em> is the
-          average angular dispersion of the flames, and 
-          <em>N</em> is the number of flames that are added per step. To
-          generate the above animation, we used values of <em>u</em> = 5, 
-          <em>η</em> = 30°, and 
-          <em>N</em> = 10. With these new values, we do the following for each
-          new flame added to the fire:
+          variables (
+          <span className="math">
+            x<sub>0</sub>
+          </span>
+          ,
+          <span className="math">
+            y<sub>0</sub>
+          </span>
+          ,
+          <span className="math">
+            v<sub>0</sub>
+          </span>
+          ,<span className="math">θ</span>), we can move on to creating an
+          entire fire. To do so, we will need three new variables: (
+          <span className="math">u</span>,<span className="math">η</span>,
+          <span className="math">N</span>). Note that{" "}
+          <span className="math">u</span> represents the maximum speed of flames
+          coming out of it, <span className="math">η</span> is the average
+          angular dispersion of the flames, and <span className="math">N</span>{" "}
+          is the number of flames that are added per step. To generate the above
+          animation, we used values of{" "}
+          <span className="math-equation">
+            <span className="math">u</span>{" "}
+            <span className="math-symbol">=</span> 5
+          </span>
+          ,{" "}
+          <span className="math-equation">
+            <span className="math">η</span>{" "}
+            <span className="math-symbol">=</span> 30°
+          </span>
+          , and{" "}
+          <span className="math-equation">
+            <span className="math">N</span>{" "}
+            <span className="math-symbol">=</span> 10
+          </span>
+          . With these new values, we do the following for each new flame added
+          to the fire:
         </p>
         <ol className="bulleted-list">
           <li>
-            Set <em>x0</em> to half the canvas width and set 
-            <em>y0</em> to the canvas height.
+            Set{" "}
+            <span className="math">
+              x<sub>0</sub>
+            </span>{" "}
+            to half the canvas width and set{" "}
+            <span className="math">
+              y<sub>0</sub>
+            </span>{" "}
+            to the canvas height.
           </li>
           <li>
-            Set <em>v0</em> to a random value between 0 and 
-            <em>u</em>.
+            Set{" "}
+            <span className="math">
+              v<sub>0</sub>
+            </span>{" "}
+            to a random value between 0 and <span className="math">u</span>.
           </li>
           <li>
-            Generate a random number <em>r</em> between 0 and 1, and let 
-            <em>θ</em> = <em>r η +</em> (<em>π - η</em>)/2
+            Generate a random number <span className="math">r</span> between 0
+            and 1, and let
+            <p>
+              <div className="math-equation full-width">
+                <span className="math">θ</span>{" "}
+                <span className="math-symbol">=</span>{" "}
+                <span className="math">r</span>
+                <span className="math">η</span>{" "}
+                <span className="math-symbol">+</span>{" "}
+                <span className="math-fraction">
+                  <div>
+                    (π <span className="math-symbol">&minus;</span>{" "}
+                    <span className="math">η</span>)
+                  </div>
+                  <span>2</span>
+                </span>
+              </div>
+            </p>
           </li>
         </ol>
         <p>
