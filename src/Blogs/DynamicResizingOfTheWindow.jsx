@@ -6,7 +6,7 @@ export function DynamicResizingOfTheWindow() {
   return (
     <div className="blog-text">
       <p className="sub-paragraph">
-        Depending on your preferences, you  may wish to have your games
+        Depending on your preferences, you may wish to have your games
         automatically fit the screen whenever the window is resized. There is a
         school of thought in web development that the user should have ultimate
         control over every aspect of a webpage - including its size - but that
@@ -38,9 +38,9 @@ export function DynamicResizingOfTheWindow() {
       </p>
       <p className="sub-paragraph">
         <h3>Resizing to Fit the Window</h3>
-        The window's width and height can be obtained (in Javascript) through{" "}
-        <span style={{ color: "#00ffff" }}>window.innerWidth</span> and{" "}
-        <span style={{ color: "#00ffff" }}>window.innerHeight</span>, but
+        The window's width and height can be obtained (in Javascript) through
+        <span className="code-snippet">window.innerWidth</span> and
+        <span className="code-snippet">window.innerHeight</span>, but
         there's a catch: first you need to disable the scrollbar. Once again, we
         are assuming that the user has no use for it - after all, the game will
         appear exactly centered no matter how much they scroll it, so it is a
@@ -55,26 +55,29 @@ export function DynamicResizingOfTheWindow() {
         all devices:
       </p>
       <p className="sub-paragraph">
-        <span style={{ color: "#00ffff" }}>
-          &lt;meta name="viewport" content="width=device-width,
-          user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"&gt;
-        </span>{" "}
-        <span style={{ color: "#00ff00" }}>//above the script tag</span>
-      </p>
-      <p className="sub-paragraph">
-        <span style={{ color: "#00ffff" }}>
+        <div className="code-block">
+          &lt;meta 
+          <div className="tabbed-code">
+            <div>
+              name="viewport" 
+            </div>
+            <div>
+              content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+            </div>
+          </div>
+          &gt;
+          <div className="code-comment">// above the script tag</div>
+          &nbsp;
+        <div>
           document.documentElement.style.overflow = "hidden";
-        </span>{" "}
-        <span style={{ color: "#00ff00" }}>//below the script tag</span>
+        </div>
+        <div>document.body.scroll = "no";</div>
+        </div>
       </p>
       <p className="sub-paragraph">
-        <span style={{ color: "#00ffff" }}>document.body.scroll = "no";</span>{" "}
-        <span style={{ color: "#00ff00" }}>//below the script tag</span>
-      </p>
-      <p className="sub-paragraph">
-        Once you've gotten rid of the scrollbar, 
-        <span style={{ color: "#00ffff" }}>window.innerWidth</span> and{" "}
-        <span style={{ color: "#00ffff" }}>window.innerHeight </span>
+        Once you've gotten rid of the scrollbar,
+        <span className="code-snippet">window.innerWidth</span> and
+        <span className="code-snippet">window.innerHeight</span>
         should give you the correct width and height of your screen. But be
         careful! Setting your canvases' width and height to the screen's width
         and height will typically mess up the aspect ratio of the game and will
@@ -101,29 +104,28 @@ export function DynamicResizingOfTheWindow() {
       </p>
       <p className="sub-paragraph">
         The final step we must take is to use
-        <span style={{ color: "#00ffff" }}>
-          {" "}
-          context.scale(<em>s</em>,<em>s</em>)
-        </span>{" "}
+        <span className="code-snippet">
+          context.scale(s, s)
+        </span>
         to rescale the context (here <em>s</em> is the scale factor that we
         multiplied the canvas by). However, here you should be aware that the
         context will reset its scale every time you reset the canvas width.{" "}
         <em>
           <strong>
             Thus game developers using this method should be wary of using the
-            traditional{" "}
-            <span style={{ color: "#00ffff" }}>
-              canvas.width = canvas.width 
+            traditional
+            <span className="code-snippet">
+              canvas.width = canvas.width
             </span>
-            method of clearing a canvas, and should always use{" "}
-            <span style={{ color: "#00ffff" }}>clearRect</span> instead.
+            method of clearing a canvas, and should always use
+            <span className="code-snippet">clearRect</span> instead.
           </strong>
         </em>
       </p>
       <p className="sub-paragraph">
         <h3>Centering the Canvas</h3>
-        Before you center your canvases, you need to do two things: use{" "}
-        <span style={{ color: "#00ffff" }}>window.scrollTo(0,0)</span> to scroll
+        Before you center your canvases, you need to do two things: use
+        <span className="code-snippet">window.scrollTo(0,0)</span> to scroll
         to the top of the page, and set each canvas's top left corner to (0,0).
         Each time you center the canvas, it gets pushed down the page a little
         bit. If you do not recalibrate its top-left corner each time you center
@@ -139,21 +141,21 @@ export function DynamicResizingOfTheWindow() {
         that space is occupied by our menu. Thus even when we have specified
         (0,0) as the top left corner, a closer examination will reveal that our
         canvas is located somewhere else. To find its actual location, we need
-        to use 
-        <span style={{ color: "#00ffff" }}>getBoundingClientRect</span> and ask
+        to use
+        <span className="code-snippet">getBoundingClientRect</span> and ask
         for the top left corner. The values this returns will represent the
         shift that we need to correct for later.
       </p>
       <p className="sub-paragraph">
         Upon centering our canvas, there should be just as much space above its
-        top side as below its bottom side. This means that the top is located{" "}
-        <span style={{ color: "#00ffff" }}>
+        top side as below its bottom side. This means that the top is located
+        <span className="code-snippet">
           (window.innerHeight-canvas.height)/2
-        </span>{" "}
-        pixels away from the top of the page. Likewise, the left side is located{" "}
-        <span style={{ color: "#00ffff" }}>
+        </span>
+        pixels away from the top of the page. Likewise, the left side is located
+        <span className="code-snippet">
           (window.innerWidth-canvas.width)/2
-        </span>{" "}
+        </span>
         pixels away from the left of the page. Note that both of these values
         need to be corrected by the shift we obtained previously.
       </p>
@@ -161,38 +163,42 @@ export function DynamicResizingOfTheWindow() {
         The following function can be used to center a single canvas:
       </p>
       <p className="sub-paragraph">
+        <div className="code-block">
         <div style={{ color: "#808080" }}>
           <strong>
             <em>function</em>
-          </strong>{" "}
-          {"centerCanvas(canvas) {"}
+          </strong>
+          {" centerCanvas(canvas) {"}
         </div>
-        <div style={{ color: "#808080" }}>
-          &nbsp;&nbsp;&nbsp;canvas.style.left = "0px";
+        <div className="tabbed-code">
+        <div>
+          canvas.style.left = "0px";
         </div>
-        <div style={{ color: "#808080" }}>
-          &nbsp;&nbsp;&nbsp;canvas.style.top = "0px";
+        <div>
+          canvas.style.top = "0px";
         </div>
-        <div style={{ color: "#808080" }}>
-          &nbsp;&nbsp;&nbsp;var rect = canvas.getBoundingClientRect();
+        <div>
+          var rect = canvas.getBoundingClientRect();
         </div>
-        <div style={{ color: "#808080" }}>
-          &nbsp;&nbsp;&nbsp;var x = (window.innerWidth - canvas.width)/2;
+        <div>
+          var x = (window.innerWidth - canvas.width)/2;
         </div>
-        <div style={{ color: "#808080" }}>
-          &nbsp;&nbsp;&nbsp;x -= rect.left;
+        <div>
+          x -= rect.left;
         </div>
-        <div style={{ color: "#808080" }}>
-          &nbsp;&nbsp;&nbsp;var y = (window.innerHeight - canvas.height)/2;
+        <div>
+          var y = (window.innerHeight - canvas.height)/2;
         </div>
-        <div style={{ color: "#808080" }}>&nbsp;&nbsp;&nbsp;y -= rect.top;</div>
-        <div style={{ color: "#808080" }}>
-          &nbsp;&nbsp;&nbsp;canvas.style.left = x + "px";
+        <div>y -= rect.top;</div>
+        <div>
+          canvas.style.left = x + "px";
         </div>
-        <div style={{ color: "#808080" }}>
-          &nbsp;&nbsp;&nbsp;canvas.style.top = y + "px";
+        <div>
+          canvas.style.top = y + "px";
         </div>
-        <div style={{ color: "#808080" }}>{"}"}</div>
+        </div>
+        <div>{"}"}</div>
+        </div>
       </p>
       <p className="sub-paragraph">
         Note that on a mobile device, you should set a 500 ms timeout before

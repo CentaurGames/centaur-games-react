@@ -9,10 +9,12 @@
 
 .sub-paragraph a {
     color: #62b6cb;
+    text-decoration: none;
 }
 
 .sub-paragraph a:hover {
     color: rgba(98, 182, 203, 0.8);
+    text-decoration: underline;
 }
 
 .sub-paragraph img {
@@ -78,4 +80,41 @@
 .next-blog {
     float: right;
     text-decoration: none;
+}
+
+.code-snippet {
+    background-color: #f7eed5;
+    color: #666;
+    padding: 2px;
+    border-radius: 2px;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 100;
+    font-style: normal;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.code-block {
+    background-color: #f7eed5;
+    color: #666;
+    padding: 2px;
+    border-radius: 2px;
+    font-family: monospace;
+    font-size: 14px;
+    overflow: scroll;
+    white-space: nowrap;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+.code-comment {
+    color: darkgreen;
+}
+
+.tabbed-code {
+    margin-left: 20px;
 }
