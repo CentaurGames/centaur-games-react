@@ -5,20 +5,18 @@ import "./IconLandingPage.css";
 
 //props:
 //game: string
-export class IconLandingPage extends React.Component {
-  render() {
-    return (
-      <a
-        href={BASE_URL + "?pageType=landing&pageName=" + this.props.game}
-        target="_blank"
-        className="icon-link-landing-page"
-        data-testid="icon-landing-page"
-      >
-        <img
-          src={GAME_META_INFO[this.props.game].iconImageURL}
-          className="icon-landing-page"
-        />
-      </a>
-    );
-  }
+export function IconLandingPage(props) {
+  return (
+    <a
+      href={BASE_URL + "?pageType=landing&pageName=" + props.game}
+      target="_blank"
+      className="icon-link-landing-page"
+      data-testid="icon-landing-page"
+    >
+      <img
+        src={GAME_META_INFO[props.game].iconImageURL}
+        className="icon-landing-page"
+      />
+    </a>
+  );
 }

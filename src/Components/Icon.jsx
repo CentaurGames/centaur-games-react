@@ -7,20 +7,15 @@ import "./Icon.css";
  * props:
  *    game: string
  */
-export class Icon extends React.Component {
-  render() {
-    return (
-      <a
-        href={BASE_URL + "?pageType=landing&pageName=" + this.props.game}
-        target="_blank"
-        className="icon-link"
-        data-testid="icon"
-      >
-        <img
-          src={GAME_META_INFO[this.props.game].iconImageURL}
-          className="icon"
-        />
-      </a>
-    );
-  }
+export function Icon(props) {
+  return (
+    <a
+      href={BASE_URL + "?pageType=landing&pageName=" + props.game}
+      target="_blank"
+      className="icon-link"
+      data-testid="icon"
+    >
+      <img src={GAME_META_INFO[props.game].iconImageURL} className="icon" />
+    </a>
+  );
 }

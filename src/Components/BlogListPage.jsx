@@ -6,29 +6,28 @@ import "./MobileGamesListPage.css";
 import { MenuBar } from "./MenuBar";
 import { BlogIcon } from "./BlogIcon";
 
-export class BlogListPage extends React.Component {
-  render() {
-    const blogNameArray = Object.keys(BLOG_META_INFO);
-    return (
+export function BlogListPage() {
+  const blogNameArray = React.useMemo(() => Object.keys(BLOG_META_INFO), []);
+
+  return (
+    <div>
+      {/*Menu Bar*/}
       <div>
-        {/*Menu Bar*/}
-        <div>
-          <MenuBar />
-        </div>
-        <div>
-          {blogNameArray.map((blogName) => (
-            <BlogIcon key={blogName} blogName={blogName} />
-          ))}
-        </div>
-        {/*Social Media Icons*/}
-        <div>
-          <SocialMediaIcons />
-        </div>
-        {/*Privacy Policy About Us*/}
-        <div>
-          <PrivacyPolicyAboutUs />
-        </div>
+        <MenuBar />
       </div>
-    );
-  }
+      <div>
+        {blogNameArray.map((blogName) => (
+          <BlogIcon key={blogName} blogName={blogName} />
+        ))}
+      </div>
+      {/*Social Media Icons*/}
+      <div>
+        <SocialMediaIcons />
+      </div>
+      {/*Privacy Policy About Us*/}
+      <div>
+        <PrivacyPolicyAboutUs />
+      </div>
+    </div>
+  );
 }
