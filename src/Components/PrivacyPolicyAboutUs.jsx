@@ -30,7 +30,7 @@ export function PrivacyPolicyAboutUs() {
       {/*Sub Text*/}
       <div className="tech-support">
         Questions? Contact us at tech.support@centaurgamesonline.com. Copyright
-        © 2022 Centaur Games.
+        © 2023 Centaur Games.
       </div>
     </div>
   );
