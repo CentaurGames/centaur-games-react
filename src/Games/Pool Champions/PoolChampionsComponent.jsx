@@ -219,8 +219,7 @@ function updateScore(ballIndex) {
 function loadMesh(texture, i) {
   spheres[i] = new THREE.Group();
   var sphere = new THREE.SphereGeometry(r, 20, 20);
-  var material = new THREE.MeshLambertMaterial({ map: texture });
-  //var material = new THREE.MeshStandardMaterial({map: texture, roughness: 1});
+  var material = new THREE.MeshLambertMaterial({ map: texture, overdraw: 0.5 });
   var mesh = new THREE.Mesh(sphere, material);
   spheres[i].add(mesh);
   scene.add(spheres[i]);
@@ -304,7 +303,6 @@ function initialize3d() {
 }
 
 function drawGradientImage() {
-  // Creating shiny effect
   r++;
   imageCanvas.width = 2 * r;
   imageCanvas.height = 2 * r;
