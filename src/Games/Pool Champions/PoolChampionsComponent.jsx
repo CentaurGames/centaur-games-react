@@ -121,63 +121,49 @@ var scene,
   spheres = new Array(16),
   sphereCameras = new Array(16);
 
-function matrixProduct(mat1, mat2) {
-  var mat3 = [
-    [0, 0, 0],
-    [0, 0, 0],
-    [0, 0, 0],
-  ];
-  for (var i = 0; i < 3; i++) {
-    for (var j = 0; j < 3; j++) {
-      for (var k = 0; k < 3; k++) {
-        mat3[i][j] += mat1[i][k] * mat2[k][j];
-      }
-    }
-  }
-  return mat3;
-}
-
-function vectorProduct(mat, vec) {
-  var vec2 = [0, 0, 0];
-  for (var i = 0; i < 3; i++) {
-    for (var k = 0; k < 3; k++) {
-      vec2[i] += mat[i][k] * vec[k];
-    }
-  }
-  return vec2;
-}
-
 function rotateX(angle, index) {
-  var c = Math.cos(angle);
-  var s = Math.sin(angle);
-  var rx = [
-    [1, 0, 0],
-    [0, c, -s],
-    [0, s, c],
-  ];
-  rotMatrices[index] = matrixProduct(rx, rotMatrices[index]);
+  const c = Math.cos(angle);
+  const s = Math.sin(angle);
+  const matrix = rotMatrices[index];
+
+  for (let i = 0; i < 3; i++) {
+    const old1 = matrix[1][i];
+    const old2 = matrix[2][i];
+    matrix[1][i] *= c;
+    matrix[2][i] *= c;
+    matrix[1][i] -= s * old2;
+    matrix[2][i] += s * old1;
+  }
 }
 
 function rotateY(angle, index) {
-  var c = Math.cos(angle);
-  var s = Math.sin(angle);
-  var ry = [
-    [c, 0, s],
-    [0, 1, 0],
-    [-s, 0, c],
-  ];
-  rotMatrices[index] = matrixProduct(ry, rotMatrices[index]);
+  const c = Math.cos(angle);
+  const s = Math.sin(angle);
+  const matrix = rotMatrices[index];
+  
+  for (let i = 0; i < 3; i++) {
+    const old0 = matrix[0][i];
+    const old2 = matrix[2][i];
+    matrix[0][i] *= c;
+    matrix[2][i] *= c;
+    matrix[0][i] += s * old2;
+    matrix[2][i] -= s * old0;
+  }
 }
 
 function rotateZ(angle, index) {
-  var c = Math.cos(angle);
-  var s = Math.sin(angle);
-  var rz = [
-    [c, -s, 0],
-    [s, c, 0],
-    [0, 0, 1],
-  ];
-  rotMatrices[index] = matrixProduct(rz, rotMatrices[index]);
+  const c = Math.cos(angle);
+  const s = Math.sin(angle);
+  const matrix = rotMatrices[index];
+
+  for (let i = 0; i < 3; i++) {
+    const old0 = matrix[0][i];
+    const old1 = matrix[1][i];
+    matrix[0][i] *= c;
+    matrix[1][i] *= c;
+    matrix[0][i] -= s * old1;
+    matrix[1][i] += s * old0;
+  }
 }
 
 function determineTeams(ballIndex) {
@@ -219,8 +205,7 @@ function updateScore(ballIndex) {
 function loadMesh(texture, i) {
   spheres[i] = new THREE.Group();
   var sphere = new THREE.SphereGeometry(r, 20, 20);
-  var material = new THREE.MeshLambertMaterial({ map: texture });
-  //var material = new THREE.MeshStandardMaterial({map: texture, roughness: 1});
+  var material = new THREE.MeshLambertMaterial({ map: texture, overdraw: 0.5 });
   var mesh = new THREE.Mesh(sphere, material);
   spheres[i].add(mesh);
   scene.add(spheres[i]);
@@ -304,7 +289,6 @@ function initialize3d() {
 }
 
 function drawGradientImage() {
-  // Creating shiny effect
   r++;
   imageCanvas.width = 2 * r;
   imageCanvas.height = 2 * r;
