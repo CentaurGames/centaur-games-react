@@ -6,6 +6,7 @@ import {
   stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
+import { clearInterval, setInterval } from "worker-timers";
 
 var scrollPreventCanvas,
   myCanvas,
@@ -87,7 +88,6 @@ var playerScore = 0;
 var AIScore = 0;
 var carpetPatternImage = new Image(50, 50);
 var gameOver = 0;
-var rotMatrices = new Array(16);
 var topImageData = new Array(16);
 var bottomImageData = new Array(16);
 var colors = [
@@ -599,11 +599,6 @@ function initializeGlobals() {
   AIScore = 0;
   gameOver = 0;
   for (var i = 0; i < 16; i++) {
-    rotMatrices[i] = [
-      [1, 0, 0],
-      [0, 1, 0],
-      [0, 0, 1],
-    ];
     if (areImagesLoaded) {
       spheres[i].rotation.y = -Math.PI / 2;
       spheres[i].rotation.x = 0;
