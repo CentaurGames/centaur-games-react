@@ -6,6 +6,7 @@ import {
   stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
+import { clearInterval, setInterval } from "worker-timers";
 
 var scrollPreventCanvas,
   myCanvas,
@@ -140,7 +141,7 @@ function rotateY(angle, index) {
   const c = Math.cos(angle);
   const s = Math.sin(angle);
   const matrix = rotMatrices[index];
-  
+
   for (let i = 0; i < 3; i++) {
     const old0 = matrix[0][i];
     const old2 = matrix[2][i];
