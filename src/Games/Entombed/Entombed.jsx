@@ -91,7 +91,7 @@ import {
   stopGlobalLoadingIndicator,
 } from "../../Components/GlobalLoadingIndicator";
 import { maxCanvasScale } from "../../Util/MaxCanvasScale";
-import {clearInterval, setInterval} from "worker-timers";
+import { clearInterval, setInterval } from "worker-timers";
 
 var scrollPreventCanvas,
   imageCanvas,
