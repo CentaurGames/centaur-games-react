@@ -1046,3 +1046,5 @@ export const BLOG_META_INFO = {
     gamesMentioned: ["PoolChampions", "EightBallPool"],
   },
 };
+
+export const IS_ANDROID_SUNSET = true;
