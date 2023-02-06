@@ -1,5 +1,5 @@
 import { BASE_URL } from "../Util/UrlHelper";
-import { GAME_META_INFO, LIST_PAGE_META_INFO } from "../Util/SiteUtil";
+import { GAME_META_INFO, IS_ANDROID_SUNSET } from "../Util/SiteUtil";
 import { IconLandingPage } from "./IconLandingPage";
 import * as React from "react";
 import YouTube from "react-youtube";
@@ -61,14 +61,16 @@ export function LandingPage(props) {
         >
           <img src={AppStoreImage} className="ios-app-icon" />
         </a>
-        <a
-          href={GAME_META_INFO[props.game].androidURL}
-          className="android-app-link"
-          target="_blank"
-          data-testid="android-app-icon"
-        >
-          <img src={googlePlayImage} className="android-app-icon" />
-        </a>
+        {!IS_ANDROID_SUNSET && (
+          <a
+            href={GAME_META_INFO[props.game].androidURL}
+            className="android-app-link"
+            target="_blank"
+            data-testid="android-app-icon"
+          >
+            <img src={googlePlayImage} className="android-app-icon" />
+          </a>
+        )}
       </div>
 
       {/*Description*/}
