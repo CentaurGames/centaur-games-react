@@ -6,10 +6,12 @@ module.exports = {
    entry: './src/index.jsx',
    output: {
       path: path.join(__dirname, '/bundle'),
-      filename: 'index_bundle.js'
+      filename: 'index_bundle.js',
+      publicPath: '/'
    },
    devServer: {
-      port: 8001
+      port: 8001,
+      historyApiFallback: true,
    },
    stats: {
       errorDetails: true,
