@@ -3,11 +3,12 @@ import * as React from "react";
 import "./MenuBar.css";
 import { IS_ANDROID_SUNSET, LIST_PAGE_META_INFO } from "../Util/SiteUtil";
 import { MenuHamburger } from "./MenuHamburger";
+import MenuButton from "./MenuButton";
 
 export function MenuBar() {
   return (
     <div>
-      <MenuHamburger />
+      <MenuButton />
       <div className="menu-bar">
         {Object.keys(LIST_PAGE_META_INFO).filter((key) => !IS_ANDROID_SUNSET || key !== "Android").map((listPageName) => (
           <a
