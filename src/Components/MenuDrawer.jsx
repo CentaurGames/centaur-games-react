@@ -5,6 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { IS_ANDROID_SUNSET, LIST_PAGE_META_INFO } from "../Util/SiteUtil";
 import { BASE_URL } from "../Util/UrlHelper";
 import "./MenuButton.css";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 
 export default function MenuDrawer() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -30,6 +31,9 @@ export default function MenuDrawer() {
               key={listPageName}
               className="menu-bar-text"
             >
+              <div style={{ marginRight: 10 }}>
+                {LIST_PAGE_META_INFO[listPageName].icon}
+              </div>
               {listPageName}
             </a>
           ))}

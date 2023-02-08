@@ -12,7 +12,7 @@ export function BlogListPage() {
   return (
     <div>
       {/*Menu Bar*/}
-      <div>
+      <div style={{ marginBottom: 40 }}>
         <MenuBar />
       </div>
       <div>
