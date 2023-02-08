@@ -1,8 +1,8 @@
 import React from "react";
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 import { IS_ANDROID_SUNSET, LIST_PAGE_META_INFO } from "../Util/SiteUtil";
 import { BASE_URL } from "../Util/UrlHelper";
 import "./MenuButton.css";
@@ -19,9 +19,7 @@ export default function MenuButton() {
 
   return (
     <div>
-      <IconButton
-        onClick={handleClick}
-      >
+      <IconButton onClick={handleClick}>
         <MenuIcon className="menu-icon" />
       </IconButton>
       <Menu
@@ -30,15 +28,17 @@ export default function MenuButton() {
         open={open}
         onClose={handleClose}
       >
-       {Object.keys(LIST_PAGE_META_INFO).filter((key) => !IS_ANDROID_SUNSET || key !== "Android").map((listPageName) => (
+        {Object.keys(LIST_PAGE_META_INFO)
+          .filter((key) => !IS_ANDROID_SUNSET || key !== "Android")
+          .map((listPageName) => (
             <MenuItem>
-                <a
-              href={BASE_URL + "?pageType=list&pageName=" + listPageName}
-              key={listPageName}
-              className="menu-bar-text"
-            >
-              {listPageName}
-            </a>
+              <a
+                href={BASE_URL + "?pageType=list&pageName=" + listPageName}
+                key={listPageName}
+                className="menu-bar-text"
+              >
+                {listPageName}
+              </a>
             </MenuItem>
           ))}
       </Menu>
