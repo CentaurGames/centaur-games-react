@@ -1,3 +1,4 @@
+import React from "react";
 import SnakeIconImage from "../Games/Snake/IconImage.png";
 import SnakeLargeImage from "../Games/Snake/LargeImage.png";
 import SnakeAppImage from "../Games/Snake/AppImage.png";
@@ -119,6 +120,16 @@ import PuzzleLogo from "../SliderImages/PuzzleLogo.png";
 import ActionAndAdventureLogo from "../SliderImages/ActionAndAdventureLogo.png";
 import ClassicsLogo from "../SliderImages/ClassicsLogo.png";
 import SportsLogo from "../SliderImages/SportsLogo.png";
+import Home from "@mui/icons-material/Home";
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import GradeIcon from "@mui/icons-material/Grade";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+import WhatshotIcon from "@mui/icons-material/Whatshot";
+import ExtensionIcon from "@mui/icons-material/Extension";
+import ExploreIcon from "@mui/icons-material/Explore";
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import SportsFootballIcon from "@mui/icons-material/SportsFootball";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 
 export const GAME_META_INFO = {
   Snake: {
@@ -761,6 +772,7 @@ export const LIST_PAGE_META_INFO = {
     ],
     youtubeLink: "0ynT_XL4F_I",
     sliderImageURL: FinalColoredLogo,
+    icon: <Home />,
   },
   iOS: {
     games: [
@@ -783,6 +795,7 @@ export const LIST_PAGE_META_INFO = {
       "ChickenWings",
       "LumpyDumplings",
     ],
+    icon: <PhoneIphoneIcon />,
   },
   Android: {
     games: [
@@ -829,6 +842,7 @@ export const LIST_PAGE_META_INFO = {
     ],
     youtubeLink: "XVAl59LLJtk",
     sliderImageURL: FeaturedGames,
+    icon: <GradeIcon />,
   },
   Strategy: {
     games: [
@@ -855,6 +869,7 @@ export const LIST_PAGE_META_INFO = {
     ],
     youtubeLink: "C-yHTpcv3mg",
     sliderImageURL: StrategyLogo,
+    icon: <PsychologyIcon />,
   },
   Addictive: {
     games: [
@@ -872,6 +887,7 @@ export const LIST_PAGE_META_INFO = {
     ],
     youtubeLink: "KADPseajCsE",
     sliderImageURL: AddictiveLogo,
+    icon: <WhatshotIcon />,
   },
   Puzzle: {
     games: [
@@ -891,6 +907,7 @@ export const LIST_PAGE_META_INFO = {
     ],
     youtubeLink: "0ynT_XL4F_I",
     sliderImageURL: PuzzleLogo,
+    icon: <ExtensionIcon />,
   },
   Adventure: {
     games: [
@@ -908,6 +925,7 @@ export const LIST_PAGE_META_INFO = {
     ],
     youtubeLink: "GLt7s2C_80E",
     sliderImageURL: ActionAndAdventureLogo,
+    icon: <ExploreIcon />,
   },
   Classics: {
     games: [
@@ -925,6 +943,7 @@ export const LIST_PAGE_META_INFO = {
     ],
     youtubeLink: "aQIitNAlMSc",
     sliderImageURL: ClassicsLogo,
+    icon: <SportsEsportsIcon />,
   },
   Sports: {
     games: [
@@ -942,8 +961,11 @@ export const LIST_PAGE_META_INFO = {
     ],
     youtubeLink: "2m4nYnKI96s",
     sliderImageURL: SportsLogo,
+    icon: <SportsFootballIcon />,
   },
-  Blog: true,
+  Blog: {
+    icon: <MenuBookIcon />,
+  },
 };
 
 export const BLOG_META_INFO = {
