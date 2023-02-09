@@ -1,0 +1,38 @@
+.search-bar {
+    background-color: white;
+    border-radius: 50px;
+}
+
+.search-bar fieldset {
+    border-width: 0 !important;
+}
+
+.MuiAutocomplete-popper {
+    margin-top: 10px !important;
+}
+
+.MuiPaper-root {
+    background-color: #232323 !important;
+}
+
+.MuiInputLabel-shrink {
+    display: none !important;
+}
+
+.MuiAutocomplete-popper li {
+    padding: 0 !important;
+}
+
+.MuiAutocomplete-popper a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.search-bar-image {
+    margin-right:20px;
+}

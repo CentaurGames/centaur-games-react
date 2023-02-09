@@ -3,6 +3,7 @@ import "./MenuBar.css";
 import { Logo } from "./Logo";
 import { LogoTitle } from "./LogoTitle";
 import MenuDrawer from "./MenuDrawer";
+import { SearchBar } from "./SearchBar";
 
 export function MenuBar() {
   return (
@@ -24,6 +25,7 @@ export function MenuBar() {
         <Logo />
         <LogoTitle />
       </div>
+      <SearchBar />
     </div>
   );
 }
