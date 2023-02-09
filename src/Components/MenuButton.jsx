@@ -5,7 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IS_ANDROID_SUNSET, LIST_PAGE_META_INFO } from "../Util/SiteUtil";
 import { BASE_URL } from "../Util/UrlHelper";
-import "./MenuButton.css";
+import "./Menu.css";
 
 export default function MenuButton() {
   const [anchorEl, setAnchorEl] = React.useState(null);
