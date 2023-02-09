@@ -39,3 +39,7 @@
 .search-bar-image {
     margin-right:20px;
 }
+
+.MuiAutocomplete-noOptions {
+    color: white !important;
+}
