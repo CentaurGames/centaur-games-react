@@ -6,18 +6,12 @@ import "./SearchBar.css";
 import { BASE_URL } from "../Util/UrlHelper";
 
 export function SearchBar() {
-  const [isLoaded, setLoaded] = React.useState(false);
-
-  React.useEffect(() => {
-    setLoaded(true);
-  }, []);
-
-  return isLoaded ? (
+  return (
     <Autocomplete
       className="search-bar"
       disablePortal
       options={Object.keys(GAME_META_INFO)}
-      getOptionLabel={(game) => GAME_META_INFO[game].name}
+      getOptionLabel={(game) => GAME_META_INFO[game]?.name}
       renderInput={(params) => <TextField {...params} label="Search" />}
       renderOption={(props, game) => (
         <li {...props} onClick={() => {}}>
@@ -26,14 +20,12 @@ export function SearchBar() {
               className={"search-bar-image"}
               width={50}
               height={50}
-              src={GAME_META_INFO[game].iconImageURL}
+              src={GAME_META_INFO[game]?.iconImageURL}
             />
-            {GAME_META_INFO[game].name}
+            {GAME_META_INFO[game]?.name}
           </a>
         </li>
       )}
     />
-  ) : (
-    <div className="search-bar" />
   );
 }
