@@ -12,8 +12,18 @@ import { BlogComponent } from "./BlogComponent";
  * pageName: ListPage etc
  */
 export function MainWebsite() {
+  const [isLoaded, setLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    setLoaded(true);
+  }, []);
+
   const pageType = getUrlParameter("pageType");
   const pageName = getUrlParameter("pageName");
+
+  if (!isLoaded) {
+    return <div />;
+  }
 
   switch (pageType) {
     case "list":

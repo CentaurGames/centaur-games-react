@@ -11,6 +11,8 @@ import { PrivacyPolicyAboutUs } from "./PrivacyPolicyAboutUs";
 import { MenuBar } from "./MenuBar";
 import AppStoreImage from "./AppStoreImage.png";
 import googlePlayImage from "./googlePlayImage.png";
+import { GlobalLoadingIndicator } from "./GlobalLoadingIndicator";
+import { LoadableImage } from "./LoadableImage";
 
 //props:
 //game: string
@@ -33,7 +35,7 @@ export function LandingPage(props) {
   );
 
   return (
-    <div>
+    <GlobalLoadingIndicator>
       {/*Menu Bars*/}
       <div>
         <MenuBar />
@@ -44,7 +46,7 @@ export function LandingPage(props) {
         href={BASE_URL + "?pageType=game&pageName=" + props.game}
         target="_blank"
       >
-        <img
+        <LoadableImage
           src={GAME_META_INFO[props.game].largeImageURL}
           className="large-icon"
         />
@@ -59,7 +61,7 @@ export function LandingPage(props) {
           target="_blank"
           data-testid="ios-app-icon"
         >
-          <img src={AppStoreImage} className="ios-app-icon" />
+          <LoadableImage src={AppStoreImage} className="ios-app-icon" />
         </a>
         {!IS_ANDROID_SUNSET && (
           <a
@@ -68,7 +70,7 @@ export function LandingPage(props) {
             target="_blank"
             data-testid="android-app-icon"
           >
-            <img src={googlePlayImage} className="android-app-icon" />
+            <LoadableImage src={googlePlayImage} className="android-app-icon" />
           </a>
         )}
       </div>
@@ -107,7 +109,7 @@ export function LandingPage(props) {
             {GAME_META_INFO[props.game].screenshotImages.map(
               (screenshotImage) => (
                 <Carousel.Item key={screenshotImage}>
-                  <img
+                  <LoadableImage
                     width={450}
                     height={450}
                     src={screenshotImage}
@@ -128,6 +130,6 @@ export function LandingPage(props) {
       <div>
         <PrivacyPolicyAboutUs />
       </div>
-    </div>
+    </GlobalLoadingIndicator>
   );
 }
