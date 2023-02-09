@@ -6,11 +6,18 @@ import "./SearchBar.css";
 import { BASE_URL } from "../Util/UrlHelper";
 
 export function SearchBar() {
-  return (
+  const [isLoaded, setLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    setLoaded(true);
+  }, []);
+
+  return isLoaded ? (
     <Autocomplete
       className="search-bar"
       disablePortal
       options={Object.keys(GAME_META_INFO)}
+      getOptionLabel={(game) => GAME_META_INFO[game].name}
       renderInput={(params) => <TextField {...params} label="Search" />}
       renderOption={(props, game) => (
         <li {...props} onClick={() => {}}>
@@ -26,5 +33,7 @@ export function SearchBar() {
         </li>
       )}
     />
+  ) : (
+    <div className="search-bar" />
   );
 }
