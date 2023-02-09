@@ -7,7 +7,7 @@ import { SearchBar } from "./SearchBar";
 
 export function MenuBar() {
   return (
-    <div style={{ backgroundColor: "#232323", width: "100%" }}>
+    <div style={{ backgroundColor: "#232323", width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
       <div
         style={{
           display: "flex",

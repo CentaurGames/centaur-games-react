@@ -10,9 +10,7 @@ export function SearchBar() {
     <Autocomplete
       className="search-bar"
       disablePortal
-      id="combo-box-demo"
       options={Object.keys(GAME_META_INFO)}
-      sx={{ width: 300, color: "white" }}
       renderInput={(params) => <TextField {...params} label="Search" />}
       renderOption={(props, game) => (
         <li {...props} onClick={() => {}}>
