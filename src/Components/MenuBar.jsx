@@ -4,6 +4,7 @@ import { Logo } from "./Logo";
 import { LogoTitle } from "./LogoTitle";
 import MenuDrawer from "./MenuDrawer";
 import { SearchBar } from "./SearchBar";
+import { BASE_URL } from "../Util/UrlHelper";
 
 export function MenuBar() {
   return (
@@ -30,8 +31,10 @@ export function MenuBar() {
         }}
       >
         <MenuDrawer />
-        <Logo />
-        <LogoTitle />
+        <a href={BASE_URL + "?pageType=list&pageName=Home"}>
+          <Logo />
+          <LogoTitle />
+        </a>
       </div>
       <SearchBar />
     </div>
