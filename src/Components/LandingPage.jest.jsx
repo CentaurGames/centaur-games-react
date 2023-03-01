@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cleanup, render } from "@testing-library/react";
-import { GAME_META_INFO } from "../Util/SiteUtil";
+import { GAME_META_INFO, IS_ANDROID_SUNSET } from "../Util/SiteUtil";
 import { LandingPage } from "./LandingPage";
 import { BASE_URL } from "../Util/UrlHelper";
 
@@ -27,7 +27,7 @@ describe("LandingPage component", () => {
       expect(iosIcon.getAttribute("href")).toEqual(iosURL);
     }
 
-    if (androidURL) {
+    if (androidURL && !IS_ANDROID_SUNSET) {
       const androidIcon = getByTestId("android-app-icon");
       expect(androidIcon.getAttribute("href")).toEqual(androidURL);
     }
